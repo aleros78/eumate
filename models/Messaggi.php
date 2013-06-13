@@ -10,7 +10,7 @@ namespace pff\models;
 
 /**
  * @Entity
- * @Table(name="ge_messaggi")
+ * @Table(name="pg_messaggi")
  */
 class Messaggi extends \pff\AModel {
 
