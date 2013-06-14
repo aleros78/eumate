@@ -1,0 +1,115 @@
+<div {$pageattrs}>
+
+{BEGIN container_dcount}
+<table class="runner-c runner-c-dcount" cellpadding="0" >
+<tr class="{$cheaderclass_dcount}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+
+
+<tr  class="runner-row style1 runner-b-detailspreviewheader {$brickclass_detailspreviewheader}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" ><b>Pg Personaggi</b>
+</td><td class="runner-cr"></td></tr>
+
+
+
+<tr  class="runner-row style1 runner-b-detailspreviewdetailsfount {$brickclass_detailspreviewdetailsfount}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" >Details found: <strong>{$row_count}.</strong>
+</td><td class="runner-cr"></td></tr>
+
+
+{BEGIN display_first}
+<tr  class="runner-row style1 runner-b-detailspreviewdispfirst {$brickclass_detailspreviewdispfirst}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" >Displaying first: <strong>{$display_count}</strong>.
+</td><td class="runner-cr"></td></tr>{END display_first}
+
+
+<tr class="{$cfooterclass_dcount}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_dcount}
+
+
+
+{BEGIN container_detailspreviewgrid}
+
+
+{BEGIN details_data}
+<table class="runner-c runner-c-detailspreviewgrid runner-b-detailspreviewgrid">
+	<tr  class="runner-toprow style1">
+		<th class="runner-cl"><img src="images/spacer.gif"></th>
+		<th class="runner-cc ">Id</th>
+		<th class="runner-cc ">Id Utente</th>
+		<th class="runner-cc ">Id Posto</th>
+		<th class="runner-cc ">Nome</th>
+		<th class="runner-cc ">Status</th>
+		<th class="runner-cc ">Att</th>
+		<th class="runner-cc ">Def</th>
+		<th class="runner-cc ">Cha</th>
+		<th class="runner-cc ">Mov</th>
+		<th class="runner-cc ">Mov Rimanenti</th>
+		<th class="runner-cc ">Mov Last Reset Time</th>
+		<th class="runner-cc ">Pf</th>
+		<th class="runner-cc ">Pf Rimanenti</th>
+		<th class="runner-cc ">Pf Last Reset Time</th>
+		<th class="runner-cc ">Lev</th>
+		<th class="runner-cc ">Xp</th>
+		<th class="runner-cc ">Xp Next</th>
+		<th class="runner-cc runner-clast">Id Gilda</th>
+		<th class="runner-cr"><img src="images/spacer.gif"></th>
+	</tr>
+	{BEGIN details_row}
+	<tr class="runner-row style1">
+		<td class="runner-cl"><img src="images/spacer.gif"></td>
+		<td class="runner-cc ">{$id_value}</td>
+		<td class="runner-cc ">{$id_utente_value}</td>
+		<td class="runner-cc ">{$id_posto_value}</td>
+		<td class="runner-cc ">{$nome_value}</td>
+		<td class="runner-cc ">{$status_value}</td>
+		<td class="runner-cc ">{$att_value}</td>
+		<td class="runner-cc ">{$def_value}</td>
+		<td class="runner-cc ">{$cha_value}</td>
+		<td class="runner-cc ">{$mov_value}</td>
+		<td class="runner-cc ">{$mov_rimanenti_value}</td>
+		<td class="runner-cc ">{$mov_last_reset_time_value}</td>
+		<td class="runner-cc ">{$pf_value}</td>
+		<td class="runner-cc ">{$pf_rimanenti_value}</td>
+		<td class="runner-cc ">{$pf_last_reset_time_value}</td>
+		<td class="runner-cc ">{$lev_value}</td>
+		<td class="runner-cc ">{$xp_value}</td>
+		<td class="runner-cc ">{$xp_next_value}</td>
+		<td class="runner-cc runner-clast">{$id_gilda_value}</td>
+		<td class="runner-cr"><img src="images/spacer.gif"></td>
+	</tr>
+	{END details_row}
+	<tr class="runner-bottomrow style1">
+		<td class="runner-cl"><img src="images/spacer.gif"></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc runner-clast"></td>
+		<td class="runner-cr"><img src="images/spacer.gif"></td>
+	</tr>
+</table>
+
+{END details_data}
+
+
+
+{END container_detailspreviewgrid}
+
+</div>

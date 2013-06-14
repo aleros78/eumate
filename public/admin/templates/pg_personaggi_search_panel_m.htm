@@ -1,0 +1,98 @@
+<div class="searchOptions bottomPanelBorder" {$srchOpt_attrs}>
+	<!-- Search panel content -->
+	<div class="srchCritTop" style="display: none;">
+		Criteria:&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$all_checkbox}> {BEGIN all_checkbox_label}all{END all_checkbox_label}
+		&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$any_checkbox}> {BEGIN any_checkbox_label}any{END any_checkbox_label}
+	</div>
+	
+	<div class="addOption">
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideControlChooseMenu{$id}" class="runner-button" {$showHideCtrls_attrs}>Add field</a>
+		</span>
+		&nbsp;&nbsp;&nbsp;
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideSearchType{$id}" class="runner-button" {$showHideCtrlsOpt_attrs}>{$showHideOpt_mess}</a>
+		</span>
+	</div>
+	
+	<!-- choose controls div -->
+	<div class="runner-panel controlChooseMenu" {$controlChooseMenuDiv_attrs}>
+		{BEGIN addSearch_id}
+			<a href="#" id="addSearchControl_id" class="addSearchControl" {$addSearchControl_id_attrs}>Id</a><br>
+		{END addSearch_id}
+		{BEGIN addSearch_id_utente}
+			<a href="#" id="addSearchControl_id_utente" class="addSearchControl" {$addSearchControl_id_utente_attrs}>Id Utente</a><br>
+		{END addSearch_id_utente}
+		{BEGIN addSearch_id_posto}
+			<a href="#" id="addSearchControl_id_posto" class="addSearchControl" {$addSearchControl_id_posto_attrs}>Id Posto</a><br>
+		{END addSearch_id_posto}
+		{BEGIN addSearch_nome}
+			<a href="#" id="addSearchControl_nome" class="addSearchControl" {$addSearchControl_nome_attrs}>Nome</a><br>
+		{END addSearch_nome}
+		{BEGIN addSearch_status}
+			<a href="#" id="addSearchControl_status" class="addSearchControl" {$addSearchControl_status_attrs}>Status</a><br>
+		{END addSearch_status}
+		{BEGIN addSearch_att}
+			<a href="#" id="addSearchControl_att" class="addSearchControl" {$addSearchControl_att_attrs}>Att</a><br>
+		{END addSearch_att}
+		{BEGIN addSearch_def}
+			<a href="#" id="addSearchControl_def" class="addSearchControl" {$addSearchControl_def_attrs}>Def</a><br>
+		{END addSearch_def}
+		{BEGIN addSearch_cha}
+			<a href="#" id="addSearchControl_cha" class="addSearchControl" {$addSearchControl_cha_attrs}>Cha</a><br>
+		{END addSearch_cha}
+		{BEGIN addSearch_mov}
+			<a href="#" id="addSearchControl_mov" class="addSearchControl" {$addSearchControl_mov_attrs}>Mov</a><br>
+		{END addSearch_mov}
+		{BEGIN addSearch_mov_rimanenti}
+			<a href="#" id="addSearchControl_mov_rimanenti" class="addSearchControl" {$addSearchControl_mov_rimanenti_attrs}>Mov Rimanenti</a><br>
+		{END addSearch_mov_rimanenti}
+		{BEGIN addSearch_mov_last_reset_time}
+			<a href="#" id="addSearchControl_mov_last_reset_time" class="addSearchControl" {$addSearchControl_mov_last_reset_time_attrs}>Mov Last Reset Time</a><br>
+		{END addSearch_mov_last_reset_time}
+		{BEGIN addSearch_pf}
+			<a href="#" id="addSearchControl_pf" class="addSearchControl" {$addSearchControl_pf_attrs}>Pf</a><br>
+		{END addSearch_pf}
+		{BEGIN addSearch_pf_rimanenti}
+			<a href="#" id="addSearchControl_pf_rimanenti" class="addSearchControl" {$addSearchControl_pf_rimanenti_attrs}>Pf Rimanenti</a><br>
+		{END addSearch_pf_rimanenti}
+		{BEGIN addSearch_pf_last_reset_time}
+			<a href="#" id="addSearchControl_pf_last_reset_time" class="addSearchControl" {$addSearchControl_pf_last_reset_time_attrs}>Pf Last Reset Time</a><br>
+		{END addSearch_pf_last_reset_time}
+		{BEGIN addSearch_lev}
+			<a href="#" id="addSearchControl_lev" class="addSearchControl" {$addSearchControl_lev_attrs}>Lev</a><br>
+		{END addSearch_lev}
+		{BEGIN addSearch_xp}
+			<a href="#" id="addSearchControl_xp" class="addSearchControl" {$addSearchControl_xp_attrs}>Xp</a><br>
+		{END addSearch_xp}
+		{BEGIN addSearch_xp_next}
+			<a href="#" id="addSearchControl_xp_next" class="addSearchControl" {$addSearchControl_xp_next_attrs}>Xp Next</a><br>
+		{END addSearch_xp_next}
+		{BEGIN addSearch_id_gilda}
+			<a href="#" id="addSearchControl_id_gilda" class="addSearchControl" {$addSearchControl_id_gilda_attrs}>Id Gilda</a><br>
+		{END addSearch_id_gilda}
+	</div>
+	
+	<div class="controlsBlock">
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow" {$filterRow_attrs}>
+			<div class="srchPanelCell">{$delCtrlButt}&nbsp;{$fLabel}:&nbsp;</div>
+			<div class="srchPanelCell srchPanelCell2">{$searchtype} {$searchcontrol} {$searchcontrol1}</div>
+		</div>
+		{END searchCtrlBlock}
+	</div>
+		
+	<div class="bottomSearchButt" align="left" {$bottomSearchButt_attrs}>
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$searchbutton_attrs}>Search</a>
+		</span>
+	</div>
+</div>

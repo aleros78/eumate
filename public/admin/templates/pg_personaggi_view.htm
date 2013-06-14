@@ -1,0 +1,376 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			{BEGIN IEcssFiles}
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+			{END IEcssFiles}
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+
+
+{BEGIN container_view}
+<table class="runner-c runner-c-view" cellpadding="0" align=center>
+
+
+<tr class="runner-toprow style2 header"><td class="runner-cl"><img src="images/spacer.gif"></td><td class="runner-cc" ><div  class="runner-b-viewheader {$brickclass_viewheader}">Pg Personaggi, View record [
+Id: {$show_key1}
+]</div></td><td class="runner-cr"><img src="images/spacer.gif"></td></tr>
+
+
+
+<tr  class="runner-row style1 runner-b-wrapper {$wrapperclass_fields}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents runner-wrapper" >
+
+{BEGIN container_fields}
+<table class="runner-c runner-c-fields" cellpadding="0" >
+
+
+	{BEGIN id_fieldblock}
+	<tr class="runner-toprow header style1 runner-b-viewfields"><td class="runner-cl"><img src="images/spacer.gif"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_id {$fielddispclass_id}">
+			<b>Id</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_id {$fielddispclass_id}">
+			{$id_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"><img src="images/spacer.gif"></td></tr>
+{END id_fieldblock}
+	{BEGIN id_utente_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_id_utente {$fielddispclass_id_utente}">
+			<b>Id Utente</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_id_utente {$fielddispclass_id_utente}">
+			{$id_utente_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END id_utente_fieldblock}
+	{BEGIN id_posto_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_id_posto {$fielddispclass_id_posto}">
+			<b>Id Posto</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_id_posto {$fielddispclass_id_posto}">
+			{$id_posto_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END id_posto_fieldblock}
+	{BEGIN nome_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_nome {$fielddispclass_nome}">
+			<b>Nome</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_nome {$fielddispclass_nome}">
+			{$nome_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END nome_fieldblock}
+	{BEGIN status_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_status {$fielddispclass_status}">
+			<b>Status</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_status {$fielddispclass_status}">
+			{$status_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END status_fieldblock}
+	{BEGIN att_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_att {$fielddispclass_att}">
+			<b>Att</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_att {$fielddispclass_att}">
+			{$att_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END att_fieldblock}
+	{BEGIN def_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_def {$fielddispclass_def}">
+			<b>Def</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_def {$fielddispclass_def}">
+			{$def_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END def_fieldblock}
+	{BEGIN cha_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_cha {$fielddispclass_cha}">
+			<b>Cha</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_cha {$fielddispclass_cha}">
+			{$cha_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END cha_fieldblock}
+	{BEGIN mov_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_mov {$fielddispclass_mov}">
+			<b>Mov</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_mov {$fielddispclass_mov}">
+			{$mov_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END mov_fieldblock}
+	{BEGIN mov_rimanenti_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_mov_rimanenti {$fielddispclass_mov_rimanenti}">
+			<b>Mov Rimanenti</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_mov_rimanenti {$fielddispclass_mov_rimanenti}">
+			{$mov_rimanenti_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END mov_rimanenti_fieldblock}
+	{BEGIN mov_last_reset_time_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_mov_last_reset_time {$fielddispclass_mov_last_reset_time}">
+			<b>Mov Last Reset Time</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_mov_last_reset_time {$fielddispclass_mov_last_reset_time}">
+			{$mov_last_reset_time_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END mov_last_reset_time_fieldblock}
+	{BEGIN pf_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_pf {$fielddispclass_pf}">
+			<b>Pf</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_pf {$fielddispclass_pf}">
+			{$pf_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END pf_fieldblock}
+	{BEGIN pf_rimanenti_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_pf_rimanenti {$fielddispclass_pf_rimanenti}">
+			<b>Pf Rimanenti</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_pf_rimanenti {$fielddispclass_pf_rimanenti}">
+			{$pf_rimanenti_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END pf_rimanenti_fieldblock}
+	{BEGIN pf_last_reset_time_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_pf_last_reset_time {$fielddispclass_pf_last_reset_time}">
+			<b>Pf Last Reset Time</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_pf_last_reset_time {$fielddispclass_pf_last_reset_time}">
+			{$pf_last_reset_time_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END pf_last_reset_time_fieldblock}
+	{BEGIN lev_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_lev {$fielddispclass_lev}">
+			<b>Lev</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_lev {$fielddispclass_lev}">
+			{$lev_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END lev_fieldblock}
+	{BEGIN xp_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_xp {$fielddispclass_xp}">
+			<b>Xp</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_xp {$fielddispclass_xp}">
+			{$xp_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END xp_fieldblock}
+	{BEGIN xp_next_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_xp_next {$fielddispclass_xp_next}">
+			<b>Xp Next</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_xp_next {$fielddispclass_xp_next}">
+			{$xp_next_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END xp_next_fieldblock}
+	{BEGIN id_gilda_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_id_gilda {$fielddispclass_id_gilda}">
+			<b>Id Gilda</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_id_gilda {$fielddispclass_id_gilda}">
+			{$id_gilda_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END id_gilda_fieldblock}
+
+
+
+
+<tr  class="runner-row style2 runner-b-viewbuttons {$brickclass_viewbuttons}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" colspan=2>{BEGIN prev_button}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$prevbutton_attrs}>&lt;&lt;&lt;</a>
+</span>
+{END prev_button}
+{BEGIN back_button}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$backbutton_attrs}>Back to list</a>
+</span>
+{END back_button}
+{BEGIN next_button}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$nextbutton_attrs}>&gt;&gt;&gt;</a>
+</span>
+{END next_button}
+</td><td class="runner-cr"></td></tr>
+
+
+<tr class="{$cfooterclass_fields}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_fields}
+
+</td><td class="runner-cr"></td></tr>
+
+
+<tr class="{$cfooterclass_view}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_view}
+
+
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>

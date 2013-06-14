@@ -1,0 +1,427 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			{BEGIN IEcssFiles}
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+			{END IEcssFiles}
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+{BEGIN container_master}
+<table class="runner-c runner-c-master" cellpadding="0" >
+<tr class="{$cheaderclass_master}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+{BEGIN mastertable_block}
+<td  class="runner-cc runner-bl runner-b-masterinfoprint" {$brickclass_masterinfoprint}><span>{$showmasterfile}
+</span></td>
+{END mastertable_block}
+
+<td class="runner-cc filler"></td>
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_master}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_master}
+
+
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+{BEGIN page}
+<h1>Pg Personaggi</h1>
+<span>
+{BEGIN page_number}
+Page {$pageno} of {$maxpages} 
+{END page_number}
+</span>
+
+	<div class="runner-s-grid">	
+	<table class="runner-c runner-c-grid" cellpadding="0">
+		<thead>
+		{BEGIN grid_header}
+		<tr class="runner-toprow style1">
+			<td class="runner-cl"><img src="images/spacer.gif"></td>
+			{BEGIN record_header}
+					{BEGIN id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN id_fieldheader}
+	<b>Id</b>
+	{END id_fieldheader}
+</th>
+{END id_fieldheadercolumn}
+	{BEGIN id_utente_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN id_utente_fieldheader}
+	<b>Id Utente</b>
+	{END id_utente_fieldheader}
+</th>
+{END id_utente_fieldheadercolumn}
+	{BEGIN id_posto_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN id_posto_fieldheader}
+	<b>Id Posto</b>
+	{END id_posto_fieldheader}
+</th>
+{END id_posto_fieldheadercolumn}
+	{BEGIN nome_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN nome_fieldheader}
+	<b>Nome</b>
+	{END nome_fieldheader}
+</th>
+{END nome_fieldheadercolumn}
+	{BEGIN status_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN status_fieldheader}
+	<b>Status</b>
+	{END status_fieldheader}
+</th>
+{END status_fieldheadercolumn}
+	{BEGIN att_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN att_fieldheader}
+	<b>Att</b>
+	{END att_fieldheader}
+</th>
+{END att_fieldheadercolumn}
+	{BEGIN def_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN def_fieldheader}
+	<b>Def</b>
+	{END def_fieldheader}
+</th>
+{END def_fieldheadercolumn}
+	{BEGIN cha_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN cha_fieldheader}
+	<b>Cha</b>
+	{END cha_fieldheader}
+</th>
+{END cha_fieldheadercolumn}
+	{BEGIN mov_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN mov_fieldheader}
+	<b>Mov</b>
+	{END mov_fieldheader}
+</th>
+{END mov_fieldheadercolumn}
+	{BEGIN mov_rimanenti_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN mov_rimanenti_fieldheader}
+	<b>Mov Rimanenti</b>
+	{END mov_rimanenti_fieldheader}
+</th>
+{END mov_rimanenti_fieldheadercolumn}
+	{BEGIN mov_last_reset_time_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN mov_last_reset_time_fieldheader}
+	<b>Mov Last Reset Time</b>
+	{END mov_last_reset_time_fieldheader}
+</th>
+{END mov_last_reset_time_fieldheadercolumn}
+	{BEGIN pf_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN pf_fieldheader}
+	<b>Pf</b>
+	{END pf_fieldheader}
+</th>
+{END pf_fieldheadercolumn}
+	{BEGIN pf_rimanenti_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN pf_rimanenti_fieldheader}
+	<b>Pf Rimanenti</b>
+	{END pf_rimanenti_fieldheader}
+</th>
+{END pf_rimanenti_fieldheadercolumn}
+	{BEGIN pf_last_reset_time_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN pf_last_reset_time_fieldheader}
+	<b>Pf Last Reset Time</b>
+	{END pf_last_reset_time_fieldheader}
+</th>
+{END pf_last_reset_time_fieldheadercolumn}
+	{BEGIN lev_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN lev_fieldheader}
+	<b>Lev</b>
+	{END lev_fieldheader}
+</th>
+{END lev_fieldheadercolumn}
+	{BEGIN xp_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN xp_fieldheader}
+	<b>Xp</b>
+	{END xp_fieldheader}
+</th>
+{END xp_fieldheadercolumn}
+	{BEGIN xp_next_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN xp_next_fieldheader}
+	<b>Xp Next</b>
+	{END xp_next_fieldheader}
+</th>
+{END xp_next_fieldheadercolumn}
+	{BEGIN id_gilda_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN id_gilda_fieldheader}
+	<b>Id Gilda</b>
+	{END id_gilda_fieldheader}
+</th>
+{END id_gilda_fieldheadercolumn}
+		
+			{END record_header}
+			<td class="runner-cr"><img src="images/spacer.gif"></td>
+			{BEGIN endrecordheader_block}
+			<td class="runner-cs">&nbsp;</td>
+			{END endrecordheader_block}
+		</tr>
+	{END grid_header}
+		</thead>
+		<tbody>	
+		{BEGIN grid_row}
+	<tr class="runner-row style1" {$rowattrs} {$rowstyle} {$rowstyle}>
+		<td class="runner-cl"></td>
+		{BEGIN grid_record}
+				{BEGIN id_fieldcolumn}
+<td  class="runner-cc {$id_class}" {$id_style}>
+	{$id_value}
+</td>
+{END id_fieldcolumn}
+	{BEGIN id_utente_fieldcolumn}
+<td  class="runner-cc {$id_utente_class}" {$id_utente_style}>
+	{$id_utente_value}
+</td>
+{END id_utente_fieldcolumn}
+	{BEGIN id_posto_fieldcolumn}
+<td  class="runner-cc {$id_posto_class}" {$id_posto_style}>
+	{$id_posto_value}
+</td>
+{END id_posto_fieldcolumn}
+	{BEGIN nome_fieldcolumn}
+<td  class="runner-cc {$nome_class}" {$nome_style}>
+	{$nome_value}
+</td>
+{END nome_fieldcolumn}
+	{BEGIN status_fieldcolumn}
+<td  class="runner-cc {$status_class}" {$status_style}>
+	{$status_value}
+</td>
+{END status_fieldcolumn}
+	{BEGIN att_fieldcolumn}
+<td  class="runner-cc {$att_class}" {$att_style}>
+	{$att_value}
+</td>
+{END att_fieldcolumn}
+	{BEGIN def_fieldcolumn}
+<td  class="runner-cc {$def_class}" {$def_style}>
+	{$def_value}
+</td>
+{END def_fieldcolumn}
+	{BEGIN cha_fieldcolumn}
+<td  class="runner-cc {$cha_class}" {$cha_style}>
+	{$cha_value}
+</td>
+{END cha_fieldcolumn}
+	{BEGIN mov_fieldcolumn}
+<td  class="runner-cc {$mov_class}" {$mov_style}>
+	{$mov_value}
+</td>
+{END mov_fieldcolumn}
+	{BEGIN mov_rimanenti_fieldcolumn}
+<td  class="runner-cc {$mov_rimanenti_class}" {$mov_rimanenti_style}>
+	{$mov_rimanenti_value}
+</td>
+{END mov_rimanenti_fieldcolumn}
+	{BEGIN mov_last_reset_time_fieldcolumn}
+<td  class="runner-cc {$mov_last_reset_time_class}" {$mov_last_reset_time_style}>
+	{$mov_last_reset_time_value}
+</td>
+{END mov_last_reset_time_fieldcolumn}
+	{BEGIN pf_fieldcolumn}
+<td  class="runner-cc {$pf_class}" {$pf_style}>
+	{$pf_value}
+</td>
+{END pf_fieldcolumn}
+	{BEGIN pf_rimanenti_fieldcolumn}
+<td  class="runner-cc {$pf_rimanenti_class}" {$pf_rimanenti_style}>
+	{$pf_rimanenti_value}
+</td>
+{END pf_rimanenti_fieldcolumn}
+	{BEGIN pf_last_reset_time_fieldcolumn}
+<td  class="runner-cc {$pf_last_reset_time_class}" {$pf_last_reset_time_style}>
+	{$pf_last_reset_time_value}
+</td>
+{END pf_last_reset_time_fieldcolumn}
+	{BEGIN lev_fieldcolumn}
+<td  class="runner-cc {$lev_class}" {$lev_style}>
+	{$lev_value}
+</td>
+{END lev_fieldcolumn}
+	{BEGIN xp_fieldcolumn}
+<td  class="runner-cc {$xp_class}" {$xp_style}>
+	{$xp_value}
+</td>
+{END xp_fieldcolumn}
+	{BEGIN xp_next_fieldcolumn}
+<td  class="runner-cc {$xp_next_class}" {$xp_next_style}>
+	{$xp_next_value}
+</td>
+{END xp_next_fieldcolumn}
+	{BEGIN id_gilda_fieldcolumn}
+<td  class="runner-cc {$id_gilda_class}" {$id_gilda_style}>
+	{$id_gilda_value}
+</td>
+{END id_gilda_fieldcolumn}
+
+		{END grid_record}
+		<td class="runner-cr"></td>
+		{BEGIN endrecord_block}
+		<td class="runner-cs">&nbsp;</td>
+		{END endrecord_block}
+	</tr>
+{END grid_row}
+										
+								<tr class="runner-bottomrow style1">
+									<td class="runner-cl"><img src="images/spacer.gif"></td>
+									{BEGIN record_footer}
+									{BEGIN id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END id_fieldfootercolumn}
+{BEGIN id_utente_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END id_utente_fieldfootercolumn}
+{BEGIN id_posto_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END id_posto_fieldfootercolumn}
+{BEGIN nome_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END nome_fieldfootercolumn}
+{BEGIN status_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END status_fieldfootercolumn}
+{BEGIN att_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END att_fieldfootercolumn}
+{BEGIN def_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END def_fieldfootercolumn}
+{BEGIN cha_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END cha_fieldfootercolumn}
+{BEGIN mov_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END mov_fieldfootercolumn}
+{BEGIN mov_rimanenti_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END mov_rimanenti_fieldfootercolumn}
+{BEGIN mov_last_reset_time_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END mov_last_reset_time_fieldfootercolumn}
+{BEGIN pf_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END pf_fieldfootercolumn}
+{BEGIN pf_rimanenti_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END pf_rimanenti_fieldfootercolumn}
+{BEGIN pf_last_reset_time_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END pf_last_reset_time_fieldfootercolumn}
+{BEGIN lev_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END lev_fieldfootercolumn}
+{BEGIN xp_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END xp_fieldfootercolumn}
+{BEGIN xp_next_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END xp_next_fieldfootercolumn}
+{BEGIN id_gilda_fieldfootercolumn}
+<td class="runner-cc runner-clast"></td>
+{END id_gilda_fieldfootercolumn}
+
+									{END record_footer}
+									<td class="runner-cr"><img src="images/spacer.gif"></td>
+									{BEGIN endrecordtotals_block}
+									<td class="runner-cs"></td>
+									{END endrecordtotals_block}
+								</tr>
+
+		</tbody>
+	</table>
+</div>	
+{END page}
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>

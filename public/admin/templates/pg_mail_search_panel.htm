@@ -1,0 +1,76 @@
+<div class="searchOptions bottomPanelBorder" {$srchOpt_attrs}>
+	
+	<!-- Search panel content -->
+	<div class="srchCritTop" style="display: none;">
+		Criteria:&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$all_checkbox}> {BEGIN all_checkbox_label}all{END all_checkbox_label}
+		&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$any_checkbox}> {BEGIN any_checkbox_label}any{END any_checkbox_label}
+	</div>
+	
+	<div class="addOption">
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideControlChooseMenu{$id}" class="runner-button" {$showHideCtrls_attrs}>Add field</a>
+		</span>
+		&nbsp;&nbsp;&nbsp;
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideSearchType{$id}" class="runner-button" {$showHideCtrlsOpt_attrs}>{$showHideOpt_mess}</a>
+		</span>
+	</div>
+	
+	<!-- choose controls div -->
+	<div class="runner-panel controlChooseMenu" {$controlChooseMenuDiv_attrs}>
+		{BEGIN addSearch_id}
+			<a href="#" id="addSearchControl_id" class="addSearchControl" {$addSearchControl_id_attrs}>Id</a><br>
+		{END addSearch_id}
+		{BEGIN addSearch_invia}
+			<a href="#" id="addSearchControl_invia" class="addSearchControl" {$addSearchControl_invia_attrs}>Invia</a><br>
+		{END addSearch_invia}
+		{BEGIN addSearch_ricevi}
+			<a href="#" id="addSearchControl_ricevi" class="addSearchControl" {$addSearchControl_ricevi_attrs}>Ricevi</a><br>
+		{END addSearch_ricevi}
+		{BEGIN addSearch_messaggio}
+			<a href="#" id="addSearchControl_messaggio" class="addSearchControl" {$addSearchControl_messaggio_attrs}>Messaggio</a><br>
+		{END addSearch_messaggio}
+		{BEGIN addSearch_soggetto}
+			<a href="#" id="addSearchControl_soggetto" class="addSearchControl" {$addSearchControl_soggetto_attrs}>Soggetto</a><br>
+		{END addSearch_soggetto}
+		{BEGIN addSearch_data}
+			<a href="#" id="addSearchControl_data" class="addSearchControl" {$addSearchControl_data_attrs}>Data</a><br>
+		{END addSearch_data}
+		{BEGIN addSearch_aperta}
+			<a href="#" id="addSearchControl_aperta" class="addSearchControl" {$addSearchControl_aperta_attrs}>Aperta</a><br>
+		{END addSearch_aperta}
+		{BEGIN addSearch_vista_invia}
+			<a href="#" id="addSearchControl_vista_invia" class="addSearchControl" {$addSearchControl_vista_invia_attrs}>Vista Invia</a><br>
+		{END addSearch_vista_invia}
+		{BEGIN addSearch_vista_ricevi}
+			<a href="#" id="addSearchControl_vista_ricevi" class="addSearchControl" {$addSearchControl_vista_ricevi_attrs}>Vista Ricevi</a><br>
+		{END addSearch_vista_ricevi}
+	</div>
+	
+	<table class="controlsBlock">
+	{BEGIN searchCtrlBlock}
+		<tr class="srchPanelRow" {$filterRow_attrs}>
+			<td class="srchPanelCell">{$delCtrlButt}</td>
+			<td class="srchPanelCell">{$fLabel}:&nbsp;</td>
+			<td class="srchPanelCell srchPanelCell2">
+				<div class="runner-searchtype">{$searchtype}</div>
+				<div class="runner-searchcontrol">{$searchcontrol}</div>
+				<div class="runner-searchcontrol">{$searchcontrol1}</div>
+		</tr>
+	{END searchCtrlBlock}
+	</table>
+	
+	<div class="bottomSearchButt" align="left" {$bottomSearchButt_attrs}>
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$searchbutton_attrs}>Search</a>
+		</span>
+	</div>
+</div>

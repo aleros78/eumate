@@ -1,0 +1,247 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			{BEGIN IEcssFiles}
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+			{END IEcssFiles}
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+{BEGIN container_master}
+<table class="runner-c runner-c-master" cellpadding="0" >
+<tr class="{$cheaderclass_master}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+{BEGIN mastertable_block}
+<td  class="runner-cc runner-bl runner-b-masterinfoprint" {$brickclass_masterinfoprint}><span>{$showmasterfile}
+</span></td>
+{END mastertable_block}
+
+<td class="runner-cc filler"></td>
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_master}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_master}
+
+
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+{BEGIN page}
+<h1>Ge Messaggi</h1>
+<span>
+{BEGIN page_number}
+Page {$pageno} of {$maxpages} 
+{END page_number}
+</span>
+
+	<div class="runner-s-grid">	
+	<table class="runner-c runner-c-grid" cellpadding="0">
+		<thead>
+		{BEGIN grid_header}
+		<tr class="runner-toprow style1">
+			<td class="runner-cl"><img src="images/spacer.gif"></td>
+			{BEGIN record_header}
+					{BEGIN id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN id_fieldheader}
+	<b>Id</b>
+	{END id_fieldheader}
+</th>
+{END id_fieldheadercolumn}
+	{BEGIN id_personaggio_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN id_personaggio_fieldheader}
+	<b>Id Personaggio</b>
+	{END id_personaggio_fieldheader}
+</th>
+{END id_personaggio_fieldheadercolumn}
+	{BEGIN id_gilda_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN id_gilda_fieldheader}
+	<b>Id Gilda</b>
+	{END id_gilda_fieldheader}
+</th>
+{END id_gilda_fieldheadercolumn}
+	{BEGIN id_posto_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN id_posto_fieldheader}
+	<b>Id Posto</b>
+	{END id_posto_fieldheader}
+</th>
+{END id_posto_fieldheadercolumn}
+	{BEGIN messaggio_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN messaggio_fieldheader}
+	<b>Messaggio</b>
+	{END messaggio_fieldheader}
+</th>
+{END messaggio_fieldheadercolumn}
+	{BEGIN data_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN data_fieldheader}
+	<b>Data</b>
+	{END data_fieldheader}
+</th>
+{END data_fieldheadercolumn}
+		
+			{END record_header}
+			<td class="runner-cr"><img src="images/spacer.gif"></td>
+			{BEGIN endrecordheader_block}
+			<td class="runner-cs">&nbsp;</td>
+			{END endrecordheader_block}
+		</tr>
+	{END grid_header}
+		</thead>
+		<tbody>	
+		{BEGIN grid_row}
+	<tr class="runner-row style1" {$rowattrs} {$rowstyle} {$rowstyle}>
+		<td class="runner-cl"></td>
+		{BEGIN grid_record}
+				{BEGIN id_fieldcolumn}
+<td  class="runner-cc {$id_class}" {$id_style}>
+	{$id_value}
+</td>
+{END id_fieldcolumn}
+	{BEGIN id_personaggio_fieldcolumn}
+<td  class="runner-cc {$id_personaggio_class}" {$id_personaggio_style}>
+	{$id_personaggio_value}
+</td>
+{END id_personaggio_fieldcolumn}
+	{BEGIN id_gilda_fieldcolumn}
+<td  class="runner-cc {$id_gilda_class}" {$id_gilda_style}>
+	{$id_gilda_value}
+</td>
+{END id_gilda_fieldcolumn}
+	{BEGIN id_posto_fieldcolumn}
+<td  class="runner-cc {$id_posto_class}" {$id_posto_style}>
+	{$id_posto_value}
+</td>
+{END id_posto_fieldcolumn}
+	{BEGIN messaggio_fieldcolumn}
+<td  class="runner-cc {$messaggio_class}" {$messaggio_style}>
+	{$messaggio_value}
+</td>
+{END messaggio_fieldcolumn}
+	{BEGIN data_fieldcolumn}
+<td  class="runner-cc {$data_class}" {$data_style}>
+	{$data_value}
+</td>
+{END data_fieldcolumn}
+
+		{END grid_record}
+		<td class="runner-cr"></td>
+		{BEGIN endrecord_block}
+		<td class="runner-cs">&nbsp;</td>
+		{END endrecord_block}
+	</tr>
+{END grid_row}
+										
+								<tr class="runner-bottomrow style1">
+									<td class="runner-cl"><img src="images/spacer.gif"></td>
+									{BEGIN record_footer}
+									{BEGIN id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END id_fieldfootercolumn}
+{BEGIN id_personaggio_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END id_personaggio_fieldfootercolumn}
+{BEGIN id_gilda_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END id_gilda_fieldfootercolumn}
+{BEGIN id_posto_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END id_posto_fieldfootercolumn}
+{BEGIN messaggio_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END messaggio_fieldfootercolumn}
+{BEGIN data_fieldfootercolumn}
+<td class="runner-cc runner-clast"></td>
+{END data_fieldfootercolumn}
+
+									{END record_footer}
+									<td class="runner-cr"><img src="images/spacer.gif"></td>
+									{BEGIN endrecordtotals_block}
+									<td class="runner-cs"></td>
+									{END endrecordtotals_block}
+								</tr>
+
+		</tbody>
+	</table>
+</div>	
+{END page}
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>

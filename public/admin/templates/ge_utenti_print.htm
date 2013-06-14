@@ -1,0 +1,322 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			{BEGIN IEcssFiles}
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+			{END IEcssFiles}
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+{BEGIN container_master}
+<table class="runner-c runner-c-master" cellpadding="0" >
+<tr class="{$cheaderclass_master}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+{BEGIN mastertable_block}
+<td  class="runner-cc runner-bl runner-b-masterinfoprint" {$brickclass_masterinfoprint}><span>{$showmasterfile}
+</span></td>
+{END mastertable_block}
+
+<td class="runner-cc filler"></td>
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_master}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_master}
+
+
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+{BEGIN page}
+<h1>Ge Utenti</h1>
+<span>
+{BEGIN page_number}
+Page {$pageno} of {$maxpages} 
+{END page_number}
+</span>
+
+	<div class="runner-s-grid">	
+	<table class="runner-c runner-c-grid" cellpadding="0">
+		<thead>
+		{BEGIN grid_header}
+		<tr class="runner-toprow style1">
+			<td class="runner-cl"><img src="images/spacer.gif"></td>
+			{BEGIN record_header}
+					{BEGIN id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN id_fieldheader}
+	<b>Id</b>
+	{END id_fieldheader}
+</th>
+{END id_fieldheadercolumn}
+	{BEGIN id_tipologia_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN id_tipologia_fieldheader}
+	<b>Id Tipologia</b>
+	{END id_tipologia_fieldheader}
+</th>
+{END id_tipologia_fieldheadercolumn}
+	{BEGIN nome_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN nome_fieldheader}
+	<b>Nome</b>
+	{END nome_fieldheader}
+</th>
+{END nome_fieldheadercolumn}
+	{BEGIN cognome_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN cognome_fieldheader}
+	<b>Cognome</b>
+	{END cognome_fieldheader}
+</th>
+{END cognome_fieldheadercolumn}
+	{BEGIN email_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN email_fieldheader}
+	<b>Email</b>
+	{END email_fieldheader}
+</th>
+{END email_fieldheadercolumn}
+	{BEGIN password_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN password_fieldheader}
+	<b>Password</b>
+	{END password_fieldheader}
+</th>
+{END password_fieldheadercolumn}
+	{BEGIN data_registrazione_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN data_registrazione_fieldheader}
+	<b>Data Registrazione</b>
+	{END data_registrazione_fieldheader}
+</th>
+{END data_registrazione_fieldheadercolumn}
+	{BEGIN ip_registrazione_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN ip_registrazione_fieldheader}
+	<b>Ip Registrazione</b>
+	{END ip_registrazione_fieldheader}
+</th>
+{END ip_registrazione_fieldheadercolumn}
+	{BEGIN numero_login_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN numero_login_fieldheader}
+	<b>Numero Login</b>
+	{END numero_login_fieldheader}
+</th>
+{END numero_login_fieldheadercolumn}
+	{BEGIN ip_ultimo_login_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN ip_ultimo_login_fieldheader}
+	<b>Ip Ultimo Login</b>
+	{END ip_ultimo_login_fieldheader}
+</th>
+{END ip_ultimo_login_fieldheadercolumn}
+	{BEGIN attivo_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN attivo_fieldheader}
+	<b>Attivo</b>
+	{END attivo_fieldheader}
+</th>
+{END attivo_fieldheadercolumn}
+		
+			{END record_header}
+			<td class="runner-cr"><img src="images/spacer.gif"></td>
+			{BEGIN endrecordheader_block}
+			<td class="runner-cs">&nbsp;</td>
+			{END endrecordheader_block}
+		</tr>
+	{END grid_header}
+		</thead>
+		<tbody>	
+		{BEGIN grid_row}
+	<tr class="runner-row style1" {$rowattrs} {$rowstyle} {$rowstyle}>
+		<td class="runner-cl"></td>
+		{BEGIN grid_record}
+				{BEGIN id_fieldcolumn}
+<td  class="runner-cc {$id_class}" {$id_style}>
+	{$id_value}
+</td>
+{END id_fieldcolumn}
+	{BEGIN id_tipologia_fieldcolumn}
+<td  class="runner-cc {$id_tipologia_class}" {$id_tipologia_style}>
+	{$id_tipologia_value}
+</td>
+{END id_tipologia_fieldcolumn}
+	{BEGIN nome_fieldcolumn}
+<td  class="runner-cc {$nome_class}" {$nome_style}>
+	{$nome_value}
+</td>
+{END nome_fieldcolumn}
+	{BEGIN cognome_fieldcolumn}
+<td  class="runner-cc {$cognome_class}" {$cognome_style}>
+	{$cognome_value}
+</td>
+{END cognome_fieldcolumn}
+	{BEGIN email_fieldcolumn}
+<td  class="runner-cc {$email_class}" {$email_style}>
+	{$email_value}
+</td>
+{END email_fieldcolumn}
+	{BEGIN password_fieldcolumn}
+<td  class="runner-cc {$password_class}" {$password_style}>
+	{$password_value}
+</td>
+{END password_fieldcolumn}
+	{BEGIN data_registrazione_fieldcolumn}
+<td  class="runner-cc {$data_registrazione_class}" {$data_registrazione_style}>
+	{$data_registrazione_value}
+</td>
+{END data_registrazione_fieldcolumn}
+	{BEGIN ip_registrazione_fieldcolumn}
+<td  class="runner-cc {$ip_registrazione_class}" {$ip_registrazione_style}>
+	{$ip_registrazione_value}
+</td>
+{END ip_registrazione_fieldcolumn}
+	{BEGIN numero_login_fieldcolumn}
+<td  class="runner-cc {$numero_login_class}" {$numero_login_style}>
+	{$numero_login_value}
+</td>
+{END numero_login_fieldcolumn}
+	{BEGIN ip_ultimo_login_fieldcolumn}
+<td  class="runner-cc {$ip_ultimo_login_class}" {$ip_ultimo_login_style}>
+	{$ip_ultimo_login_value}
+</td>
+{END ip_ultimo_login_fieldcolumn}
+	{BEGIN attivo_fieldcolumn}
+<td  class="runner-cc {$attivo_class}" {$attivo_style}>
+	{$attivo_value}
+</td>
+{END attivo_fieldcolumn}
+
+		{END grid_record}
+		<td class="runner-cr"></td>
+		{BEGIN endrecord_block}
+		<td class="runner-cs">&nbsp;</td>
+		{END endrecord_block}
+	</tr>
+{END grid_row}
+										
+								<tr class="runner-bottomrow style1">
+									<td class="runner-cl"><img src="images/spacer.gif"></td>
+									{BEGIN record_footer}
+									{BEGIN id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END id_fieldfootercolumn}
+{BEGIN id_tipologia_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END id_tipologia_fieldfootercolumn}
+{BEGIN nome_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END nome_fieldfootercolumn}
+{BEGIN cognome_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END cognome_fieldfootercolumn}
+{BEGIN email_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END email_fieldfootercolumn}
+{BEGIN password_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END password_fieldfootercolumn}
+{BEGIN data_registrazione_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END data_registrazione_fieldfootercolumn}
+{BEGIN ip_registrazione_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END ip_registrazione_fieldfootercolumn}
+{BEGIN numero_login_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END numero_login_fieldfootercolumn}
+{BEGIN ip_ultimo_login_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END ip_ultimo_login_fieldfootercolumn}
+{BEGIN attivo_fieldfootercolumn}
+<td class="runner-cc runner-clast"></td>
+{END attivo_fieldfootercolumn}
+
+									{END record_footer}
+									<td class="runner-cr"><img src="images/spacer.gif"></td>
+									{BEGIN endrecordtotals_block}
+									<td class="runner-cs"></td>
+									{END endrecordtotals_block}
+								</tr>
+
+		</tbody>
+	</table>
+</div>	
+{END page}
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>

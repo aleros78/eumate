@@ -1,0 +1,109 @@
+<div {$pageattrs}>
+
+{BEGIN container_dcount}
+<table class="runner-c runner-c-dcount" cellpadding="0" >
+<tr class="{$cheaderclass_dcount}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+
+
+<tr  class="runner-row style1 runner-b-detailspreviewheader {$brickclass_detailspreviewheader}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" ><b>Pl Posti</b>
+</td><td class="runner-cr"></td></tr>
+
+
+
+<tr  class="runner-row style1 runner-b-detailspreviewdetailsfount {$brickclass_detailspreviewdetailsfount}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" >Details found: <strong>{$row_count}.</strong>
+</td><td class="runner-cr"></td></tr>
+
+
+{BEGIN display_first}
+<tr  class="runner-row style1 runner-b-detailspreviewdispfirst {$brickclass_detailspreviewdispfirst}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" >Displaying first: <strong>{$display_count}</strong>.
+</td><td class="runner-cr"></td></tr>{END display_first}
+
+
+<tr class="{$cfooterclass_dcount}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_dcount}
+
+
+
+{BEGIN container_detailspreviewgrid}
+
+
+{BEGIN details_data}
+<table class="runner-c runner-c-detailspreviewgrid runner-b-detailspreviewgrid">
+	<tr  class="runner-toprow style1">
+		<th class="runner-cl"><img src="images/spacer.gif"></th>
+		<th class="runner-cc ">Id</th>
+		<th class="runner-cc ">Id Location</th>
+		<th class="runner-cc ">Id Citta</th>
+		<th class="runner-cc ">Id Regione</th>
+		<th class="runner-cc ">Posto</th>
+		<th class="runner-cc ">Nome It</th>
+		<th class="runner-cc ">Nome En</th>
+		<th class="runner-cc ">Descrizione It</th>
+		<th class="runner-cc ">Descrizione En</th>
+		<th class="runner-cc ">Storia It</th>
+		<th class="runner-cc ">Storia En</th>
+		<th class="runner-cc ">Back It</th>
+		<th class="runner-cc ">Back En</th>
+		<th class="runner-cc ">Note It</th>
+		<th class="runner-cc ">Note En</th>
+		<th class="runner-cc runner-clast">Attivo</th>
+		<th class="runner-cr"><img src="images/spacer.gif"></th>
+	</tr>
+	{BEGIN details_row}
+	<tr class="runner-row style1">
+		<td class="runner-cl"><img src="images/spacer.gif"></td>
+		<td class="runner-cc ">{$id_value}</td>
+		<td class="runner-cc ">{$id_location_value}</td>
+		<td class="runner-cc ">{$id_citta_value}</td>
+		<td class="runner-cc ">{$id_regione_value}</td>
+		<td class="runner-cc ">{$posto_value}</td>
+		<td class="runner-cc ">{$nome_it_value}</td>
+		<td class="runner-cc ">{$nome_en_value}</td>
+		<td class="runner-cc ">{$descrizione_it_value}</td>
+		<td class="runner-cc ">{$descrizione_en_value}</td>
+		<td class="runner-cc ">{$storia_it_value}</td>
+		<td class="runner-cc ">{$storia_en_value}</td>
+		<td class="runner-cc ">{$back_it_value}</td>
+		<td class="runner-cc ">{$back_en_value}</td>
+		<td class="runner-cc ">{$note_it_value}</td>
+		<td class="runner-cc ">{$note_en_value}</td>
+		<td class="runner-cc runner-clast">{$attivo_value}</td>
+		<td class="runner-cr"><img src="images/spacer.gif"></td>
+	</tr>
+	{END details_row}
+	<tr class="runner-bottomrow style1">
+		<td class="runner-cl"><img src="images/spacer.gif"></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc runner-clast"></td>
+		<td class="runner-cr"><img src="images/spacer.gif"></td>
+	</tr>
+</table>
+
+{END details_data}
+
+
+
+{END container_detailspreviewgrid}
+
+</div>

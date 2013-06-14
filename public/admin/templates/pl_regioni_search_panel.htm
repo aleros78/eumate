@@ -1,0 +1,88 @@
+<div class="searchOptions bottomPanelBorder" {$srchOpt_attrs}>
+	
+	<!-- Search panel content -->
+	<div class="srchCritTop" style="display: none;">
+		Criteria:&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$all_checkbox}> {BEGIN all_checkbox_label}all{END all_checkbox_label}
+		&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$any_checkbox}> {BEGIN any_checkbox_label}any{END any_checkbox_label}
+	</div>
+	
+	<div class="addOption">
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideControlChooseMenu{$id}" class="runner-button" {$showHideCtrls_attrs}>Add field</a>
+		</span>
+		&nbsp;&nbsp;&nbsp;
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideSearchType{$id}" class="runner-button" {$showHideCtrlsOpt_attrs}>{$showHideOpt_mess}</a>
+		</span>
+	</div>
+	
+	<!-- choose controls div -->
+	<div class="runner-panel controlChooseMenu" {$controlChooseMenuDiv_attrs}>
+		{BEGIN addSearch_id}
+			<a href="#" id="addSearchControl_id" class="addSearchControl" {$addSearchControl_id_attrs}>Id</a><br>
+		{END addSearch_id}
+		{BEGIN addSearch_regione}
+			<a href="#" id="addSearchControl_regione" class="addSearchControl" {$addSearchControl_regione_attrs}>Regione</a><br>
+		{END addSearch_regione}
+		{BEGIN addSearch_nome_it}
+			<a href="#" id="addSearchControl_nome_it" class="addSearchControl" {$addSearchControl_nome_it_attrs}>Nome It</a><br>
+		{END addSearch_nome_it}
+		{BEGIN addSearch_nome_en}
+			<a href="#" id="addSearchControl_nome_en" class="addSearchControl" {$addSearchControl_nome_en_attrs}>Nome En</a><br>
+		{END addSearch_nome_en}
+		{BEGIN addSearch_descrizione_it}
+			<a href="#" id="addSearchControl_descrizione_it" class="addSearchControl" {$addSearchControl_descrizione_it_attrs}>Descrizione It</a><br>
+		{END addSearch_descrizione_it}
+		{BEGIN addSearch_descrizione_en}
+			<a href="#" id="addSearchControl_descrizione_en" class="addSearchControl" {$addSearchControl_descrizione_en_attrs}>Descrizione En</a><br>
+		{END addSearch_descrizione_en}
+		{BEGIN addSearch_storia_it}
+			<a href="#" id="addSearchControl_storia_it" class="addSearchControl" {$addSearchControl_storia_it_attrs}>Storia It</a><br>
+		{END addSearch_storia_it}
+		{BEGIN addSearch_storia_en}
+			<a href="#" id="addSearchControl_storia_en" class="addSearchControl" {$addSearchControl_storia_en_attrs}>Storia En</a><br>
+		{END addSearch_storia_en}
+		{BEGIN addSearch_back_it}
+			<a href="#" id="addSearchControl_back_it" class="addSearchControl" {$addSearchControl_back_it_attrs}>Back It</a><br>
+		{END addSearch_back_it}
+		{BEGIN addSearch_back_en}
+			<a href="#" id="addSearchControl_back_en" class="addSearchControl" {$addSearchControl_back_en_attrs}>Back En</a><br>
+		{END addSearch_back_en}
+		{BEGIN addSearch_note_it}
+			<a href="#" id="addSearchControl_note_it" class="addSearchControl" {$addSearchControl_note_it_attrs}>Note It</a><br>
+		{END addSearch_note_it}
+		{BEGIN addSearch_note_en}
+			<a href="#" id="addSearchControl_note_en" class="addSearchControl" {$addSearchControl_note_en_attrs}>Note En</a><br>
+		{END addSearch_note_en}
+		{BEGIN addSearch_attivo}
+			<a href="#" id="addSearchControl_attivo" class="addSearchControl" {$addSearchControl_attivo_attrs}>Attivo</a><br>
+		{END addSearch_attivo}
+	</div>
+	
+	<table class="controlsBlock">
+	{BEGIN searchCtrlBlock}
+		<tr class="srchPanelRow" {$filterRow_attrs}>
+			<td class="srchPanelCell">{$delCtrlButt}</td>
+			<td class="srchPanelCell">{$fLabel}:&nbsp;</td>
+			<td class="srchPanelCell srchPanelCell2">
+				<div class="runner-searchtype">{$searchtype}</div>
+				<div class="runner-searchcontrol">{$searchcontrol}</div>
+				<div class="runner-searchcontrol">{$searchcontrol1}</div>
+		</tr>
+	{END searchCtrlBlock}
+	</table>
+	
+	<div class="bottomSearchButt" align="left" {$bottomSearchButt_attrs}>
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$searchbutton_attrs}>Search</a>
+		</span>
+	</div>
+</div>

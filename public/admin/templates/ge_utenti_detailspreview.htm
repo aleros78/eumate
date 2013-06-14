@@ -1,0 +1,94 @@
+<div {$pageattrs}>
+
+{BEGIN container_dcount}
+<table class="runner-c runner-c-dcount" cellpadding="0" >
+<tr class="{$cheaderclass_dcount}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+
+
+<tr  class="runner-row style1 runner-b-detailspreviewheader {$brickclass_detailspreviewheader}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" ><b>Ge Utenti</b>
+</td><td class="runner-cr"></td></tr>
+
+
+
+<tr  class="runner-row style1 runner-b-detailspreviewdetailsfount {$brickclass_detailspreviewdetailsfount}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" >Details found: <strong>{$row_count}.</strong>
+</td><td class="runner-cr"></td></tr>
+
+
+{BEGIN display_first}
+<tr  class="runner-row style1 runner-b-detailspreviewdispfirst {$brickclass_detailspreviewdispfirst}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" >Displaying first: <strong>{$display_count}</strong>.
+</td><td class="runner-cr"></td></tr>{END display_first}
+
+
+<tr class="{$cfooterclass_dcount}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_dcount}
+
+
+
+{BEGIN container_detailspreviewgrid}
+
+
+{BEGIN details_data}
+<table class="runner-c runner-c-detailspreviewgrid runner-b-detailspreviewgrid">
+	<tr  class="runner-toprow style1">
+		<th class="runner-cl"><img src="images/spacer.gif"></th>
+		<th class="runner-cc ">Id</th>
+		<th class="runner-cc ">Id Tipologia</th>
+		<th class="runner-cc ">Nome</th>
+		<th class="runner-cc ">Cognome</th>
+		<th class="runner-cc ">Email</th>
+		<th class="runner-cc ">Password</th>
+		<th class="runner-cc ">Data Registrazione</th>
+		<th class="runner-cc ">Ip Registrazione</th>
+		<th class="runner-cc ">Numero Login</th>
+		<th class="runner-cc ">Ip Ultimo Login</th>
+		<th class="runner-cc runner-clast">Attivo</th>
+		<th class="runner-cr"><img src="images/spacer.gif"></th>
+	</tr>
+	{BEGIN details_row}
+	<tr class="runner-row style1">
+		<td class="runner-cl"><img src="images/spacer.gif"></td>
+		<td class="runner-cc ">{$id_value}</td>
+		<td class="runner-cc ">{$id_tipologia_value}</td>
+		<td class="runner-cc ">{$nome_value}</td>
+		<td class="runner-cc ">{$cognome_value}</td>
+		<td class="runner-cc ">{$email_value}</td>
+		<td class="runner-cc ">{$password_value}</td>
+		<td class="runner-cc ">{$data_registrazione_value}</td>
+		<td class="runner-cc ">{$ip_registrazione_value}</td>
+		<td class="runner-cc ">{$numero_login_value}</td>
+		<td class="runner-cc ">{$ip_ultimo_login_value}</td>
+		<td class="runner-cc runner-clast">{$attivo_value}</td>
+		<td class="runner-cr"><img src="images/spacer.gif"></td>
+	</tr>
+	{END details_row}
+	<tr class="runner-bottomrow style1">
+		<td class="runner-cl"><img src="images/spacer.gif"></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc runner-clast"></td>
+		<td class="runner-cr"><img src="images/spacer.gif"></td>
+	</tr>
+</table>
+
+{END details_data}
+
+
+
+{END container_detailspreviewgrid}
+
+</div>

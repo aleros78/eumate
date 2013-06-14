@@ -1,0 +1,292 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			{BEGIN IEcssFiles}
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+			{END IEcssFiles}
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+{BEGIN container_master}
+<table class="runner-c runner-c-master" cellpadding="0" >
+<tr class="{$cheaderclass_master}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+{BEGIN mastertable_block}
+<td  class="runner-cc runner-bl runner-b-masterinfoprint" {$brickclass_masterinfoprint}><span>{$showmasterfile}
+</span></td>
+{END mastertable_block}
+
+<td class="runner-cc filler"></td>
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_master}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_master}
+
+
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+{BEGIN page}
+<h1>Pg Mail</h1>
+<span>
+{BEGIN page_number}
+Page {$pageno} of {$maxpages} 
+{END page_number}
+</span>
+
+	<div class="runner-s-grid">	
+	<table class="runner-c runner-c-grid" cellpadding="0">
+		<thead>
+		{BEGIN grid_header}
+		<tr class="runner-toprow style1">
+			<td class="runner-cl"><img src="images/spacer.gif"></td>
+			{BEGIN record_header}
+					{BEGIN id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN id_fieldheader}
+	<b>Id</b>
+	{END id_fieldheader}
+</th>
+{END id_fieldheadercolumn}
+	{BEGIN invia_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN invia_fieldheader}
+	<b>Invia</b>
+	{END invia_fieldheader}
+</th>
+{END invia_fieldheadercolumn}
+	{BEGIN ricevi_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN ricevi_fieldheader}
+	<b>Ricevi</b>
+	{END ricevi_fieldheader}
+</th>
+{END ricevi_fieldheadercolumn}
+	{BEGIN messaggio_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN messaggio_fieldheader}
+	<b>Messaggio</b>
+	{END messaggio_fieldheader}
+</th>
+{END messaggio_fieldheadercolumn}
+	{BEGIN soggetto_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN soggetto_fieldheader}
+	<b>Soggetto</b>
+	{END soggetto_fieldheader}
+</th>
+{END soggetto_fieldheadercolumn}
+	{BEGIN data_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN data_fieldheader}
+	<b>Data</b>
+	{END data_fieldheader}
+</th>
+{END data_fieldheadercolumn}
+	{BEGIN aperta_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN aperta_fieldheader}
+	<b>Aperta</b>
+	{END aperta_fieldheader}
+</th>
+{END aperta_fieldheadercolumn}
+	{BEGIN vista_invia_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN vista_invia_fieldheader}
+	<b>Vista Invia</b>
+	{END vista_invia_fieldheader}
+</th>
+{END vista_invia_fieldheadercolumn}
+	{BEGIN vista_ricevi_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN vista_ricevi_fieldheader}
+	<b>Vista Ricevi</b>
+	{END vista_ricevi_fieldheader}
+</th>
+{END vista_ricevi_fieldheadercolumn}
+		
+			{END record_header}
+			<td class="runner-cr"><img src="images/spacer.gif"></td>
+			{BEGIN endrecordheader_block}
+			<td class="runner-cs">&nbsp;</td>
+			{END endrecordheader_block}
+		</tr>
+	{END grid_header}
+		</thead>
+		<tbody>	
+		{BEGIN grid_row}
+	<tr class="runner-row style1" {$rowattrs} {$rowstyle} {$rowstyle}>
+		<td class="runner-cl"></td>
+		{BEGIN grid_record}
+				{BEGIN id_fieldcolumn}
+<td  class="runner-cc {$id_class}" {$id_style}>
+	{$id_value}
+</td>
+{END id_fieldcolumn}
+	{BEGIN invia_fieldcolumn}
+<td  class="runner-cc {$invia_class}" {$invia_style}>
+	{$invia_value}
+</td>
+{END invia_fieldcolumn}
+	{BEGIN ricevi_fieldcolumn}
+<td  class="runner-cc {$ricevi_class}" {$ricevi_style}>
+	{$ricevi_value}
+</td>
+{END ricevi_fieldcolumn}
+	{BEGIN messaggio_fieldcolumn}
+<td  class="runner-cc {$messaggio_class}" {$messaggio_style}>
+	{$messaggio_value}
+</td>
+{END messaggio_fieldcolumn}
+	{BEGIN soggetto_fieldcolumn}
+<td  class="runner-cc {$soggetto_class}" {$soggetto_style}>
+	{$soggetto_value}
+</td>
+{END soggetto_fieldcolumn}
+	{BEGIN data_fieldcolumn}
+<td  class="runner-cc {$data_class}" {$data_style}>
+	{$data_value}
+</td>
+{END data_fieldcolumn}
+	{BEGIN aperta_fieldcolumn}
+<td  class="runner-cc {$aperta_class}" {$aperta_style}>
+	{$aperta_value}
+</td>
+{END aperta_fieldcolumn}
+	{BEGIN vista_invia_fieldcolumn}
+<td  class="runner-cc {$vista_invia_class}" {$vista_invia_style}>
+	{$vista_invia_value}
+</td>
+{END vista_invia_fieldcolumn}
+	{BEGIN vista_ricevi_fieldcolumn}
+<td  class="runner-cc {$vista_ricevi_class}" {$vista_ricevi_style}>
+	{$vista_ricevi_value}
+</td>
+{END vista_ricevi_fieldcolumn}
+
+		{END grid_record}
+		<td class="runner-cr"></td>
+		{BEGIN endrecord_block}
+		<td class="runner-cs">&nbsp;</td>
+		{END endrecord_block}
+	</tr>
+{END grid_row}
+										
+								<tr class="runner-bottomrow style1">
+									<td class="runner-cl"><img src="images/spacer.gif"></td>
+									{BEGIN record_footer}
+									{BEGIN id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END id_fieldfootercolumn}
+{BEGIN invia_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END invia_fieldfootercolumn}
+{BEGIN ricevi_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END ricevi_fieldfootercolumn}
+{BEGIN messaggio_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END messaggio_fieldfootercolumn}
+{BEGIN soggetto_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END soggetto_fieldfootercolumn}
+{BEGIN data_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END data_fieldfootercolumn}
+{BEGIN aperta_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END aperta_fieldfootercolumn}
+{BEGIN vista_invia_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END vista_invia_fieldfootercolumn}
+{BEGIN vista_ricevi_fieldfootercolumn}
+<td class="runner-cc runner-clast"></td>
+{END vista_ricevi_fieldfootercolumn}
+
+									{END record_footer}
+									<td class="runner-cr"><img src="images/spacer.gif"></td>
+									{BEGIN endrecordtotals_block}
+									<td class="runner-cs"></td>
+									{END endrecordtotals_block}
+								</tr>
+
+		</tbody>
+	</table>
+</div>	
+{END page}
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>
