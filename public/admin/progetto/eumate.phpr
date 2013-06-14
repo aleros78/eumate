@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<project app="PHPRunner" version="6.2" build="15275">
+	<tables />
+	<m_layoutManager>
+		<projectLayout>Amsterdam</projectLayout>
+		<pageTypeOverrides />
+		<pageOverrides />
+		<tabOverrides />
+	</m_layoutManager>
+	<m_styleManager>
+		<projectStyle>Bold</projectStyle>
+		<projectColors>BlueWave</projectColors>
+		<tableOverrides />
+		<pageOverrides />
+		<tabOverrides />
+	</m_styleManager>
+	<AuditTrailSettings>
+		<LoggingMode>0</LoggingMode>
+		<sLogTable></sLogTable>
+		<sLogFile>audit.log</sLogFile>
+		<bLogSecurityActions>0</bLogSecurityActions>
+		<bTimeoutAfterUnsuccessfulLogin>0</bTimeoutAfterUnsuccessfulLogin>
+		<bEnableLocking>0</bEnableLocking>
+		<sLockingTable></sLockingTable>
+	</AuditTrailSettings>
+	<m_controlHandlers />
+	<m_arrEventHandlers />
+	<m_ProjectLabels>
+		<m_arrLanguageLabels>
+			<v>
+				<m_strLanguage>English</m_strLanguage>
+				<m_arrTableLabels />
+			</v>
+		</m_arrLanguageLabels>
+	</m_ProjectLabels>
+	<CustomLabels />
+	<databaseinfo>
+		<dbtables />
+		<m_strCacheConnString></m_strCacheConnString>
+	</databaseinfo>
+	<UserGroups />
+	<m_strLCID>1040</m_strLCID>
+	<m_nCodepage>65001</m_nCodepage>
+	<m_strCharset>utf-8</m_strCharset>
+	<m_strDefaultLanguage>English</m_strDefaultLanguage>
+	<m_arrLanguages>
+		<v>English</v>
+	</m_arrLanguages>
+	<Registration>
+		<m_bNewUserPage>0</m_bNewUserPage>
+		<m_bNotifyUser>0</m_bNotifyUser>
+		<m_bNotifyAdmin>0</m_bNotifyAdmin>
+		<m_strAdminEmail></m_strAdminEmail>
+		<m_bRemindPwdPage>0</m_bRemindPwdPage>
+		<m_bChangePwdPage>0</m_bChangePwdPage>
+		<m_arrUserFields />
+		<m_bEncryptPasswords>0</m_bEncryptPasswords>
+		<m_bCaseInsensitiveLogin>0</m_bCaseInsensitiveLogin>
+		<m_strUserEmailField></m_strUserEmailField>
+		<m_strFromEmail></m_strFromEmail>
+		<m_strSMTPServer>localhost</m_strSMTPServer>
+		<m_strSMTPPort>25</m_strSMTPPort>
+		<m_strSMTPUser></m_strSMTPUser>
+		<m_strSMTPPassword></m_strSMTPPassword>
+		<m_strActivationField></m_strActivationField>
+		<m_bSendActivationLink>0</m_bSendActivationLink>
+		<m_bStrongPassword>0</m_bStrongPassword>
+		<m_nPwdLen>8</m_nPwdLen>
+		<m_nPwdUnique>4</m_nPwdUnique>
+		<m_nPwdDigits>2</m_nPwdDigits>
+		<m_bPwdUpperLower>0</m_bPwdUpperLower>
+		<m_bCustomSMTP>0</m_bCustomSMTP>
+		<m_bUseBuiltInMailer>0</m_bUseBuiltInMailer>
+	</Registration>
+	<BuildInfo>
+		<m_nBuildTimeLow>0</m_nBuildTimeLow>
+		<m_nBuildTimeHigh>0</m_nBuildTimeHigh>
+		<nonProcessFiles />
+		<m_bCompressJs>1</m_bCompressJs>
+		<builtFiles />
+		<m_builtDBTables />
+	</BuildInfo>
+	<m_strAppUser>PHPRunner 6.2</m_strAppUser>
+	<m_controlLinks />
+	<m_deletedLinks />
+	<m_bDynamicPermissions>0</m_bDynamicPermissions>
+	<m_strUGPrefix></m_strUGPrefix>
+	<m_strLogin></m_strLogin>
+	<m_strPwd></m_strPwd>
+	<m_strConnectionString></m_strConnectionString>
+	<m_bUseEncrypt>0</m_bUseEncrypt>
+	<m_strGoogleApiKey></m_strGoogleApiKey>
+	<m_bCreateLoginPage>0</m_bCreateLoginPage>
+	<m_nLoginMethod>0</m_nLoginMethod>
+	<m_strUserName></m_strUserName>
+	<m_strPassword></m_strPassword>
+	<m_strLoginTable></m_strLoginTable>
+	<m_strUserNameField></m_strUserNameField>
+	<m_strDisplayNameField></m_strDisplayNameField>
+	<m_strPasswordField></m_strPasswordField>
+	<m_strUserGroupField></m_strUserGroupField>
+	<m_bGuestLogin>0</m_bGuestLogin>
+	<m_bFacebookLogin>0</m_bFacebookLogin>
+	<m_strFacebookAppId></m_strFacebookAppId>
+	<m_strFacebookSecretId></m_strFacebookSecretId>
+	<m_nEncryptMode>0</m_nEncryptMode>
+	<m_strEncryptKey></m_strEncryptKey>
+	<m_ADDomain></m_ADDomain>
+	<m_ADServer></m_ADServer>
+	<m_ADAdmins />
+	<m_ADSingleSignOn>0</m_ADSingleSignOn>
+	<m_ADLogin></m_ADLogin>
+	<m_ADPassword></m_ADPassword>
+	<m_bPre72Project>0</m_bPre72Project>
+	<m_bAdminUser>0</m_bAdminUser>
+	<m_strAdminUserID></m_strAdminUserID>
+	<m_securityBusinessTemplate></m_securityBusinessTemplate>
+	<m_strOutputDir>T:\eumate\app\public\admin\progetto\output</m_strOutputDir>
+	<m_strDBPath>db</m_strDBPath>
+	<m_bUseServerMapPath>1</m_bUseServerMapPath>
+	<m_strURL></m_strURL>
+	<m_compressJSFiles>1</m_compressJSFiles>
+	<m_bViewPDF>0</m_bViewPDF>
+	<m_strRTEType></m_strRTEType>
+	<m_strTempDir>tmp</m_strTempDir>
+	<m_strMYSQLNames></m_strMYSQLNames>
+	<m_nDotNetLanguage>1</m_nDotNetLanguage>
+	<m_customFiles />
+	<m_mobileFiles />
+	<m_overridenFiles />
+	<InlineMenu>0</InlineMenu>
+	<m_bSection508Compatibility>0</m_bSection508Compatibility>
+	<m_bOldMysqlLib>0</m_bOldMysqlLib>
+	<m_bWebReports>0</m_bWebReports>
+	<m_strWRAdminPassword>webreports</m_strWRAdminPassword>
+	<m_projectBuildNumber>0</m_projectBuildNumber>
+	<m_FTPlocation></m_FTPlocation>
+	<m_FrontPagelocation></m_FrontPagelocation>
+	<FTPFiles />
+	<m_lastDbSyncTime></m_lastDbSyncTime>
+	<m_arrRegisterTabs />
+	<m_CustomDBConnections />
+	<m_bDebug>0</m_bDebug>
+	<m_nDefaultDecimalDigits>2</m_nDefaultDecimalDigits>
+	<m_nDefaultInitialYearFactor>100</m_nDefaultInitialYearFactor>
+	<m_nDefaultLastYearFactor>10</m_nDefaultLastYearFactor>
+	<m_strCustomDBConnString></m_strCustomDBConnString>
+	<m_bBuildMobile>0</m_bBuildMobile>
+	<m_projectCRC>0</m_projectCRC>
+	<viewPluginsWithJS />
+	<m_groups_groupid></m_groups_groupid>
+	<m_groups_label></m_groups_label>
+	<m_members_username></m_members_username>
+	<m_members_groupid></m_members_groupid>
+	<m_rights_tablename></m_rights_tablename>
+	<m_rights_groupid></m_rights_groupid>
+	<m_rights_accessmask></m_rights_accessmask>
+	<MenuNodes />
+	<m_nDatabaseType>0</m_nDatabaseType>
+	<m_strDatabaseType>0</m_strDatabaseType>
+	<m_connStringType></m_connStringType>
+	<m_strODBCString>DRIVER={MySQL ODBC 3.51 Driver};Server=localhost;Uid=root;Pwd=root;OPTION=3</m_strODBCString>
+	<m_strODBCUID>root</m_strODBCUID>
+	<m_strODBCPWD>root</m_strODBCPWD>
+	<m_strUGRights>ugrights</m_strUGRights>
+	<m_strUGMembers>ugmembers</m_strUGMembers>
+	<m_strUGGroups>uggroups</m_strUGGroups>
+	<m_cLeftWrap>`</m_cLeftWrap>
+	<m_cRightWrap>`</m_cRightWrap>
+</project>
