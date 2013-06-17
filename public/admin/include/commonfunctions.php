@@ -178,8 +178,6 @@ function checkTableName($shortTName, $type=false)
 	if (!$shortTName)
 		return false;
 	
-	if ("ge_messaggi" == $shortTName && ($type===false || ($type!==false && $type == 0)))
-		return true;
 	if ("ge_testo" == $shortTName && ($type===false || ($type!==false && $type == 0)))
 		return true;
 	if ("ge_utenti" == $shortTName && ($type===false || ($type!==false && $type == 0)))
@@ -205,6 +203,8 @@ function checkTableName($shortTName, $type=false)
 	if ("vv_config_var" == $shortTName && ($type===false || ($type!==false && $type == 0)))
 		return true;
 	if ("vv_tipologia_utenti" == $shortTName && ($type===false || ($type!==false && $type == 0)))
+		return true;
+	if ("pg_messaggi" == $shortTName && ($type===false || ($type!==false && $type == 0)))
 		return true;
 	return false;
 }
@@ -239,7 +239,6 @@ function GetEmailField($table = "")
 function GetTablesList($pdfMode = false)
 {
 	$arr = array();
-		$arr[]="ge_messaggi";
 		$arr[]="ge_testo";
 		$arr[]="ge_utenti";
 		$arr[]="pg_mail";
@@ -253,6 +252,7 @@ function GetTablesList($pdfMode = false)
 		$arr[]="vv_azioni_lista";
 		$arr[]="vv_config_var";
 		$arr[]="vv_tipologia_utenti";
+		$arr[]="pg_messaggi";
 	return $arr;
 }
 
@@ -1379,10 +1379,6 @@ function GetUserPermissions($table="")
 	if(!$table)
 		$table = $strTableName;
 	$permissions = "";
-	if($table=="ge_messaggi")
-	{
-			$permissions =  "ADESPIM";
-	}
 	if($table=="ge_testo")
 	{
 			$permissions =  "ADESPIM";
@@ -1432,6 +1428,10 @@ function GetUserPermissions($table="")
 			$permissions =  "ADESPIM";
 	}
 	if($table=="vv_tipologia_utenti")
+	{
+			$permissions =  "ADESPIM";
+	}
+	if($table=="pg_messaggi")
 	{
 			$permissions =  "ADESPIM";
 	}
@@ -1973,32 +1973,6 @@ function buildLookupSQL($pageType, $field, $table, $parentVal, $childVal = "",
 			$parentVal = make_db_value($pSet->getCategoryControl($field), $parentVal, '', '', $table);
 	}
 		
-	if($doValueFilter)
-	{
-		if($pageType != PAGE_SEARCH || $doValueFilterByLinkField)
-		{
-			if($nLookupType == LT_QUERY)
-				$childWhereField = $pSet->getLWLinkField($field, false);
-			else 
-				$childWhereField = $pSet->getLWLinkField($field, true);
-		}
-		else
-		{
-			if($nLookupType == LT_QUERY)
-				$childWhereField = $pSet->getLWDisplayField($field, false);
-			else 
-				$childWhereField = $pSet->getLWDisplayField($field, true);
-		} 
-		if($nLookupType == LT_QUERY)
-			$childVal = $cipherer->MakeDBValue($childWhereField, $childVal, "", $lookupTable, true);
-		else
-		{
-			if($linkAndDisplaySame)
-				$childVal = make_db_value($field, $childVal, '', '', $table);
-			else 
-				$childVal = add_db_quotes($field, $childVal, $table, 200);
-		}
-	}
 		
 	//	build Where clause
 	
@@ -2021,31 +1995,51 @@ function buildLookupSQL($pageType, $field, $table, $parentVal, $childVal = "",
 	}
 	if($doValueFilter)
 	{
+		//	prepare filter value
+		if($pageType != PAGE_SEARCH || $doValueFilterByLinkField || $pSet->lookupControlType($field) == LCT_LIST)
+		{
+			if($nLookupType == LT_QUERY)
+			{
+				$fieldNameForSettings = $pSet->getLWLinkField($field, false);
+				$fieldNameForSQL = GetFullFieldName($pSet->getLinkField($field), $lookupTable, false);
+			}
+			else 
+			{
+				$fieldNameForSettings = $field;
+				$fieldNameForSQL = $pSet->getLWLinkField($field, true);
+			}
+		}
+		else
+		{
+			if($nLookupType == LT_QUERY)
+			{
+				$fieldNameForSettings = $pSet->getLWDisplayField($field, false);
+				if(!$pSet->getCustomDisplay($field))
+					$fieldNameForSQL = $cipherer->GetFieldName($lookupPSet->getFullNameField($displayFieldName), $field);
+				else 
+					$fieldNameForSQL = $pSet->getDisplayField($field);
+			}
+			else 
+			{
+				$fieldNameForSettings = $field;
+				$fieldNameForSQL = $pSet->getLWDisplayField($field, true);
+			}
+		} 
+		if($nLookupType == LT_QUERY)
+			$childVal = $cipherer->MakeDBValue($fieldNameForSettings, $childVal, "", $lookupTable, true);
+		else
+		{
+			if($linkAndDisplaySame)
+				$childVal = make_db_value($fieldNameForSettings, $childVal, '', '', $table);
+			else 
+				$childVal = add_db_quotes($fieldNameForSettings, $childVal, $table);
+		}
+
+
 		$condition = "=".$childVal;
 		if($childVal === "null")
 			$condition = " is null";
-		if($nLookupType == LT_QUERY)
-		{
-			if($pageType != PAGE_SEARCH || $pSet->lookupControlType($field) == LCT_LIST || $doValueFilterByLinkField)
-			{
-				$childWhere = GetFullFieldName($pSet->getLinkField($field), $lookupTable, false).$condition;
-			}
-			else 
-			{
-				if(!$pSet->getCustomDisplay($field))
-					$childWhere = $cipherer->GetFieldName($lookupPSet->getFullNameField($displayFieldName), $field).$condition;
-				else 
-					$childWhere = $pSet->getDisplayField($field).$condition;
-			}
-		}
-		else 
-		{
-			if($pageType != PAGE_SEARCH || $doValueFilterByLinkField)
-				$childWhere = $pSet->getLWLinkField($field, true).$condition;
-			else 
-				$childWhere = $pSet->getLWDisplayField($field, true).$condition;
-		}
-			
+		$childWhere = $fieldNameForSQL.$condition;
 	}
 	$strWhere = "";
 	if($doWhereFilter && strlen($strLookupWhere))

@@ -647,10 +647,6 @@ function GetDefaultValue($field, $ptype, $table="")
 	global $strTableName;
 	if(!$table)
 		$table=$strTableName;
-				if($table=="ge_messaggi" && $field=="data") 
-	{
-		return now();
-	}
 				if($table=="pg_mail" && $field=="vista_invia") 
 	{
 		return 1;
@@ -658,6 +654,10 @@ function GetDefaultValue($field, $ptype, $table="")
 				if($table=="pg_mail" && $field=="vista_ricevi") 
 	{
 		return 1;
+	}
+				if($table=="pg_messaggi" && $field=="data") 
+	{
+		return now();
 	}
 	return "";
 }

@@ -175,7 +175,7 @@ $detailKeys = $pageObject->detailKeysByM;
 $addFields = $pageObject->getFieldsByPageType();
 
 // add button events if exist
-if ($inlineadd==ADD_SIMPLE)
+if ($inlineadd==ADD_SIMPLE || $inlineadd == ADD_ONTHEFLY)
 	$pageObject->addButtonHandlers();
 
 $url_page=substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1,12);
@@ -210,6 +210,7 @@ if(@$_POST["a"]=="added")
 	$blobfields=array();
 //	processing chiave - start
 	$inlineAddOption = true;
+	$inlineAddOption = $inlineadd!=ADD_INLINE;
 	if($inlineAddOption)
 	{
 		$control_chiave = $pageObject->getControl("chiave", $id);
@@ -218,6 +219,7 @@ if(@$_POST["a"]=="added")
 //	processing chiave - end
 //	processing value_it - start
 	$inlineAddOption = true;
+	$inlineAddOption = $inlineadd!=ADD_INLINE;
 	if($inlineAddOption)
 	{
 		$control_value_it = $pageObject->getControl("value_it", $id);
@@ -226,6 +228,7 @@ if(@$_POST["a"]=="added")
 //	processing value_it - end
 //	processing value_en - start
 	$inlineAddOption = true;
+	$inlineAddOption = $inlineadd!=ADD_INLINE;
 	if($inlineAddOption)
 	{
 		$control_value_en = $pageObject->getControl("value_en", $id);
@@ -267,6 +270,7 @@ if(@$_POST["a"]=="added")
 // Give possibility to all edit controls to clean their data				
 //	processing chiave - start
 			$inlineAddOption = true;
+			$inlineAddOption = $inlineadd!=ADD_INLINE;
 			if($inlineAddOption)
 			{
 				$control_chiave->afterSuccessfulSave();
@@ -274,6 +278,7 @@ if(@$_POST["a"]=="added")
 //	processing chiave - end
 //	processing value_it - start
 			$inlineAddOption = true;
+			$inlineAddOption = $inlineadd!=ADD_INLINE;
 			if($inlineAddOption)
 			{
 				$control_value_it->afterSuccessfulSave();
@@ -281,6 +286,7 @@ if(@$_POST["a"]=="added")
 //	processing value_it - end
 //	processing value_en - start
 			$inlineAddOption = true;
+			$inlineAddOption = $inlineadd!=ADD_INLINE;
 			if($inlineAddOption)
 			{
 				$control_value_en->afterSuccessfulSave();

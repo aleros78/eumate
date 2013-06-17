@@ -76,29 +76,6 @@
 <table border="0" cellpadding="0" class="runner-hc">
 <tr>
 <td class="runner-cc filler"></td>
-{BEGIN prints_block}
-<td  class="runner-cc runner-br runner-b-toplinks_print" {$brickclass_toplinks_print}><span>{BEGIN print_link}
-	<span class="runner-btnframe">
-	<span class="runner-btnleft"></span>
-	<span class="runner-btnright"></span>
-	<a href="#" class="runner-button" {$printlink_attrs}>Print this page</a>
-	</span>
-{END print_link}
-
-{BEGIN printall_link}
-	<span class="runner-btnframe">
-	<span class="runner-btnleft"></span>
-	<span class="runner-btnright"></span>
-	<a href="#" class="runner-button" {$printalllink_attrs}>Print all pages</a>
-	</span>
-{END printall_link}
-
-
-
-
-</span></td>
-{END prints_block}
-
 
 {BEGIN asearch_link}
 <td  class="runner-cc runner-br runner-b-toplinks_advsearch" {$brickclass_toplinks_advsearch}><span>	<span class="runner-btnframe">
@@ -110,24 +87,6 @@
 {END asearch_link}
 
 
-{BEGIN import_link}
-<td  class="runner-cc runner-br runner-b-toplinks_import" {$brickclass_toplinks_import}><span>	<span class="runner-btnframe">
-	<span class="runner-btnleft"></span>
-	<span class="runner-btnright"></span>
-	<a href="pg_mail_import.php?{$crosstable_attrs}" class="runner-button" {$importlink_attrs}>Import</a>
-	</span>
-</span></td>
-{END import_link}
-
-
-{BEGIN export_link}
-<td  class="runner-cc runner-br runner-b-toplinks_export" {$brickclass_toplinks_export}><span>	<span class="runner-btnframe">
-	<span class="runner-btnleft"></span>
-	<span class="runner-btnright"></span>
-	<a target="_blank" href="pg_mail_export.php" class="runner-button" {$exportlink_attrs}>Export results</a>
-	</span>
-</span></td>
-{END export_link}
 
 
 
@@ -306,14 +265,7 @@
 		</span>
 	{END add_link}
 
-		{BEGIN inlineadd_link}
-		<span class="runner-btnframe">
-		<span class="runner-btnleft"></span>
-		<span class="runner-btnright"></span>
-		<a href="#" class="runner-button" {$inlineaddlink_attrs}>Inline Add</a>
-		</span>
-	{END inlineadd_link}
-
+	
 
 </span></td>
 {END newrecord_controls_block}
@@ -321,28 +273,7 @@
 
 {BEGIN record_controls_block}
 <td  class="runner-cc runner-bl runner-b-recordcontrol" {$brickclass_recordcontrol}><span>	
-			{BEGIN editselected_link}
-		<span class="runner-btnframe" {$editselectedlink_span}>
-		<span class="runner-btnleft"></span>
-		<span class="runner-btnright"></span>
-		<a href="#" class="runner-button" {$editselectedlink_attrs}>Edit selected</a>
-		</span>
-	{END editselected_link}
-	{BEGIN saveall_link}
-		<span class="runner-btnframe" {$savealllink_span}>
-		<span class="runner-btnleft"></span>
-		<span class="runner-btnright"></span>
-		<a href="#" class="runner-button" {$savealllink_attrs}>Save all</a>
-		</span>
-	{END saveall_link}
-	{BEGIN cancelall_link}
-		<span class="runner-btnframe" {$cancelalllink_span}>
-		<span class="runner-btnleft"></span>
-		<span class="runner-btnright"></span>
-		<a href="#" class="runner-button" {$cancelalllink_attrs}>Cancel</a>
-		</span>
-	{END cancelall_link}
-
+	
 		{BEGIN deleteselected_link}
 		<span class="runner-btnframe" {$deleteselectedlink_span}>
 		<span class="runner-btnleft"></span>
@@ -351,22 +282,8 @@
 		</span>
 	{END deleteselected_link}
 
-		{BEGIN exportselected_link}
-		<span class="runner-btnframe" {$exportselectedlink_span}>
-		<span class="runner-btnleft"></span>
-		<span class="runner-btnright"></span>
-		<a href="#" class="runner-button" {$exportselectedlink_attrs}>Export selected</a>
-		</span>
-	{END exportselected_link}
-
-		{BEGIN printselected_link}
-		<span class="runner-btnframe" {$printselectedlink_span}>
-		<span class="runner-btnleft"></span>
-		<span class="runner-btnright"></span>
-		<a href="#" class="runner-button" {$printselectedlink_attrs}>Print selected</a>
-		</span>
-	{END printselected_link}
-
+	
+	
 </span></td>
 {END record_controls_block}
 
@@ -554,13 +471,13 @@
 									{END edit_link}
 									{END edit_column}
 
-																		{BEGIN inlineedit_column}
-									{BEGIN inlineedit_link}
-									<a class="runner-button-img" {$inlineeditlink_attrs} title="Inline Edit"><img class="runner-cicon" src="images/icon_inline_edit_new.gif" alt="Inline Edit"></a>
-									{END inlineedit_link}
-									{END inlineedit_column}
-
 									
+																		{BEGIN copy_column}
+									{BEGIN copy_link}
+									<a class="runner-button-img" {$copylink_attrs} title="Copy"><img class="runner-cicon" src="images/icon_copy_new.gif" alt="Copy"></a>
+									{END copy_link}
+									{END copy_column}
+
 																		{BEGIN view_column}
 									{BEGIN view_link}
 									<a class="runner-button-img" {$viewlink_attrs} title="View"><img class="runner-cicon" src="images/icon_view_new.gif" alt="View"></a>

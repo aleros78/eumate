@@ -766,7 +766,7 @@ if (!svgSupported)
 	xmlFile += '&ctype=<?php echo $params["ctype"];?>';
 	chart.setXMLFile(xmlFile);
 	chart.write('<?php echo $params["chartname"];?>');
-	if("<?php echo $refresh?>"!="0" && "<?php echo isMobile()?>"=="false")
+	if("<?php echo $refresh?>"!="0" && "<?php echo isMobile()?>"==false)
 		setInterval('refreshChart()',<?php echo $refresh?>);
 	function refreshChart()
 	{

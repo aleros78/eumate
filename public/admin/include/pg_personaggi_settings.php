@@ -85,13 +85,10 @@ $tdatapg_personaggi[".listAjax"] = false;
 
 $tdatapg_personaggi[".listIcons"] = true;
 $tdatapg_personaggi[".edit"] = true;
-$tdatapg_personaggi[".inlineEdit"] = true;
-$tdatapg_personaggi[".inlineAdd"] = true;
+$tdatapg_personaggi[".copy"] = true;
 $tdatapg_personaggi[".view"] = true;
 
-$tdatapg_personaggi[".exportTo"] = true;
 
-$tdatapg_personaggi[".printFriendly"] = true;
 
 $tdatapg_personaggi[".delete"] = true;
 
@@ -115,7 +112,6 @@ $tdatapg_personaggi[".isUseTimeForSearch"] = false;
 
 
 
-$tdatapg_personaggi[".useDetailsPreview"] = true;
 
 $tdatapg_personaggi[".allSearchFields"] = array();
 
@@ -235,16 +231,6 @@ $tdatapg_personaggi[".listFields"][] = "id";
 $tdatapg_personaggi[".listFields"][] = "id_utente";
 $tdatapg_personaggi[".listFields"][] = "id_posto";
 $tdatapg_personaggi[".listFields"][] = "nome";
-$tdatapg_personaggi[".listFields"][] = "status";
-$tdatapg_personaggi[".listFields"][] = "att";
-$tdatapg_personaggi[".listFields"][] = "def";
-$tdatapg_personaggi[".listFields"][] = "cha";
-$tdatapg_personaggi[".listFields"][] = "mov";
-$tdatapg_personaggi[".listFields"][] = "mov_rimanenti";
-$tdatapg_personaggi[".listFields"][] = "mov_last_reset_time";
-$tdatapg_personaggi[".listFields"][] = "pf";
-$tdatapg_personaggi[".listFields"][] = "pf_rimanenti";
-$tdatapg_personaggi[".listFields"][] = "pf_last_reset_time";
 $tdatapg_personaggi[".listFields"][] = "lev";
 $tdatapg_personaggi[".listFields"][] = "xp";
 $tdatapg_personaggi[".listFields"][] = "xp_next";
@@ -290,23 +276,6 @@ $tdatapg_personaggi[".addFields"][] = "xp_next";
 $tdatapg_personaggi[".addFields"][] = "id_gilda";
 
 $tdatapg_personaggi[".inlineAddFields"] = array();
-$tdatapg_personaggi[".inlineAddFields"][] = "id_utente";
-$tdatapg_personaggi[".inlineAddFields"][] = "id_posto";
-$tdatapg_personaggi[".inlineAddFields"][] = "nome";
-$tdatapg_personaggi[".inlineAddFields"][] = "status";
-$tdatapg_personaggi[".inlineAddFields"][] = "att";
-$tdatapg_personaggi[".inlineAddFields"][] = "def";
-$tdatapg_personaggi[".inlineAddFields"][] = "cha";
-$tdatapg_personaggi[".inlineAddFields"][] = "mov";
-$tdatapg_personaggi[".inlineAddFields"][] = "mov_rimanenti";
-$tdatapg_personaggi[".inlineAddFields"][] = "mov_last_reset_time";
-$tdatapg_personaggi[".inlineAddFields"][] = "pf";
-$tdatapg_personaggi[".inlineAddFields"][] = "pf_rimanenti";
-$tdatapg_personaggi[".inlineAddFields"][] = "pf_last_reset_time";
-$tdatapg_personaggi[".inlineAddFields"][] = "lev";
-$tdatapg_personaggi[".inlineAddFields"][] = "xp";
-$tdatapg_personaggi[".inlineAddFields"][] = "xp_next";
-$tdatapg_personaggi[".inlineAddFields"][] = "id_gilda";
 
 $tdatapg_personaggi[".editFields"] = array();
 $tdatapg_personaggi[".editFields"][] = "id_utente";
@@ -328,63 +297,10 @@ $tdatapg_personaggi[".editFields"][] = "xp_next";
 $tdatapg_personaggi[".editFields"][] = "id_gilda";
 
 $tdatapg_personaggi[".inlineEditFields"] = array();
-$tdatapg_personaggi[".inlineEditFields"][] = "id_utente";
-$tdatapg_personaggi[".inlineEditFields"][] = "id_posto";
-$tdatapg_personaggi[".inlineEditFields"][] = "nome";
-$tdatapg_personaggi[".inlineEditFields"][] = "status";
-$tdatapg_personaggi[".inlineEditFields"][] = "att";
-$tdatapg_personaggi[".inlineEditFields"][] = "def";
-$tdatapg_personaggi[".inlineEditFields"][] = "cha";
-$tdatapg_personaggi[".inlineEditFields"][] = "mov";
-$tdatapg_personaggi[".inlineEditFields"][] = "mov_rimanenti";
-$tdatapg_personaggi[".inlineEditFields"][] = "mov_last_reset_time";
-$tdatapg_personaggi[".inlineEditFields"][] = "pf";
-$tdatapg_personaggi[".inlineEditFields"][] = "pf_rimanenti";
-$tdatapg_personaggi[".inlineEditFields"][] = "pf_last_reset_time";
-$tdatapg_personaggi[".inlineEditFields"][] = "lev";
-$tdatapg_personaggi[".inlineEditFields"][] = "xp";
-$tdatapg_personaggi[".inlineEditFields"][] = "xp_next";
-$tdatapg_personaggi[".inlineEditFields"][] = "id_gilda";
 
 $tdatapg_personaggi[".exportFields"] = array();
-$tdatapg_personaggi[".exportFields"][] = "id";
-$tdatapg_personaggi[".exportFields"][] = "id_utente";
-$tdatapg_personaggi[".exportFields"][] = "id_posto";
-$tdatapg_personaggi[".exportFields"][] = "nome";
-$tdatapg_personaggi[".exportFields"][] = "status";
-$tdatapg_personaggi[".exportFields"][] = "att";
-$tdatapg_personaggi[".exportFields"][] = "def";
-$tdatapg_personaggi[".exportFields"][] = "cha";
-$tdatapg_personaggi[".exportFields"][] = "mov";
-$tdatapg_personaggi[".exportFields"][] = "mov_rimanenti";
-$tdatapg_personaggi[".exportFields"][] = "mov_last_reset_time";
-$tdatapg_personaggi[".exportFields"][] = "pf";
-$tdatapg_personaggi[".exportFields"][] = "pf_rimanenti";
-$tdatapg_personaggi[".exportFields"][] = "pf_last_reset_time";
-$tdatapg_personaggi[".exportFields"][] = "lev";
-$tdatapg_personaggi[".exportFields"][] = "xp";
-$tdatapg_personaggi[".exportFields"][] = "xp_next";
-$tdatapg_personaggi[".exportFields"][] = "id_gilda";
 
 $tdatapg_personaggi[".printFields"] = array();
-$tdatapg_personaggi[".printFields"][] = "id";
-$tdatapg_personaggi[".printFields"][] = "id_utente";
-$tdatapg_personaggi[".printFields"][] = "id_posto";
-$tdatapg_personaggi[".printFields"][] = "nome";
-$tdatapg_personaggi[".printFields"][] = "status";
-$tdatapg_personaggi[".printFields"][] = "att";
-$tdatapg_personaggi[".printFields"][] = "def";
-$tdatapg_personaggi[".printFields"][] = "cha";
-$tdatapg_personaggi[".printFields"][] = "mov";
-$tdatapg_personaggi[".printFields"][] = "mov_rimanenti";
-$tdatapg_personaggi[".printFields"][] = "mov_last_reset_time";
-$tdatapg_personaggi[".printFields"][] = "pf";
-$tdatapg_personaggi[".printFields"][] = "pf_rimanenti";
-$tdatapg_personaggi[".printFields"][] = "pf_last_reset_time";
-$tdatapg_personaggi[".printFields"][] = "lev";
-$tdatapg_personaggi[".printFields"][] = "xp";
-$tdatapg_personaggi[".printFields"][] = "xp_next";
-$tdatapg_personaggi[".printFields"][] = "id_gilda";
 
 //	id
 //	Custom field settings
@@ -409,10 +325,8 @@ $tdatapg_personaggi[".printFields"][] = "id_gilda";
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "id"; 
 		$fdata["FullName"] = "id";
 	
@@ -502,20 +416,16 @@ $tdatapg_personaggi[".printFields"][] = "id_gilda";
 	
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "id_utente"; 
 		$fdata["FullName"] = "id_utente";
 	
@@ -624,20 +534,16 @@ $tdatapg_personaggi[".printFields"][] = "id_gilda";
 	
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "id_posto"; 
 		$fdata["FullName"] = "id_posto";
 	
@@ -746,20 +652,16 @@ $tdatapg_personaggi[".printFields"][] = "id_gilda";
 	
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "nome"; 
 		$fdata["FullName"] = "nome";
 	
@@ -843,24 +745,19 @@ $tdatapg_personaggi[".printFields"][] = "id_gilda";
 	
 		
 		
-		$fdata["bListPage"] = true; 
-	
+		
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "status"; 
 		$fdata["FullName"] = "status";
 	
@@ -944,24 +841,19 @@ $tdatapg_personaggi[".printFields"][] = "id_gilda";
 	
 		
 		
-		$fdata["bListPage"] = true; 
-	
+		
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "att"; 
 		$fdata["FullName"] = "att";
 	
@@ -1047,24 +939,19 @@ $tdatapg_personaggi[".printFields"][] = "id_gilda";
 	
 		
 		
-		$fdata["bListPage"] = true; 
-	
+		
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "def"; 
 		$fdata["FullName"] = "def";
 	
@@ -1150,24 +1037,19 @@ $tdatapg_personaggi[".printFields"][] = "id_gilda";
 	
 		
 		
-		$fdata["bListPage"] = true; 
-	
+		
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "cha"; 
 		$fdata["FullName"] = "cha";
 	
@@ -1253,24 +1135,19 @@ $tdatapg_personaggi[".printFields"][] = "id_gilda";
 	
 		
 		
-		$fdata["bListPage"] = true; 
-	
+		
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "mov"; 
 		$fdata["FullName"] = "mov";
 	
@@ -1356,24 +1233,19 @@ $tdatapg_personaggi[".printFields"][] = "id_gilda";
 	
 		
 		
-		$fdata["bListPage"] = true; 
-	
+		
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "mov_rimanenti"; 
 		$fdata["FullName"] = "mov_rimanenti";
 	
@@ -1459,24 +1331,19 @@ $tdatapg_personaggi[".printFields"][] = "id_gilda";
 	
 		
 		
-		$fdata["bListPage"] = true; 
-	
+		
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "mov_last_reset_time"; 
 		$fdata["FullName"] = "mov_last_reset_time";
 	
@@ -1562,24 +1429,19 @@ $tdatapg_personaggi[".printFields"][] = "id_gilda";
 	
 		
 		
-		$fdata["bListPage"] = true; 
-	
+		
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "pf"; 
 		$fdata["FullName"] = "pf";
 	
@@ -1665,24 +1527,19 @@ $tdatapg_personaggi[".printFields"][] = "id_gilda";
 	
 		
 		
-		$fdata["bListPage"] = true; 
-	
+		
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "pf_rimanenti"; 
 		$fdata["FullName"] = "pf_rimanenti";
 	
@@ -1768,24 +1625,19 @@ $tdatapg_personaggi[".printFields"][] = "id_gilda";
 	
 		
 		
-		$fdata["bListPage"] = true; 
-	
+		
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "pf_last_reset_time"; 
 		$fdata["FullName"] = "pf_last_reset_time";
 	
@@ -1875,20 +1727,16 @@ $tdatapg_personaggi[".printFields"][] = "id_gilda";
 	
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "lev"; 
 		$fdata["FullName"] = "lev";
 	
@@ -1978,20 +1826,16 @@ $tdatapg_personaggi[".printFields"][] = "id_gilda";
 	
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "xp"; 
 		$fdata["FullName"] = "xp";
 	
@@ -2081,20 +1925,16 @@ $tdatapg_personaggi[".printFields"][] = "id_gilda";
 	
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "xp_next"; 
 		$fdata["FullName"] = "xp_next";
 	
@@ -2184,20 +2024,16 @@ $tdatapg_personaggi[".printFields"][] = "id_gilda";
 	
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "id_gilda"; 
 		$fdata["FullName"] = "id_gilda";
 	
@@ -2300,26 +2136,6 @@ $fieldToolTips["pg_personaggi"] = &$fieldToolTipspg_personaggi;
 // tables which are detail tables for current table (master)
 $detailsTablesData["pg_personaggi"] = array();
 $dIndex = 1-1;
-			$strOriginalDetailsTable="ge_messaggi";
-	$detailsParam["dDataSourceTable"]="ge_messaggi";
-	$detailsParam["dOriginalTable"]=$strOriginalDetailsTable;
-	$detailsParam["dShortTable"]="ge_messaggi";
-	$detailsParam["masterKeys"]=array();
-	$detailsParam["detailKeys"]=array();
-	$detailsParam["dispChildCount"]= "1";
-	$detailsParam["hideChild"]="0";
-	$detailsParam["previewOnList"]= 1;
-	$detailsParam["previewOnAdd"]= 0;
-	$detailsParam["previewOnEdit"]= 0;
-	$detailsParam["previewOnView"]= 0;
-		
-	$detailsTablesData["pg_personaggi"][$dIndex] = $detailsParam;
-	
-		
-		$detailsTablesData["pg_personaggi"][$dIndex]["masterKeys"][]="id";
-		$detailsTablesData["pg_personaggi"][$dIndex]["detailKeys"][]="id_personaggio";
-
-$dIndex = 2-1;
 			$strOriginalDetailsTable="pg_mail";
 	$detailsParam["dDataSourceTable"]="pg_mail";
 	$detailsParam["dOriginalTable"]=$strOriginalDetailsTable;
@@ -2328,7 +2144,7 @@ $dIndex = 2-1;
 	$detailsParam["detailKeys"]=array();
 	$detailsParam["dispChildCount"]= "1";
 	$detailsParam["hideChild"]="0";
-	$detailsParam["previewOnList"]= 1;
+	$detailsParam["previewOnList"]= 0;
 	$detailsParam["previewOnAdd"]= 0;
 	$detailsParam["previewOnEdit"]= 0;
 	$detailsParam["previewOnView"]= 0;
@@ -2338,6 +2154,26 @@ $dIndex = 2-1;
 		
 		$detailsTablesData["pg_personaggi"][$dIndex]["masterKeys"][]="id";
 		$detailsTablesData["pg_personaggi"][$dIndex]["detailKeys"][]="invia";
+
+$dIndex = 2-1;
+			$strOriginalDetailsTable="pg_messaggi";
+	$detailsParam["dDataSourceTable"]="pg_messaggi";
+	$detailsParam["dOriginalTable"]=$strOriginalDetailsTable;
+	$detailsParam["dShortTable"]="pg_messaggi";
+	$detailsParam["masterKeys"]=array();
+	$detailsParam["detailKeys"]=array();
+	$detailsParam["dispChildCount"]= "1";
+	$detailsParam["hideChild"]="0";
+	$detailsParam["previewOnList"]= 0;
+	$detailsParam["previewOnAdd"]= 0;
+	$detailsParam["previewOnEdit"]= 0;
+	$detailsParam["previewOnView"]= 0;
+		
+	$detailsTablesData["pg_personaggi"][$dIndex] = $detailsParam;
+	
+		
+		$detailsTablesData["pg_personaggi"][$dIndex]["masterKeys"][]="id";
+		$detailsTablesData["pg_personaggi"][$dIndex]["detailKeys"][]="id_personaggio";
 
 	
 // tables which are master tables for current table (detail)
@@ -2353,7 +2189,7 @@ $mIndex = 1-1;
 	$masterParams["dispChildCount"]= "1";
 	$masterParams["hideChild"]= "0";
 	$masterParams["dispInfo"]= "1";
-	$masterParams["previewOnList"]= 1;
+	$masterParams["previewOnList"]= 0;
 	$masterParams["previewOnAdd"]= 0;
 	$masterParams["previewOnEdit"]= 0;
 	$masterParams["previewOnView"]= 0;
@@ -2371,7 +2207,7 @@ $mIndex = 2-1;
 	$masterParams["dispChildCount"]= "1";
 	$masterParams["hideChild"]= "0";
 	$masterParams["dispInfo"]= "1";
-	$masterParams["previewOnList"]= 1;
+	$masterParams["previewOnList"]= 0;
 	$masterParams["previewOnAdd"]= 0;
 	$masterParams["previewOnEdit"]= 0;
 	$masterParams["previewOnView"]= 0;

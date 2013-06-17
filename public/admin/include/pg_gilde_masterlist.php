@@ -42,13 +42,13 @@ $layout->skins["mastergrid"] = "grid";
 $layout->blocks["bare"][] = "mastergrid";$page_layouts["pg_gilde_masterlist"] = $layout;
 
 
-if($detailtable == "ge_messaggi")
+if($detailtable == "pg_personaggi")
 {
 		$where.= GetFullFieldName("id", "", false)."=".$cipherer->MakeDBValue("id",$keys[1-1], "", "", true);
 	$showKeys .= " "."Id".": ".$keys[1-1];
 	$xt->assign('showKeys',$showKeys);
 }
-if($detailtable == "pg_personaggi")
+if($detailtable == "pg_messaggi")
 {
 		$where.= GetFullFieldName("id", "", false)."=".$cipherer->MakeDBValue("id",$keys[1-1], "", "", true);
 	$showKeys .= " "."Id".": ".$keys[1-1];

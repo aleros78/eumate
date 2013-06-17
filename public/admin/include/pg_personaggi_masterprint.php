@@ -41,14 +41,14 @@ $layout->blocks["bare"][] = "mastergrid";$page_layouts["pg_personaggi_masterprin
 
 
 $showKeys = "";
-if($detailtable=="ge_messaggi")
+if($detailtable=="pg_mail")
 {
 		$where.= GetFullFieldName("id", "", false)."=".$cipherer->MakeDBValue("id",$keys[1-1], "", "", true);
 	$showKeys .= " "."Id".": ".$keys[1-1];
 	$xt->assign('showKeys',$showKeys);
 	
 }
-if($detailtable=="pg_mail")
+if($detailtable=="pg_messaggi")
 {
 		$where.= GetFullFieldName("id", "", false)."=".$cipherer->MakeDBValue("id",$keys[1-1], "", "", true);
 	$showKeys .= " "."Id".": ".$keys[1-1];

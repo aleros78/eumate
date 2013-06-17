@@ -7,8 +7,8 @@ add_nocache_headers();
 
 include('include/xtempl.php');
 include("include/pg_personaggi_variables.php");
-include_once("include/ge_messaggi_settings.php");
 include_once("include/pg_mail_settings.php");
+include_once("include/pg_messaggi_settings.php");
 include('classes/runnerpage.php');
 include('classes/listpage.php');
 include("classes/searchpanel.php");
@@ -74,16 +74,10 @@ $layout->skins["master"] = "empty";
 $layout->blocks["top"][] = "master";
 $layout->containers["toplinks"] = array();
 
-$layout->containers["toplinks"][] = array("name"=>"toplinks_print","block"=>"prints_block","substyle"=>1);
-
 
 $layout->containers["toplinks"][] = array("name"=>"toplinks_advsearch","block"=>"asearch_link","substyle"=>1);
 
 
-$layout->containers["toplinks"][] = array("name"=>"toplinks_import","block"=>"import_link","substyle"=>1);
-
-
-$layout->containers["toplinks"][] = array("name"=>"toplinks_export","block"=>"export_link","substyle"=>1);
 
 
 
@@ -133,7 +127,7 @@ elseif(postvalue("mode") == "lookup")
 	$mode=LIST_LOOKUP;
 	//determine which field should be used to select values
 			$params["lookupSelectField"] = "id";
-																	}
+							}
 elseif(postvalue("mode")=="listdetails")
 {
 	

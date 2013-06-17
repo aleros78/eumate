@@ -71,13 +71,10 @@ $tdatage_utenti[".listAjax"] = false;
 
 $tdatage_utenti[".listIcons"] = true;
 $tdatage_utenti[".edit"] = true;
-$tdatage_utenti[".inlineEdit"] = true;
-$tdatage_utenti[".inlineAdd"] = true;
+$tdatage_utenti[".copy"] = true;
 $tdatage_utenti[".view"] = true;
 
-$tdatage_utenti[".exportTo"] = true;
 
-$tdatage_utenti[".printFriendly"] = true;
 
 $tdatage_utenti[".delete"] = true;
 
@@ -101,7 +98,6 @@ $tdatage_utenti[".isUseTimeForSearch"] = false;
 
 
 
-$tdatage_utenti[".useDetailsPreview"] = true;
 
 $tdatage_utenti[".allSearchFields"] = array();
 
@@ -234,16 +230,6 @@ $tdatage_utenti[".addFields"][] = "ip_ultimo_login";
 $tdatage_utenti[".addFields"][] = "attivo";
 
 $tdatage_utenti[".inlineAddFields"] = array();
-$tdatage_utenti[".inlineAddFields"][] = "id_tipologia";
-$tdatage_utenti[".inlineAddFields"][] = "nome";
-$tdatage_utenti[".inlineAddFields"][] = "cognome";
-$tdatage_utenti[".inlineAddFields"][] = "email";
-$tdatage_utenti[".inlineAddFields"][] = "password";
-$tdatage_utenti[".inlineAddFields"][] = "data_registrazione";
-$tdatage_utenti[".inlineAddFields"][] = "ip_registrazione";
-$tdatage_utenti[".inlineAddFields"][] = "numero_login";
-$tdatage_utenti[".inlineAddFields"][] = "ip_ultimo_login";
-$tdatage_utenti[".inlineAddFields"][] = "attivo";
 
 $tdatage_utenti[".editFields"] = array();
 $tdatage_utenti[".editFields"][] = "id_tipologia";
@@ -258,42 +244,10 @@ $tdatage_utenti[".editFields"][] = "ip_ultimo_login";
 $tdatage_utenti[".editFields"][] = "attivo";
 
 $tdatage_utenti[".inlineEditFields"] = array();
-$tdatage_utenti[".inlineEditFields"][] = "id_tipologia";
-$tdatage_utenti[".inlineEditFields"][] = "nome";
-$tdatage_utenti[".inlineEditFields"][] = "cognome";
-$tdatage_utenti[".inlineEditFields"][] = "email";
-$tdatage_utenti[".inlineEditFields"][] = "password";
-$tdatage_utenti[".inlineEditFields"][] = "data_registrazione";
-$tdatage_utenti[".inlineEditFields"][] = "ip_registrazione";
-$tdatage_utenti[".inlineEditFields"][] = "numero_login";
-$tdatage_utenti[".inlineEditFields"][] = "ip_ultimo_login";
-$tdatage_utenti[".inlineEditFields"][] = "attivo";
 
 $tdatage_utenti[".exportFields"] = array();
-$tdatage_utenti[".exportFields"][] = "id";
-$tdatage_utenti[".exportFields"][] = "id_tipologia";
-$tdatage_utenti[".exportFields"][] = "nome";
-$tdatage_utenti[".exportFields"][] = "cognome";
-$tdatage_utenti[".exportFields"][] = "email";
-$tdatage_utenti[".exportFields"][] = "password";
-$tdatage_utenti[".exportFields"][] = "data_registrazione";
-$tdatage_utenti[".exportFields"][] = "ip_registrazione";
-$tdatage_utenti[".exportFields"][] = "numero_login";
-$tdatage_utenti[".exportFields"][] = "ip_ultimo_login";
-$tdatage_utenti[".exportFields"][] = "attivo";
 
 $tdatage_utenti[".printFields"] = array();
-$tdatage_utenti[".printFields"][] = "id";
-$tdatage_utenti[".printFields"][] = "id_tipologia";
-$tdatage_utenti[".printFields"][] = "nome";
-$tdatage_utenti[".printFields"][] = "cognome";
-$tdatage_utenti[".printFields"][] = "email";
-$tdatage_utenti[".printFields"][] = "password";
-$tdatage_utenti[".printFields"][] = "data_registrazione";
-$tdatage_utenti[".printFields"][] = "ip_registrazione";
-$tdatage_utenti[".printFields"][] = "numero_login";
-$tdatage_utenti[".printFields"][] = "ip_ultimo_login";
-$tdatage_utenti[".printFields"][] = "attivo";
 
 //	id
 //	Custom field settings
@@ -318,10 +272,8 @@ $tdatage_utenti[".printFields"][] = "attivo";
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "id"; 
 		$fdata["FullName"] = "id";
 	
@@ -411,20 +363,16 @@ $tdatage_utenti[".printFields"][] = "attivo";
 	
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "id_tipologia"; 
 		$fdata["FullName"] = "id_tipologia";
 	
@@ -533,20 +481,16 @@ $tdatage_utenti[".printFields"][] = "attivo";
 	
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "nome"; 
 		$fdata["FullName"] = "nome";
 	
@@ -634,20 +578,16 @@ $tdatage_utenti[".printFields"][] = "attivo";
 	
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "cognome"; 
 		$fdata["FullName"] = "cognome";
 	
@@ -735,20 +675,16 @@ $tdatage_utenti[".printFields"][] = "attivo";
 	
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "email"; 
 		$fdata["FullName"] = "email";
 	
@@ -836,20 +772,16 @@ $tdatage_utenti[".printFields"][] = "attivo";
 	
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "password"; 
 		$fdata["FullName"] = "password";
 	
@@ -937,20 +869,16 @@ $tdatage_utenti[".printFields"][] = "attivo";
 	
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "data_registrazione"; 
 		$fdata["FullName"] = "data_registrazione";
 	
@@ -1041,20 +969,16 @@ $tdatage_utenti[".printFields"][] = "attivo";
 	
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "ip_registrazione"; 
 		$fdata["FullName"] = "ip_registrazione";
 	
@@ -1142,20 +1066,16 @@ $tdatage_utenti[".printFields"][] = "attivo";
 	
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "numero_login"; 
 		$fdata["FullName"] = "numero_login";
 	
@@ -1245,20 +1165,16 @@ $tdatage_utenti[".printFields"][] = "attivo";
 	
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "ip_ultimo_login"; 
 		$fdata["FullName"] = "ip_ultimo_login";
 	
@@ -1346,20 +1262,16 @@ $tdatage_utenti[".printFields"][] = "attivo";
 	
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "attivo"; 
 		$fdata["FullName"] = "attivo";
 	
@@ -1447,7 +1359,7 @@ $dIndex = 1-1;
 	$detailsParam["detailKeys"]=array();
 	$detailsParam["dispChildCount"]= "1";
 	$detailsParam["hideChild"]="0";
-	$detailsParam["previewOnList"]= 1;
+	$detailsParam["previewOnList"]= 0;
 	$detailsParam["previewOnAdd"]= 0;
 	$detailsParam["previewOnEdit"]= 0;
 	$detailsParam["previewOnView"]= 0;
@@ -1472,7 +1384,7 @@ $mIndex = 1-1;
 	$masterParams["dispChildCount"]= "1";
 	$masterParams["hideChild"]= "0";
 	$masterParams["dispInfo"]= "1";
-	$masterParams["previewOnList"]= 1;
+	$masterParams["previewOnList"]= 0;
 	$masterParams["previewOnAdd"]= 0;
 	$masterParams["previewOnEdit"]= 0;
 	$masterParams["previewOnView"]= 0;

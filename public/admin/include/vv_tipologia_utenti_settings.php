@@ -53,13 +53,10 @@ $tdatavv_tipologia_utenti[".listAjax"] = false;
 
 $tdatavv_tipologia_utenti[".listIcons"] = true;
 $tdatavv_tipologia_utenti[".edit"] = true;
-$tdatavv_tipologia_utenti[".inlineEdit"] = true;
-$tdatavv_tipologia_utenti[".inlineAdd"] = true;
+$tdatavv_tipologia_utenti[".copy"] = true;
 $tdatavv_tipologia_utenti[".view"] = true;
 
-$tdatavv_tipologia_utenti[".exportTo"] = true;
 
-$tdatavv_tipologia_utenti[".printFriendly"] = true;
 
 $tdatavv_tipologia_utenti[".delete"] = true;
 
@@ -83,7 +80,6 @@ $tdatavv_tipologia_utenti[".isUseTimeForSearch"] = false;
 
 
 
-$tdatavv_tipologia_utenti[".useDetailsPreview"] = true;
 
 $tdatavv_tipologia_utenti[".allSearchFields"] = array();
 
@@ -162,21 +158,15 @@ $tdatavv_tipologia_utenti[".addFields"] = array();
 $tdatavv_tipologia_utenti[".addFields"][] = "tipologia";
 
 $tdatavv_tipologia_utenti[".inlineAddFields"] = array();
-$tdatavv_tipologia_utenti[".inlineAddFields"][] = "tipologia";
 
 $tdatavv_tipologia_utenti[".editFields"] = array();
 $tdatavv_tipologia_utenti[".editFields"][] = "tipologia";
 
 $tdatavv_tipologia_utenti[".inlineEditFields"] = array();
-$tdatavv_tipologia_utenti[".inlineEditFields"][] = "tipologia";
 
 $tdatavv_tipologia_utenti[".exportFields"] = array();
-$tdatavv_tipologia_utenti[".exportFields"][] = "id";
-$tdatavv_tipologia_utenti[".exportFields"][] = "tipologia";
 
 $tdatavv_tipologia_utenti[".printFields"] = array();
-$tdatavv_tipologia_utenti[".printFields"][] = "id";
-$tdatavv_tipologia_utenti[".printFields"][] = "tipologia";
 
 //	id
 //	Custom field settings
@@ -201,10 +191,8 @@ $tdatavv_tipologia_utenti[".printFields"][] = "tipologia";
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "id"; 
 		$fdata["FullName"] = "id";
 	
@@ -294,20 +282,16 @@ $tdatavv_tipologia_utenti[".printFields"][] = "tipologia";
 	
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "tipologia"; 
 		$fdata["FullName"] = "tipologia";
 	
@@ -397,7 +381,7 @@ $dIndex = 1-1;
 	$detailsParam["detailKeys"]=array();
 	$detailsParam["dispChildCount"]= "1";
 	$detailsParam["hideChild"]="0";
-	$detailsParam["previewOnList"]= 1;
+	$detailsParam["previewOnList"]= 0;
 	$detailsParam["previewOnAdd"]= 0;
 	$detailsParam["previewOnEdit"]= 0;
 	$detailsParam["previewOnView"]= 0;

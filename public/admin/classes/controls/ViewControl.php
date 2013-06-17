@@ -111,7 +111,7 @@ class ViewControl
 					$isMobileLookup = true;
 			}
 			if($this->container->pageType == PAGE_ADD || $this->container->pageType == PAGE_EDIT)
-				$pageType = PAGE_LIST;
+				$pageType = PAGE_VIEW;
 			else 
 				$pageType = $this->container->pageType;
 			$value = ProcessLargeText($this->container->pSet, $value, "field=".rawurlencode($this->field).$keylink, 

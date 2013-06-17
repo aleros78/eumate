@@ -84,7 +84,7 @@ $xt = new Xtempl();
 // assign an id
 $xt->assign("id",$id);
 
-$templatefile = ($inlineedit == EDIT_INLINE) ? "ge_utenti_inline_edit.htm" : "ge_utenti_edit.htm";
+$templatefile = "ge_utenti_edit.htm";
 
 //array of params for classes
 $params = array("pageType" => PAGE_EDIT,"id" => $id);
@@ -225,7 +225,7 @@ if(@$_POST["a"] == "edited")
 	
 
 //	processing id_tipologia - begin
-	$condition = 1;
+	$condition = $inlineedit!=EDIT_INLINE;//(!$inlineedit) edit simple mode
 
 	if($condition)
 	{
@@ -235,7 +235,7 @@ if(@$_POST["a"] == "edited")
 		}
 //	processing id_tipologia - end
 //	processing nome - begin
-	$condition = 1;
+	$condition = $inlineedit!=EDIT_INLINE;//(!$inlineedit) edit simple mode
 
 	if($condition)
 	{
@@ -245,7 +245,7 @@ if(@$_POST["a"] == "edited")
 		}
 //	processing nome - end
 //	processing cognome - begin
-	$condition = 1;
+	$condition = $inlineedit!=EDIT_INLINE;//(!$inlineedit) edit simple mode
 
 	if($condition)
 	{
@@ -255,7 +255,7 @@ if(@$_POST["a"] == "edited")
 		}
 //	processing cognome - end
 //	processing email - begin
-	$condition = 1;
+	$condition = $inlineedit!=EDIT_INLINE;//(!$inlineedit) edit simple mode
 
 	if($condition)
 	{
@@ -265,7 +265,7 @@ if(@$_POST["a"] == "edited")
 		}
 //	processing email - end
 //	processing password - begin
-	$condition = 1;
+	$condition = $inlineedit!=EDIT_INLINE;//(!$inlineedit) edit simple mode
 
 	if($condition)
 	{
@@ -275,7 +275,7 @@ if(@$_POST["a"] == "edited")
 		}
 //	processing password - end
 //	processing data_registrazione - begin
-	$condition = 1;
+	$condition = $inlineedit!=EDIT_INLINE;//(!$inlineedit) edit simple mode
 
 	if($condition)
 	{
@@ -285,7 +285,7 @@ if(@$_POST["a"] == "edited")
 		}
 //	processing data_registrazione - end
 //	processing ip_registrazione - begin
-	$condition = 1;
+	$condition = $inlineedit!=EDIT_INLINE;//(!$inlineedit) edit simple mode
 
 	if($condition)
 	{
@@ -295,7 +295,7 @@ if(@$_POST["a"] == "edited")
 		}
 //	processing ip_registrazione - end
 //	processing numero_login - begin
-	$condition = 1;
+	$condition = $inlineedit!=EDIT_INLINE;//(!$inlineedit) edit simple mode
 
 	if($condition)
 	{
@@ -305,7 +305,7 @@ if(@$_POST["a"] == "edited")
 		}
 //	processing numero_login - end
 //	processing ip_ultimo_login - begin
-	$condition = 1;
+	$condition = $inlineedit!=EDIT_INLINE;//(!$inlineedit) edit simple mode
 
 	if($condition)
 	{
@@ -315,7 +315,7 @@ if(@$_POST["a"] == "edited")
 		}
 //	processing ip_ultimo_login - end
 //	processing attivo - begin
-	$condition = 1;
+	$condition = $inlineedit!=EDIT_INLINE;//(!$inlineedit) edit simple mode
 
 	if($condition)
 	{
@@ -382,7 +382,7 @@ if(@$_POST["a"] == "edited")
 
 			// Give possibility to all edit controls to clean their data				
 			//	processing id_tipologia - begin
-							$condition = 1;
+							$condition = $inlineedit!=EDIT_INLINE;//(!$inlineedit) edit simple mode
 			
 				if($condition)
 				{
@@ -390,7 +390,7 @@ if(@$_POST["a"] == "edited")
 				}
 	//	processing id_tipologia - end
 			//	processing nome - begin
-							$condition = 1;
+							$condition = $inlineedit!=EDIT_INLINE;//(!$inlineedit) edit simple mode
 			
 				if($condition)
 				{
@@ -398,7 +398,7 @@ if(@$_POST["a"] == "edited")
 				}
 	//	processing nome - end
 			//	processing cognome - begin
-							$condition = 1;
+							$condition = $inlineedit!=EDIT_INLINE;//(!$inlineedit) edit simple mode
 			
 				if($condition)
 				{
@@ -406,7 +406,7 @@ if(@$_POST["a"] == "edited")
 				}
 	//	processing cognome - end
 			//	processing email - begin
-							$condition = 1;
+							$condition = $inlineedit!=EDIT_INLINE;//(!$inlineedit) edit simple mode
 			
 				if($condition)
 				{
@@ -414,7 +414,7 @@ if(@$_POST["a"] == "edited")
 				}
 	//	processing email - end
 			//	processing password - begin
-							$condition = 1;
+							$condition = $inlineedit!=EDIT_INLINE;//(!$inlineedit) edit simple mode
 			
 				if($condition)
 				{
@@ -422,7 +422,7 @@ if(@$_POST["a"] == "edited")
 				}
 	//	processing password - end
 			//	processing data_registrazione - begin
-							$condition = 1;
+							$condition = $inlineedit!=EDIT_INLINE;//(!$inlineedit) edit simple mode
 			
 				if($condition)
 				{
@@ -430,7 +430,7 @@ if(@$_POST["a"] == "edited")
 				}
 	//	processing data_registrazione - end
 			//	processing ip_registrazione - begin
-							$condition = 1;
+							$condition = $inlineedit!=EDIT_INLINE;//(!$inlineedit) edit simple mode
 			
 				if($condition)
 				{
@@ -438,7 +438,7 @@ if(@$_POST["a"] == "edited")
 				}
 	//	processing ip_registrazione - end
 			//	processing numero_login - begin
-							$condition = 1;
+							$condition = $inlineedit!=EDIT_INLINE;//(!$inlineedit) edit simple mode
 			
 				if($condition)
 				{
@@ -446,7 +446,7 @@ if(@$_POST["a"] == "edited")
 				}
 	//	processing numero_login - end
 			//	processing ip_ultimo_login - begin
-							$condition = 1;
+							$condition = $inlineedit!=EDIT_INLINE;//(!$inlineedit) edit simple mode
 			
 				if($condition)
 				{
@@ -454,7 +454,7 @@ if(@$_POST["a"] == "edited")
 				}
 	//	processing ip_ultimo_login - end
 			//	processing attivo - begin
-							$condition = 1;
+							$condition = $inlineedit!=EDIT_INLINE;//(!$inlineedit) edit simple mode
 			
 				if($condition)
 				{
@@ -767,132 +767,6 @@ if(!strlen($message))
 //process readonly and auto-update fields
 /////////////////////////////////////////////////////////////
 
-/////////////////////////////////////////////////////////////
-//	return new data to the List page or report an error
-/////////////////////////////////////////////////////////////
-if (postvalue("a")=="edited" && ($inlineedit == EDIT_INLINE || $inlineedit == EDIT_POPUP))
-{
-	if(!$data)
-	{
-		$data = $evalues;
-		$HaveData = false;
-	}
-	//Preparation   view values
-
-//	detail tables
-	$showDetailKeys["pg_personaggi"]["masterkey1"] = $data["id"];		
-
-	$keylink = "";
-	$keylink.= "&key1=".htmlspecialchars(rawurlencode(@$data["id"]));
-
-
-//	id - 
-	$value = $pageObject->showDBValue("id", $data, $keylink);
-	$showValues["id"] = $value;
-	$showFields[] = "id";
-		$showRawValues["id"] = substr($data["id"],0,100);
-
-//	id_tipologia - 
-	$value = $pageObject->showDBValue("id_tipologia", $data, $keylink);
-	$showValues["id_tipologia"] = $value;
-	$showFields[] = "id_tipologia";
-		$showRawValues["id_tipologia"] = substr($data["id_tipologia"],0,100);
-
-//	nome - 
-	$value = $pageObject->showDBValue("nome", $data, $keylink);
-	$showValues["nome"] = $value;
-	$showFields[] = "nome";
-		$showRawValues["nome"] = substr($data["nome"],0,100);
-
-//	cognome - 
-	$value = $pageObject->showDBValue("cognome", $data, $keylink);
-	$showValues["cognome"] = $value;
-	$showFields[] = "cognome";
-		$showRawValues["cognome"] = substr($data["cognome"],0,100);
-
-//	email - 
-	$value = $pageObject->showDBValue("email", $data, $keylink);
-	$showValues["email"] = $value;
-	$showFields[] = "email";
-		$showRawValues["email"] = substr($data["email"],0,100);
-
-//	password - 
-	$value = $pageObject->showDBValue("password", $data, $keylink);
-	$showValues["password"] = $value;
-	$showFields[] = "password";
-		$showRawValues["password"] = substr($data["password"],0,100);
-
-//	data_registrazione - Short Date
-	$value = $pageObject->showDBValue("data_registrazione", $data, $keylink);
-	$showValues["data_registrazione"] = $value;
-	$showFields[] = "data_registrazione";
-		$showRawValues["data_registrazione"] = substr($data["data_registrazione"],0,100);
-
-//	ip_registrazione - 
-	$value = $pageObject->showDBValue("ip_registrazione", $data, $keylink);
-	$showValues["ip_registrazione"] = $value;
-	$showFields[] = "ip_registrazione";
-		$showRawValues["ip_registrazione"] = substr($data["ip_registrazione"],0,100);
-
-//	numero_login - 
-	$value = $pageObject->showDBValue("numero_login", $data, $keylink);
-	$showValues["numero_login"] = $value;
-	$showFields[] = "numero_login";
-		$showRawValues["numero_login"] = substr($data["numero_login"],0,100);
-
-//	ip_ultimo_login - 
-	$value = $pageObject->showDBValue("ip_ultimo_login", $data, $keylink);
-	$showValues["ip_ultimo_login"] = $value;
-	$showFields[] = "ip_ultimo_login";
-		$showRawValues["ip_ultimo_login"] = substr($data["ip_ultimo_login"],0,100);
-
-//	attivo - Checkbox
-	$value = $pageObject->showDBValue("attivo", $data, $keylink);
-	$showValues["attivo"] = $value;
-	$showFields[] = "attivo";
-		$showRawValues["attivo"] = substr($data["attivo"],0,100);
-/////////////////////////////////////////////////////////////
-//	start inline output
-/////////////////////////////////////////////////////////////
-	
-	if($IsSaved)
-	{
-		if($pageObject->lockingObj)
-			$pageObject->lockingObj->UnlockRecord($strTableName,$keys,"");
-		
-		$returnJSON['success'] = true;
-		$returnJSON['keys'] = $pageObject->jsKeys;
-		$returnJSON['keyFields'] = $pageObject->keyFields;
-		$returnJSON['vals'] = $showValues;
-		$returnJSON['fields'] = $showFields;
-		$returnJSON['rawVals'] = $showRawValues;
-		$returnJSON['detKeys'] = $showDetailKeys;
-		$returnJSON['userMess'] = $usermessage;
-		$returnJSON['hrefs'] = $pageObject->buildDetailGridLinks($showDetailKeys);
-		
-		if($inlineedit==EDIT_POPUP && isset($_SESSION[$strTableName."_count_captcha"]) || $_SESSION[$strTableName."_count_captcha"]>0 || $_SESSION[$strTableName."_count_captcha"]<5)
-			$returnJSON['hideCaptcha'] = true;
-			
-		if($globalEvents->exists("IsRecordEditable", $strTableName))
-		{
-			if(!$globalEvents->IsRecordEditable($showRawValues, true, $strTableName))
-				$returnJSON['nonEditable'] = true;
-		}
-	}
-	else
-	{
-		$returnJSON['success'] = false;
-		$returnJSON['message'] = $message;
-		
-		if($pageObject->lockingObj)
-			$returnJSON['lockMessage'] = $system_message;
-		
-		if($inlineedit == EDIT_POPUP && !$pageObject->isCaptchaOk)
-			$returnJSON['captcha'] = false;
-	}
-	echo "<textarea>".htmlspecialchars(my_json_encode($returnJSON))."</textarea>";
-	exit();
-} 
 /////////////////////////////////////////////////////////////
 //	prepare Edit Controls
 /////////////////////////////////////////////////////////////

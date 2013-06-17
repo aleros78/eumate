@@ -298,7 +298,6 @@ $mlang_charsets = array();
 // table captions
 $tableCaptions = array();
 $tableCaptions["English"] = array();
-$tableCaptions["English"]["ge_messaggi"] = "Ge Messaggi";
 $tableCaptions["English"]["ge_testo"] = "Ge Testo";
 $tableCaptions["English"]["ge_utenti"] = "Ge Utenti";
 $tableCaptions["English"]["pg_mail"] = "Pg Mail";
@@ -312,6 +311,7 @@ $tableCaptions["English"]["pl_riferimenti_posti"] = "Pl Riferimenti Posti";
 $tableCaptions["English"]["vv_azioni_lista"] = "Vv Azioni Lista";
 $tableCaptions["English"]["vv_config_var"] = "Vv Config Var";
 $tableCaptions["English"]["vv_tipologia_utenti"] = "Vv Tipologia Utenti";
+$tableCaptions["English"]["pg_messaggi"] = "Pg Messaggi";
 
 $globalEvents = new class_GlobalEvents;
 $tableEvents = array();

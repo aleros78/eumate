@@ -1641,7 +1641,7 @@ class Chart_Gauge extends Chart
 		$strwidth=100/count($this->arrDataSeries);
 		for($t=0;$t<count($this->arrDataSeries);$t++)
 		{
-			echo "<".$this->type_gauge."_template width=\"".($strwidth-1)."\" x=\"".($t*$strwidth+1)."\" name=\"template_".$this->chart_xmlencode($this->arrDataSeries[$t]).$t."\">"."\n";
+			echo "<".$this->type_gauge."_template width=\"".($strwidth-1)."\" x=\"".($t*$strwidth+1)."\" name=\"template_".$this->chart_xmlencode($this->arrDataSeries[$t])."\">"."\n";
 			$this->gauge_style();
 			$this->get_frame();
 			$this->get_axis($t);
@@ -1727,7 +1727,7 @@ class Chart_Gauge extends Chart
 			if($row) 
 			{
 				$j=1;
-				$arrSer["series".$i]="<".$this->type_gauge." template=\"template_".$this->chart_xmlencode($this->arrDataSeries[$i]).$i."\"  orientation=\"".$this->orientation."\" name=\"".$this->chart_xmlencode($this->arrDataSeries[$i]).$i."_gauge\">"."\n";
+				$arrSer["series".$i]="<".$this->type_gauge." template=\"template_".$this->chart_xmlencode($this->arrDataSeries[$i])."\"  orientation=\"".$this->orientation."\" name=\"".$this->chart_xmlencode($this->arrDataSeries[$i])."_gauge\">"."\n";
 				$arrSer["series".$i].="<pointers>"."\n";
 				$arrSer["series".$i].="<pointer name=\"".$this->chart_xmlencode($this->arrDataSeries[$i])."_point\" type=\"".$this->pointer_type()."\" value=\"".$this->chart_xmlencode($row[$this->arrDataSeries[$i]]+0)."\" color=\"#75B7E1\">"."\n";
 				$arrSer["series".$i].="<animation enabled=\"true\" start_time=\"0\" duration=\"1\" interpolation_type=\"Elastic\"/>"."\n";

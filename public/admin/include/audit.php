@@ -309,10 +309,6 @@ class AuditTrailTable
 	}
 	function logValueEnable($table)
 	{
-		if($table=="ge_messaggi")
-		{
-			return false;
-		}
 		if($table=="ge_testo")
 		{
 			return false;
@@ -362,6 +358,10 @@ class AuditTrailTable
 			return false;
 		}
 		if($table=="vv_tipologia_utenti")
+		{
+			return false;
+		}
+		if($table=="pg_messaggi")
 		{
 			return false;
 		}
@@ -657,10 +657,6 @@ class AuditTrailFile
 	}
 	function logValueEnable($table)
 	{
-		if($table=="ge_messaggi")
-		{
-			return false;
-		}
 		if($table=="ge_testo")
 		{
 			return false;
@@ -710,6 +706,10 @@ class AuditTrailFile
 			return false;
 		}
 		if($table=="vv_tipologia_utenti")
+		{
+			return false;
+		}
+		if($table=="pg_messaggi")
 		{
 			return false;
 		}

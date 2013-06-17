@@ -20,20 +20,26 @@ class Messaggi_Controller extends \pff\AController
         echo 'Welcome to pff!';
     }
 
+    public function formMessaggi(){
+
+        $view = \pff\FView::create('formMessaggi.tpl',$this->_app);
+        $this->addView($view);
+    }
+
     public function addMessaggio(){
-        $id_personaggio = $_POST['personaggio'];
-        $personaggio = $this->_em->find('/pff/models/personaggio',$id_personaggio);
+        $id_personaggio = $_SESSION['login_personaggio'];
+        $personaggio = $this->_em->find('pff\models\personaggio',$id_personaggio);
         $id_gilda = $_POST['gilda'];
-        $id_posto = $_POST['posto'];
+        $id_posto = $_SESSION['posto'];
         if ($id_gilda == 0){
             $gilda = null;
         } else{
-            $gilda = $this->_em->find('/pff/models/gilda',$id_gilda);
+            $gilda = $this->_em->find('pff\models\gilda',$id_gilda);
         }
         if ($id_posto == 0){
             $posto = null;
         } else {
-            $posto = $this->_em->find('/pff/models/posto',$id_posto);
+            $posto = $this->_em->find('pff\models\posto',$id_posto);
         }
         $messaggio = $_POST['messaggio'];
         $data = new DateTime();
@@ -47,7 +53,8 @@ class Messaggi_Controller extends \pff\AController
 
         $this->_em->persist($m);
         $this->_em->flush();
-        
+
+        header("Location: " .$this->_app->getExternalPath() . "test");
     }
 
 }

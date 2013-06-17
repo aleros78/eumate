@@ -175,7 +175,7 @@ $detailKeys = $pageObject->detailKeysByM;
 $addFields = $pageObject->getFieldsByPageType();
 
 // add button events if exist
-if ($inlineadd==ADD_SIMPLE)
+if ($inlineadd==ADD_SIMPLE || $inlineadd == ADD_ONTHEFLY)
 	$pageObject->addButtonHandlers();
 
 $url_page=substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1,12);
@@ -210,6 +210,7 @@ if(@$_POST["a"]=="added")
 	$blobfields=array();
 //	processing id_tipologia - start
 	$inlineAddOption = true;
+	$inlineAddOption = $inlineadd!=ADD_INLINE;
 	if($inlineAddOption)
 	{
 		$control_id_tipologia = $pageObject->getControl("id_tipologia", $id);
@@ -218,6 +219,7 @@ if(@$_POST["a"]=="added")
 //	processing id_tipologia - end
 //	processing nome - start
 	$inlineAddOption = true;
+	$inlineAddOption = $inlineadd!=ADD_INLINE;
 	if($inlineAddOption)
 	{
 		$control_nome = $pageObject->getControl("nome", $id);
@@ -226,6 +228,7 @@ if(@$_POST["a"]=="added")
 //	processing nome - end
 //	processing cognome - start
 	$inlineAddOption = true;
+	$inlineAddOption = $inlineadd!=ADD_INLINE;
 	if($inlineAddOption)
 	{
 		$control_cognome = $pageObject->getControl("cognome", $id);
@@ -234,6 +237,7 @@ if(@$_POST["a"]=="added")
 //	processing cognome - end
 //	processing email - start
 	$inlineAddOption = true;
+	$inlineAddOption = $inlineadd!=ADD_INLINE;
 	if($inlineAddOption)
 	{
 		$control_email = $pageObject->getControl("email", $id);
@@ -242,6 +246,7 @@ if(@$_POST["a"]=="added")
 //	processing email - end
 //	processing password - start
 	$inlineAddOption = true;
+	$inlineAddOption = $inlineadd!=ADD_INLINE;
 	if($inlineAddOption)
 	{
 		$control_password = $pageObject->getControl("password", $id);
@@ -250,6 +255,7 @@ if(@$_POST["a"]=="added")
 //	processing password - end
 //	processing data_registrazione - start
 	$inlineAddOption = true;
+	$inlineAddOption = $inlineadd!=ADD_INLINE;
 	if($inlineAddOption)
 	{
 		$control_data_registrazione = $pageObject->getControl("data_registrazione", $id);
@@ -258,6 +264,7 @@ if(@$_POST["a"]=="added")
 //	processing data_registrazione - end
 //	processing ip_registrazione - start
 	$inlineAddOption = true;
+	$inlineAddOption = $inlineadd!=ADD_INLINE;
 	if($inlineAddOption)
 	{
 		$control_ip_registrazione = $pageObject->getControl("ip_registrazione", $id);
@@ -266,6 +273,7 @@ if(@$_POST["a"]=="added")
 //	processing ip_registrazione - end
 //	processing numero_login - start
 	$inlineAddOption = true;
+	$inlineAddOption = $inlineadd!=ADD_INLINE;
 	if($inlineAddOption)
 	{
 		$control_numero_login = $pageObject->getControl("numero_login", $id);
@@ -274,6 +282,7 @@ if(@$_POST["a"]=="added")
 //	processing numero_login - end
 //	processing ip_ultimo_login - start
 	$inlineAddOption = true;
+	$inlineAddOption = $inlineadd!=ADD_INLINE;
 	if($inlineAddOption)
 	{
 		$control_ip_ultimo_login = $pageObject->getControl("ip_ultimo_login", $id);
@@ -282,6 +291,7 @@ if(@$_POST["a"]=="added")
 //	processing ip_ultimo_login - end
 //	processing attivo - start
 	$inlineAddOption = true;
+	$inlineAddOption = $inlineadd!=ADD_INLINE;
 	if($inlineAddOption)
 	{
 		$control_attivo = $pageObject->getControl("attivo", $id);
@@ -334,6 +344,7 @@ if(@$_POST["a"]=="added")
 // Give possibility to all edit controls to clean their data				
 //	processing id_tipologia - start
 			$inlineAddOption = true;
+			$inlineAddOption = $inlineadd!=ADD_INLINE;
 			if($inlineAddOption)
 			{
 				$control_id_tipologia->afterSuccessfulSave();
@@ -341,6 +352,7 @@ if(@$_POST["a"]=="added")
 //	processing id_tipologia - end
 //	processing nome - start
 			$inlineAddOption = true;
+			$inlineAddOption = $inlineadd!=ADD_INLINE;
 			if($inlineAddOption)
 			{
 				$control_nome->afterSuccessfulSave();
@@ -348,6 +360,7 @@ if(@$_POST["a"]=="added")
 //	processing nome - end
 //	processing cognome - start
 			$inlineAddOption = true;
+			$inlineAddOption = $inlineadd!=ADD_INLINE;
 			if($inlineAddOption)
 			{
 				$control_cognome->afterSuccessfulSave();
@@ -355,6 +368,7 @@ if(@$_POST["a"]=="added")
 //	processing cognome - end
 //	processing email - start
 			$inlineAddOption = true;
+			$inlineAddOption = $inlineadd!=ADD_INLINE;
 			if($inlineAddOption)
 			{
 				$control_email->afterSuccessfulSave();
@@ -362,6 +376,7 @@ if(@$_POST["a"]=="added")
 //	processing email - end
 //	processing password - start
 			$inlineAddOption = true;
+			$inlineAddOption = $inlineadd!=ADD_INLINE;
 			if($inlineAddOption)
 			{
 				$control_password->afterSuccessfulSave();
@@ -369,6 +384,7 @@ if(@$_POST["a"]=="added")
 //	processing password - end
 //	processing data_registrazione - start
 			$inlineAddOption = true;
+			$inlineAddOption = $inlineadd!=ADD_INLINE;
 			if($inlineAddOption)
 			{
 				$control_data_registrazione->afterSuccessfulSave();
@@ -376,6 +392,7 @@ if(@$_POST["a"]=="added")
 //	processing data_registrazione - end
 //	processing ip_registrazione - start
 			$inlineAddOption = true;
+			$inlineAddOption = $inlineadd!=ADD_INLINE;
 			if($inlineAddOption)
 			{
 				$control_ip_registrazione->afterSuccessfulSave();
@@ -383,6 +400,7 @@ if(@$_POST["a"]=="added")
 //	processing ip_registrazione - end
 //	processing numero_login - start
 			$inlineAddOption = true;
+			$inlineAddOption = $inlineadd!=ADD_INLINE;
 			if($inlineAddOption)
 			{
 				$control_numero_login->afterSuccessfulSave();
@@ -390,6 +408,7 @@ if(@$_POST["a"]=="added")
 //	processing numero_login - end
 //	processing ip_ultimo_login - start
 			$inlineAddOption = true;
+			$inlineAddOption = $inlineadd!=ADD_INLINE;
 			if($inlineAddOption)
 			{
 				$control_ip_ultimo_login->afterSuccessfulSave();
@@ -397,6 +416,7 @@ if(@$_POST["a"]=="added")
 //	processing ip_ultimo_login - end
 //	processing attivo - start
 			$inlineAddOption = true;
+			$inlineAddOption = $inlineadd!=ADD_INLINE;
 			if($inlineAddOption)
 			{
 				$control_attivo->afterSuccessfulSave();

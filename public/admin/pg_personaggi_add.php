@@ -175,7 +175,7 @@ $detailKeys = $pageObject->detailKeysByM;
 $addFields = $pageObject->getFieldsByPageType();
 
 // add button events if exist
-if ($inlineadd==ADD_SIMPLE)
+if ($inlineadd==ADD_SIMPLE || $inlineadd == ADD_ONTHEFLY)
 	$pageObject->addButtonHandlers();
 
 $url_page=substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1,12);
@@ -210,6 +210,7 @@ if(@$_POST["a"]=="added")
 	$blobfields=array();
 //	processing id_utente - start
 	$inlineAddOption = true;
+	$inlineAddOption = $inlineadd!=ADD_INLINE;
 	if($inlineAddOption)
 	{
 		$control_id_utente = $pageObject->getControl("id_utente", $id);
@@ -218,6 +219,7 @@ if(@$_POST["a"]=="added")
 //	processing id_utente - end
 //	processing id_posto - start
 	$inlineAddOption = true;
+	$inlineAddOption = $inlineadd!=ADD_INLINE;
 	if($inlineAddOption)
 	{
 		$control_id_posto = $pageObject->getControl("id_posto", $id);
@@ -226,6 +228,7 @@ if(@$_POST["a"]=="added")
 //	processing id_posto - end
 //	processing nome - start
 	$inlineAddOption = true;
+	$inlineAddOption = $inlineadd!=ADD_INLINE;
 	if($inlineAddOption)
 	{
 		$control_nome = $pageObject->getControl("nome", $id);
@@ -234,6 +237,7 @@ if(@$_POST["a"]=="added")
 //	processing nome - end
 //	processing status - start
 	$inlineAddOption = true;
+	$inlineAddOption = $inlineadd!=ADD_INLINE;
 	if($inlineAddOption)
 	{
 		$control_status = $pageObject->getControl("status", $id);
@@ -242,6 +246,7 @@ if(@$_POST["a"]=="added")
 //	processing status - end
 //	processing att - start
 	$inlineAddOption = true;
+	$inlineAddOption = $inlineadd!=ADD_INLINE;
 	if($inlineAddOption)
 	{
 		$control_att = $pageObject->getControl("att", $id);
@@ -250,6 +255,7 @@ if(@$_POST["a"]=="added")
 //	processing att - end
 //	processing def - start
 	$inlineAddOption = true;
+	$inlineAddOption = $inlineadd!=ADD_INLINE;
 	if($inlineAddOption)
 	{
 		$control_def = $pageObject->getControl("def", $id);
@@ -258,6 +264,7 @@ if(@$_POST["a"]=="added")
 //	processing def - end
 //	processing cha - start
 	$inlineAddOption = true;
+	$inlineAddOption = $inlineadd!=ADD_INLINE;
 	if($inlineAddOption)
 	{
 		$control_cha = $pageObject->getControl("cha", $id);
@@ -266,6 +273,7 @@ if(@$_POST["a"]=="added")
 //	processing cha - end
 //	processing mov - start
 	$inlineAddOption = true;
+	$inlineAddOption = $inlineadd!=ADD_INLINE;
 	if($inlineAddOption)
 	{
 		$control_mov = $pageObject->getControl("mov", $id);
@@ -274,6 +282,7 @@ if(@$_POST["a"]=="added")
 //	processing mov - end
 //	processing mov_rimanenti - start
 	$inlineAddOption = true;
+	$inlineAddOption = $inlineadd!=ADD_INLINE;
 	if($inlineAddOption)
 	{
 		$control_mov_rimanenti = $pageObject->getControl("mov_rimanenti", $id);
@@ -282,6 +291,7 @@ if(@$_POST["a"]=="added")
 //	processing mov_rimanenti - end
 //	processing mov_last_reset_time - start
 	$inlineAddOption = true;
+	$inlineAddOption = $inlineadd!=ADD_INLINE;
 	if($inlineAddOption)
 	{
 		$control_mov_last_reset_time = $pageObject->getControl("mov_last_reset_time", $id);
@@ -290,6 +300,7 @@ if(@$_POST["a"]=="added")
 //	processing mov_last_reset_time - end
 //	processing pf - start
 	$inlineAddOption = true;
+	$inlineAddOption = $inlineadd!=ADD_INLINE;
 	if($inlineAddOption)
 	{
 		$control_pf = $pageObject->getControl("pf", $id);
@@ -298,6 +309,7 @@ if(@$_POST["a"]=="added")
 //	processing pf - end
 //	processing pf_rimanenti - start
 	$inlineAddOption = true;
+	$inlineAddOption = $inlineadd!=ADD_INLINE;
 	if($inlineAddOption)
 	{
 		$control_pf_rimanenti = $pageObject->getControl("pf_rimanenti", $id);
@@ -306,6 +318,7 @@ if(@$_POST["a"]=="added")
 //	processing pf_rimanenti - end
 //	processing pf_last_reset_time - start
 	$inlineAddOption = true;
+	$inlineAddOption = $inlineadd!=ADD_INLINE;
 	if($inlineAddOption)
 	{
 		$control_pf_last_reset_time = $pageObject->getControl("pf_last_reset_time", $id);
@@ -314,6 +327,7 @@ if(@$_POST["a"]=="added")
 //	processing pf_last_reset_time - end
 //	processing lev - start
 	$inlineAddOption = true;
+	$inlineAddOption = $inlineadd!=ADD_INLINE;
 	if($inlineAddOption)
 	{
 		$control_lev = $pageObject->getControl("lev", $id);
@@ -322,6 +336,7 @@ if(@$_POST["a"]=="added")
 //	processing lev - end
 //	processing xp - start
 	$inlineAddOption = true;
+	$inlineAddOption = $inlineadd!=ADD_INLINE;
 	if($inlineAddOption)
 	{
 		$control_xp = $pageObject->getControl("xp", $id);
@@ -330,6 +345,7 @@ if(@$_POST["a"]=="added")
 //	processing xp - end
 //	processing xp_next - start
 	$inlineAddOption = true;
+	$inlineAddOption = $inlineadd!=ADD_INLINE;
 	if($inlineAddOption)
 	{
 		$control_xp_next = $pageObject->getControl("xp_next", $id);
@@ -338,6 +354,7 @@ if(@$_POST["a"]=="added")
 //	processing xp_next - end
 //	processing id_gilda - start
 	$inlineAddOption = true;
+	$inlineAddOption = $inlineadd!=ADD_INLINE;
 	if($inlineAddOption)
 	{
 		$control_id_gilda = $pageObject->getControl("id_gilda", $id);
@@ -410,6 +427,7 @@ if(@$_POST["a"]=="added")
 // Give possibility to all edit controls to clean their data				
 //	processing id_utente - start
 			$inlineAddOption = true;
+			$inlineAddOption = $inlineadd!=ADD_INLINE;
 			if($inlineAddOption)
 			{
 				$control_id_utente->afterSuccessfulSave();
@@ -417,6 +435,7 @@ if(@$_POST["a"]=="added")
 //	processing id_utente - end
 //	processing id_posto - start
 			$inlineAddOption = true;
+			$inlineAddOption = $inlineadd!=ADD_INLINE;
 			if($inlineAddOption)
 			{
 				$control_id_posto->afterSuccessfulSave();
@@ -424,6 +443,7 @@ if(@$_POST["a"]=="added")
 //	processing id_posto - end
 //	processing nome - start
 			$inlineAddOption = true;
+			$inlineAddOption = $inlineadd!=ADD_INLINE;
 			if($inlineAddOption)
 			{
 				$control_nome->afterSuccessfulSave();
@@ -431,6 +451,7 @@ if(@$_POST["a"]=="added")
 //	processing nome - end
 //	processing status - start
 			$inlineAddOption = true;
+			$inlineAddOption = $inlineadd!=ADD_INLINE;
 			if($inlineAddOption)
 			{
 				$control_status->afterSuccessfulSave();
@@ -438,6 +459,7 @@ if(@$_POST["a"]=="added")
 //	processing status - end
 //	processing att - start
 			$inlineAddOption = true;
+			$inlineAddOption = $inlineadd!=ADD_INLINE;
 			if($inlineAddOption)
 			{
 				$control_att->afterSuccessfulSave();
@@ -445,6 +467,7 @@ if(@$_POST["a"]=="added")
 //	processing att - end
 //	processing def - start
 			$inlineAddOption = true;
+			$inlineAddOption = $inlineadd!=ADD_INLINE;
 			if($inlineAddOption)
 			{
 				$control_def->afterSuccessfulSave();
@@ -452,6 +475,7 @@ if(@$_POST["a"]=="added")
 //	processing def - end
 //	processing cha - start
 			$inlineAddOption = true;
+			$inlineAddOption = $inlineadd!=ADD_INLINE;
 			if($inlineAddOption)
 			{
 				$control_cha->afterSuccessfulSave();
@@ -459,6 +483,7 @@ if(@$_POST["a"]=="added")
 //	processing cha - end
 //	processing mov - start
 			$inlineAddOption = true;
+			$inlineAddOption = $inlineadd!=ADD_INLINE;
 			if($inlineAddOption)
 			{
 				$control_mov->afterSuccessfulSave();
@@ -466,6 +491,7 @@ if(@$_POST["a"]=="added")
 //	processing mov - end
 //	processing mov_rimanenti - start
 			$inlineAddOption = true;
+			$inlineAddOption = $inlineadd!=ADD_INLINE;
 			if($inlineAddOption)
 			{
 				$control_mov_rimanenti->afterSuccessfulSave();
@@ -473,6 +499,7 @@ if(@$_POST["a"]=="added")
 //	processing mov_rimanenti - end
 //	processing mov_last_reset_time - start
 			$inlineAddOption = true;
+			$inlineAddOption = $inlineadd!=ADD_INLINE;
 			if($inlineAddOption)
 			{
 				$control_mov_last_reset_time->afterSuccessfulSave();
@@ -480,6 +507,7 @@ if(@$_POST["a"]=="added")
 //	processing mov_last_reset_time - end
 //	processing pf - start
 			$inlineAddOption = true;
+			$inlineAddOption = $inlineadd!=ADD_INLINE;
 			if($inlineAddOption)
 			{
 				$control_pf->afterSuccessfulSave();
@@ -487,6 +515,7 @@ if(@$_POST["a"]=="added")
 //	processing pf - end
 //	processing pf_rimanenti - start
 			$inlineAddOption = true;
+			$inlineAddOption = $inlineadd!=ADD_INLINE;
 			if($inlineAddOption)
 			{
 				$control_pf_rimanenti->afterSuccessfulSave();
@@ -494,6 +523,7 @@ if(@$_POST["a"]=="added")
 //	processing pf_rimanenti - end
 //	processing pf_last_reset_time - start
 			$inlineAddOption = true;
+			$inlineAddOption = $inlineadd!=ADD_INLINE;
 			if($inlineAddOption)
 			{
 				$control_pf_last_reset_time->afterSuccessfulSave();
@@ -501,6 +531,7 @@ if(@$_POST["a"]=="added")
 //	processing pf_last_reset_time - end
 //	processing lev - start
 			$inlineAddOption = true;
+			$inlineAddOption = $inlineadd!=ADD_INLINE;
 			if($inlineAddOption)
 			{
 				$control_lev->afterSuccessfulSave();
@@ -508,6 +539,7 @@ if(@$_POST["a"]=="added")
 //	processing lev - end
 //	processing xp - start
 			$inlineAddOption = true;
+			$inlineAddOption = $inlineadd!=ADD_INLINE;
 			if($inlineAddOption)
 			{
 				$control_xp->afterSuccessfulSave();
@@ -515,6 +547,7 @@ if(@$_POST["a"]=="added")
 //	processing xp - end
 //	processing xp_next - start
 			$inlineAddOption = true;
+			$inlineAddOption = $inlineadd!=ADD_INLINE;
 			if($inlineAddOption)
 			{
 				$control_xp_next->afterSuccessfulSave();
@@ -522,6 +555,7 @@ if(@$_POST["a"]=="added")
 //	processing xp_next - end
 //	processing id_gilda - start
 			$inlineAddOption = true;
+			$inlineAddOption = $inlineadd!=ADD_INLINE;
 			if($inlineAddOption)
 			{
 				$control_id_gilda->afterSuccessfulSave();
@@ -632,6 +666,18 @@ if(array_key_exists("copyid1",$_REQUEST) || array_key_exists("editid1",$_REQUEST
 }
 else
 {
+	$defvalues["att"] = 0;
+	$defvalues["def"] = 0;
+	$defvalues["cha"] = 0;
+	$defvalues["mov"] = 0;
+	$defvalues["mov_rimanenti"] = 0;
+	$defvalues["mov_last_reset_time"] = 0;
+	$defvalues["pf"] = 0;
+	$defvalues["pf_rimanenti"] = 0;
+	$defvalues["pf_last_reset_time"] = 0;
+	$defvalues["lev"] = 0;
+	$defvalues["xp"] = 0;
+	$defvalues["xp_next"] = 0;
 }
 
 
@@ -940,8 +986,8 @@ if(@$_POST["a"]=="added" && ($inlineadd == ADD_INLINE || $inlineadd == ADD_MASTE
 		$HaveData=false;
 	}
 	//check if correct values added
-	$showDetailKeys["ge_messaggi"]["masterkey1"] = $data["id"];	
 	$showDetailKeys["pg_mail"]["masterkey1"] = $data["id"];	
+	$showDetailKeys["pg_messaggi"]["masterkey1"] = $data["id"];	
 
 	$keylink="";
 	$keylink.="&key1=".htmlspecialchars(rawurlencode(@$data["id"]));
@@ -997,8 +1043,6 @@ if(@$_POST["a"]=="added" && ($inlineadd == ADD_INLINE || $inlineadd == ADD_MASTE
 	$display = false;
 	if($inlineadd==ADD_MASTER)
 		$display = true;
-	if($inlineadd==ADD_INLINE || $inlineadd==ADD_ONTHEFLY || $inlineadd==ADD_POPUP)
-		$display = true;
 	if($display)
 	{	
 		$value = $pageObject->showDBValue("status", $data, $keylink);
@@ -1008,8 +1052,6 @@ if(@$_POST["a"]=="added" && ($inlineadd == ADD_INLINE || $inlineadd == ADD_MASTE
 //	att
 	$display = false;
 	if($inlineadd==ADD_MASTER)
-		$display = true;
-	if($inlineadd==ADD_INLINE || $inlineadd==ADD_ONTHEFLY || $inlineadd==ADD_POPUP)
 		$display = true;
 	if($display)
 	{	
@@ -1021,8 +1063,6 @@ if(@$_POST["a"]=="added" && ($inlineadd == ADD_INLINE || $inlineadd == ADD_MASTE
 	$display = false;
 	if($inlineadd==ADD_MASTER)
 		$display = true;
-	if($inlineadd==ADD_INLINE || $inlineadd==ADD_ONTHEFLY || $inlineadd==ADD_POPUP)
-		$display = true;
 	if($display)
 	{	
 		$value = $pageObject->showDBValue("def", $data, $keylink);
@@ -1032,8 +1072,6 @@ if(@$_POST["a"]=="added" && ($inlineadd == ADD_INLINE || $inlineadd == ADD_MASTE
 //	cha
 	$display = false;
 	if($inlineadd==ADD_MASTER)
-		$display = true;
-	if($inlineadd==ADD_INLINE || $inlineadd==ADD_ONTHEFLY || $inlineadd==ADD_POPUP)
 		$display = true;
 	if($display)
 	{	
@@ -1045,8 +1083,6 @@ if(@$_POST["a"]=="added" && ($inlineadd == ADD_INLINE || $inlineadd == ADD_MASTE
 	$display = false;
 	if($inlineadd==ADD_MASTER)
 		$display = true;
-	if($inlineadd==ADD_INLINE || $inlineadd==ADD_ONTHEFLY || $inlineadd==ADD_POPUP)
-		$display = true;
 	if($display)
 	{	
 		$value = $pageObject->showDBValue("mov", $data, $keylink);
@@ -1056,8 +1092,6 @@ if(@$_POST["a"]=="added" && ($inlineadd == ADD_INLINE || $inlineadd == ADD_MASTE
 //	mov_rimanenti
 	$display = false;
 	if($inlineadd==ADD_MASTER)
-		$display = true;
-	if($inlineadd==ADD_INLINE || $inlineadd==ADD_ONTHEFLY || $inlineadd==ADD_POPUP)
 		$display = true;
 	if($display)
 	{	
@@ -1069,8 +1103,6 @@ if(@$_POST["a"]=="added" && ($inlineadd == ADD_INLINE || $inlineadd == ADD_MASTE
 	$display = false;
 	if($inlineadd==ADD_MASTER)
 		$display = true;
-	if($inlineadd==ADD_INLINE || $inlineadd==ADD_ONTHEFLY || $inlineadd==ADD_POPUP)
-		$display = true;
 	if($display)
 	{	
 		$value = $pageObject->showDBValue("mov_last_reset_time", $data, $keylink);
@@ -1080,8 +1112,6 @@ if(@$_POST["a"]=="added" && ($inlineadd == ADD_INLINE || $inlineadd == ADD_MASTE
 //	pf
 	$display = false;
 	if($inlineadd==ADD_MASTER)
-		$display = true;
-	if($inlineadd==ADD_INLINE || $inlineadd==ADD_ONTHEFLY || $inlineadd==ADD_POPUP)
 		$display = true;
 	if($display)
 	{	
@@ -1093,8 +1123,6 @@ if(@$_POST["a"]=="added" && ($inlineadd == ADD_INLINE || $inlineadd == ADD_MASTE
 	$display = false;
 	if($inlineadd==ADD_MASTER)
 		$display = true;
-	if($inlineadd==ADD_INLINE || $inlineadd==ADD_ONTHEFLY || $inlineadd==ADD_POPUP)
-		$display = true;
 	if($display)
 	{	
 		$value = $pageObject->showDBValue("pf_rimanenti", $data, $keylink);
@@ -1104,8 +1132,6 @@ if(@$_POST["a"]=="added" && ($inlineadd == ADD_INLINE || $inlineadd == ADD_MASTE
 //	pf_last_reset_time
 	$display = false;
 	if($inlineadd==ADD_MASTER)
-		$display = true;
-	if($inlineadd==ADD_INLINE || $inlineadd==ADD_ONTHEFLY || $inlineadd==ADD_POPUP)
 		$display = true;
 	if($display)
 	{	

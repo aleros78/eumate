@@ -67,13 +67,10 @@ $tdatapg_mail[".listAjax"] = false;
 
 $tdatapg_mail[".listIcons"] = true;
 $tdatapg_mail[".edit"] = true;
-$tdatapg_mail[".inlineEdit"] = true;
-$tdatapg_mail[".inlineAdd"] = true;
+$tdatapg_mail[".copy"] = true;
 $tdatapg_mail[".view"] = true;
 
-$tdatapg_mail[".exportTo"] = true;
 
-$tdatapg_mail[".printFriendly"] = true;
 
 $tdatapg_mail[".delete"] = true;
 
@@ -217,14 +214,6 @@ $tdatapg_mail[".addFields"][] = "vista_invia";
 $tdatapg_mail[".addFields"][] = "vista_ricevi";
 
 $tdatapg_mail[".inlineAddFields"] = array();
-$tdatapg_mail[".inlineAddFields"][] = "invia";
-$tdatapg_mail[".inlineAddFields"][] = "ricevi";
-$tdatapg_mail[".inlineAddFields"][] = "messaggio";
-$tdatapg_mail[".inlineAddFields"][] = "soggetto";
-$tdatapg_mail[".inlineAddFields"][] = "data";
-$tdatapg_mail[".inlineAddFields"][] = "aperta";
-$tdatapg_mail[".inlineAddFields"][] = "vista_invia";
-$tdatapg_mail[".inlineAddFields"][] = "vista_ricevi";
 
 $tdatapg_mail[".editFields"] = array();
 $tdatapg_mail[".editFields"][] = "invia";
@@ -237,36 +226,10 @@ $tdatapg_mail[".editFields"][] = "vista_invia";
 $tdatapg_mail[".editFields"][] = "vista_ricevi";
 
 $tdatapg_mail[".inlineEditFields"] = array();
-$tdatapg_mail[".inlineEditFields"][] = "invia";
-$tdatapg_mail[".inlineEditFields"][] = "ricevi";
-$tdatapg_mail[".inlineEditFields"][] = "messaggio";
-$tdatapg_mail[".inlineEditFields"][] = "soggetto";
-$tdatapg_mail[".inlineEditFields"][] = "data";
-$tdatapg_mail[".inlineEditFields"][] = "aperta";
-$tdatapg_mail[".inlineEditFields"][] = "vista_invia";
-$tdatapg_mail[".inlineEditFields"][] = "vista_ricevi";
 
 $tdatapg_mail[".exportFields"] = array();
-$tdatapg_mail[".exportFields"][] = "id";
-$tdatapg_mail[".exportFields"][] = "invia";
-$tdatapg_mail[".exportFields"][] = "ricevi";
-$tdatapg_mail[".exportFields"][] = "messaggio";
-$tdatapg_mail[".exportFields"][] = "soggetto";
-$tdatapg_mail[".exportFields"][] = "data";
-$tdatapg_mail[".exportFields"][] = "aperta";
-$tdatapg_mail[".exportFields"][] = "vista_invia";
-$tdatapg_mail[".exportFields"][] = "vista_ricevi";
 
 $tdatapg_mail[".printFields"] = array();
-$tdatapg_mail[".printFields"][] = "id";
-$tdatapg_mail[".printFields"][] = "invia";
-$tdatapg_mail[".printFields"][] = "ricevi";
-$tdatapg_mail[".printFields"][] = "messaggio";
-$tdatapg_mail[".printFields"][] = "soggetto";
-$tdatapg_mail[".printFields"][] = "data";
-$tdatapg_mail[".printFields"][] = "aperta";
-$tdatapg_mail[".printFields"][] = "vista_invia";
-$tdatapg_mail[".printFields"][] = "vista_ricevi";
 
 //	id
 //	Custom field settings
@@ -291,10 +254,8 @@ $tdatapg_mail[".printFields"][] = "vista_ricevi";
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "id"; 
 		$fdata["FullName"] = "id";
 	
@@ -384,20 +345,16 @@ $tdatapg_mail[".printFields"][] = "vista_ricevi";
 	
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "invia"; 
 		$fdata["FullName"] = "invia";
 	
@@ -506,20 +463,16 @@ $tdatapg_mail[".printFields"][] = "vista_ricevi";
 	
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "ricevi"; 
 		$fdata["FullName"] = "ricevi";
 	
@@ -628,20 +581,16 @@ $tdatapg_mail[".printFields"][] = "vista_ricevi";
 	
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "messaggio"; 
 		$fdata["FullName"] = "messaggio";
 	
@@ -729,20 +678,16 @@ $tdatapg_mail[".printFields"][] = "vista_ricevi";
 	
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "soggetto"; 
 		$fdata["FullName"] = "soggetto";
 	
@@ -830,20 +775,16 @@ $tdatapg_mail[".printFields"][] = "vista_ricevi";
 	
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "data"; 
 		$fdata["FullName"] = "`data`";
 	
@@ -934,20 +875,16 @@ $tdatapg_mail[".printFields"][] = "vista_ricevi";
 	
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "aperta"; 
 		$fdata["FullName"] = "aperta";
 	
@@ -1033,20 +970,16 @@ $tdatapg_mail[".printFields"][] = "vista_ricevi";
 	
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "vista_invia"; 
 		$fdata["FullName"] = "vista_invia";
 	
@@ -1132,20 +1065,16 @@ $tdatapg_mail[".printFields"][] = "vista_ricevi";
 	
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "vista_ricevi"; 
 		$fdata["FullName"] = "vista_ricevi";
 	
@@ -1238,7 +1167,7 @@ $mIndex = 1-1;
 	$masterParams["dispChildCount"]= "1";
 	$masterParams["hideChild"]= "0";
 	$masterParams["dispInfo"]= "1";
-	$masterParams["previewOnList"]= 1;
+	$masterParams["previewOnList"]= 0;
 	$masterParams["previewOnAdd"]= 0;
 	$masterParams["previewOnEdit"]= 0;
 	$masterParams["previewOnView"]= 0;

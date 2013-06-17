@@ -122,6 +122,15 @@ class Services_JSON
 	 * @var bool
 	 */
 	var $isUtf8 = true;
+
+	/**
+	 * PHPRunner tweak
+	 * We don't need to replace unicode symbols with \uXXXX when saving JSON strings to database becase that breaks searhing.
+	 *
+	 * @var bool
+	 */
+	var $escapeUnicode = true;
+
 	
    /**
     * constructs a new JSON instance
@@ -139,10 +148,11 @@ class Services_JSON
     *                                   bubble up with an error, so all return values
     *                                   from encode() should be checked with isError()
     */
-    function Services_JSON($use = 0, $isUtf8 = true)
+    function Services_JSON($use = 0, $isUtf8 = true, $escapeUnicode = true)
     {
         $this->use = $use;
         $this->isUtf8 = $isUtf8;
+		$this->escapeUnicode = $escapeUnicode;
     }
 
    /**
@@ -297,7 +307,7 @@ class Services_JSON
                             $ascii .= '\\'.$var{$c};
                             break;
 
-                        case !$this->isUtf8 ||  (($ord_var_c >= 0x20) && ($ord_var_c <= 0x7F)):
+                        case !$this->escapeUnicode || !$this->isUtf8 ||  (($ord_var_c >= 0x20) && ($ord_var_c <= 0x7F)):
                             // characters U-00000000 - U-0000007F (same as ASCII)
                             $ascii .= $var{$c};
                             break;
