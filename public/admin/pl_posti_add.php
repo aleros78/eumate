@@ -175,7 +175,7 @@ $detailKeys = $pageObject->detailKeysByM;
 $addFields = $pageObject->getFieldsByPageType();
 
 // add button events if exist
-if ($inlineadd==ADD_SIMPLE)
+if ($inlineadd==ADD_SIMPLE || $inlineadd == ADD_ONTHEFLY)
 	$pageObject->addButtonHandlers();
 
 $url_page=substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1,12);
@@ -892,9 +892,9 @@ if(@$_POST["a"]=="added" && ($inlineadd == ADD_INLINE || $inlineadd == ADD_MASTE
 		$HaveData=false;
 	}
 	//check if correct values added
-	$showDetailKeys["ge_messaggi"]["masterkey1"] = $data["id"];	
 	$showDetailKeys["pg_personaggi"]["masterkey1"] = $data["id"];	
 	$showDetailKeys["pl_riferimenti_posti"]["masterkey1"] = $data["id"];	
+	$showDetailKeys["pg_messaggi"]["masterkey1"] = $data["id"];	
 
 	$keylink="";
 	$keylink.="&key1=".htmlspecialchars(rawurlencode(@$data["id"]));

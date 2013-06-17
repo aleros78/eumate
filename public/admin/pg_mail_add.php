@@ -175,7 +175,7 @@ $detailKeys = $pageObject->detailKeysByM;
 $addFields = $pageObject->getFieldsByPageType();
 
 // add button events if exist
-if ($inlineadd==ADD_SIMPLE)
+if ($inlineadd==ADD_SIMPLE || $inlineadd == ADD_ONTHEFLY)
 	$pageObject->addButtonHandlers();
 
 $url_page=substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1,12);
@@ -210,6 +210,7 @@ if(@$_POST["a"]=="added")
 	$blobfields=array();
 //	processing invia - start
 	$inlineAddOption = true;
+	$inlineAddOption = $inlineadd!=ADD_INLINE;
 	if($inlineAddOption)
 	{
 		$control_invia = $pageObject->getControl("invia", $id);
@@ -218,6 +219,7 @@ if(@$_POST["a"]=="added")
 //	processing invia - end
 //	processing ricevi - start
 	$inlineAddOption = true;
+	$inlineAddOption = $inlineadd!=ADD_INLINE;
 	if($inlineAddOption)
 	{
 		$control_ricevi = $pageObject->getControl("ricevi", $id);
@@ -226,6 +228,7 @@ if(@$_POST["a"]=="added")
 //	processing ricevi - end
 //	processing messaggio - start
 	$inlineAddOption = true;
+	$inlineAddOption = $inlineadd!=ADD_INLINE;
 	if($inlineAddOption)
 	{
 		$control_messaggio = $pageObject->getControl("messaggio", $id);
@@ -234,6 +237,7 @@ if(@$_POST["a"]=="added")
 //	processing messaggio - end
 //	processing soggetto - start
 	$inlineAddOption = true;
+	$inlineAddOption = $inlineadd!=ADD_INLINE;
 	if($inlineAddOption)
 	{
 		$control_soggetto = $pageObject->getControl("soggetto", $id);
@@ -242,6 +246,7 @@ if(@$_POST["a"]=="added")
 //	processing soggetto - end
 //	processing data - start
 	$inlineAddOption = true;
+	$inlineAddOption = $inlineadd!=ADD_INLINE;
 	if($inlineAddOption)
 	{
 		$control_data = $pageObject->getControl("data", $id);
@@ -250,6 +255,7 @@ if(@$_POST["a"]=="added")
 //	processing data - end
 //	processing aperta - start
 	$inlineAddOption = true;
+	$inlineAddOption = $inlineadd!=ADD_INLINE;
 	if($inlineAddOption)
 	{
 		$control_aperta = $pageObject->getControl("aperta", $id);
@@ -258,6 +264,7 @@ if(@$_POST["a"]=="added")
 //	processing aperta - end
 //	processing vista_invia - start
 	$inlineAddOption = true;
+	$inlineAddOption = $inlineadd!=ADD_INLINE;
 	if($inlineAddOption)
 	{
 		$control_vista_invia = $pageObject->getControl("vista_invia", $id);
@@ -266,6 +273,7 @@ if(@$_POST["a"]=="added")
 //	processing vista_invia - end
 //	processing vista_ricevi - start
 	$inlineAddOption = true;
+	$inlineAddOption = $inlineadd!=ADD_INLINE;
 	if($inlineAddOption)
 	{
 		$control_vista_ricevi = $pageObject->getControl("vista_ricevi", $id);
@@ -318,6 +326,7 @@ if(@$_POST["a"]=="added")
 // Give possibility to all edit controls to clean their data				
 //	processing invia - start
 			$inlineAddOption = true;
+			$inlineAddOption = $inlineadd!=ADD_INLINE;
 			if($inlineAddOption)
 			{
 				$control_invia->afterSuccessfulSave();
@@ -325,6 +334,7 @@ if(@$_POST["a"]=="added")
 //	processing invia - end
 //	processing ricevi - start
 			$inlineAddOption = true;
+			$inlineAddOption = $inlineadd!=ADD_INLINE;
 			if($inlineAddOption)
 			{
 				$control_ricevi->afterSuccessfulSave();
@@ -332,6 +342,7 @@ if(@$_POST["a"]=="added")
 //	processing ricevi - end
 //	processing messaggio - start
 			$inlineAddOption = true;
+			$inlineAddOption = $inlineadd!=ADD_INLINE;
 			if($inlineAddOption)
 			{
 				$control_messaggio->afterSuccessfulSave();
@@ -339,6 +350,7 @@ if(@$_POST["a"]=="added")
 //	processing messaggio - end
 //	processing soggetto - start
 			$inlineAddOption = true;
+			$inlineAddOption = $inlineadd!=ADD_INLINE;
 			if($inlineAddOption)
 			{
 				$control_soggetto->afterSuccessfulSave();
@@ -346,6 +358,7 @@ if(@$_POST["a"]=="added")
 //	processing soggetto - end
 //	processing data - start
 			$inlineAddOption = true;
+			$inlineAddOption = $inlineadd!=ADD_INLINE;
 			if($inlineAddOption)
 			{
 				$control_data->afterSuccessfulSave();
@@ -353,6 +366,7 @@ if(@$_POST["a"]=="added")
 //	processing data - end
 //	processing aperta - start
 			$inlineAddOption = true;
+			$inlineAddOption = $inlineadd!=ADD_INLINE;
 			if($inlineAddOption)
 			{
 				$control_aperta->afterSuccessfulSave();
@@ -360,6 +374,7 @@ if(@$_POST["a"]=="added")
 //	processing aperta - end
 //	processing vista_invia - start
 			$inlineAddOption = true;
+			$inlineAddOption = $inlineadd!=ADD_INLINE;
 			if($inlineAddOption)
 			{
 				$control_vista_invia->afterSuccessfulSave();
@@ -367,6 +382,7 @@ if(@$_POST["a"]=="added")
 //	processing vista_invia - end
 //	processing vista_ricevi - start
 			$inlineAddOption = true;
+			$inlineAddOption = $inlineadd!=ADD_INLINE;
 			if($inlineAddOption)
 			{
 				$control_vista_ricevi->afterSuccessfulSave();

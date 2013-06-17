@@ -81,13 +81,10 @@ $tdatapl_posti[".listAjax"] = false;
 
 $tdatapl_posti[".listIcons"] = true;
 $tdatapl_posti[".edit"] = true;
-$tdatapl_posti[".inlineEdit"] = true;
-$tdatapl_posti[".inlineAdd"] = true;
+$tdatapl_posti[".copy"] = true;
 $tdatapl_posti[".view"] = true;
 
-$tdatapl_posti[".exportTo"] = true;
 
-$tdatapl_posti[".printFriendly"] = true;
 
 $tdatapl_posti[".delete"] = true;
 
@@ -2045,26 +2042,6 @@ $fieldToolTips["pl_posti"] = &$fieldToolTipspl_posti;
 // tables which are detail tables for current table (master)
 $detailsTablesData["pl_posti"] = array();
 $dIndex = 1-1;
-			$strOriginalDetailsTable="ge_messaggi";
-	$detailsParam["dDataSourceTable"]="ge_messaggi";
-	$detailsParam["dOriginalTable"]=$strOriginalDetailsTable;
-	$detailsParam["dShortTable"]="ge_messaggi";
-	$detailsParam["masterKeys"]=array();
-	$detailsParam["detailKeys"]=array();
-	$detailsParam["dispChildCount"]= "1";
-	$detailsParam["hideChild"]="0";
-	$detailsParam["previewOnList"]= 1;
-	$detailsParam["previewOnAdd"]= 0;
-	$detailsParam["previewOnEdit"]= 0;
-	$detailsParam["previewOnView"]= 0;
-		
-	$detailsTablesData["pl_posti"][$dIndex] = $detailsParam;
-	
-		
-		$detailsTablesData["pl_posti"][$dIndex]["masterKeys"][]="id";
-		$detailsTablesData["pl_posti"][$dIndex]["detailKeys"][]="id_posto";
-
-$dIndex = 2-1;
 			$strOriginalDetailsTable="pg_personaggi";
 	$detailsParam["dDataSourceTable"]="pg_personaggi";
 	$detailsParam["dOriginalTable"]=$strOriginalDetailsTable;
@@ -2084,7 +2061,7 @@ $dIndex = 2-1;
 		$detailsTablesData["pl_posti"][$dIndex]["masterKeys"][]="id";
 		$detailsTablesData["pl_posti"][$dIndex]["detailKeys"][]="id_posto";
 
-$dIndex = 3-1;
+$dIndex = 2-1;
 			$strOriginalDetailsTable="pl_riferimenti_posti";
 	$detailsParam["dDataSourceTable"]="pl_riferimenti_posti";
 	$detailsParam["dOriginalTable"]=$strOriginalDetailsTable;
@@ -2093,7 +2070,7 @@ $dIndex = 3-1;
 	$detailsParam["detailKeys"]=array();
 	$detailsParam["dispChildCount"]= "1";
 	$detailsParam["hideChild"]="0";
-	$detailsParam["previewOnList"]= 1;
+	$detailsParam["previewOnList"]= 0;
 	$detailsParam["previewOnAdd"]= 0;
 	$detailsParam["previewOnEdit"]= 0;
 	$detailsParam["previewOnView"]= 0;
@@ -2103,6 +2080,26 @@ $dIndex = 3-1;
 		
 		$detailsTablesData["pl_posti"][$dIndex]["masterKeys"][]="id";
 		$detailsTablesData["pl_posti"][$dIndex]["detailKeys"][]="id_posto_riferimento";
+
+$dIndex = 3-1;
+			$strOriginalDetailsTable="pg_messaggi";
+	$detailsParam["dDataSourceTable"]="pg_messaggi";
+	$detailsParam["dOriginalTable"]=$strOriginalDetailsTable;
+	$detailsParam["dShortTable"]="pg_messaggi";
+	$detailsParam["masterKeys"]=array();
+	$detailsParam["detailKeys"]=array();
+	$detailsParam["dispChildCount"]= "1";
+	$detailsParam["hideChild"]="0";
+	$detailsParam["previewOnList"]= 0;
+	$detailsParam["previewOnAdd"]= 0;
+	$detailsParam["previewOnEdit"]= 0;
+	$detailsParam["previewOnView"]= 0;
+		
+	$detailsTablesData["pl_posti"][$dIndex] = $detailsParam;
+	
+		
+		$detailsTablesData["pl_posti"][$dIndex]["masterKeys"][]="id";
+		$detailsTablesData["pl_posti"][$dIndex]["detailKeys"][]="id_posto";
 
 	
 // tables which are master tables for current table (detail)
@@ -2118,7 +2115,7 @@ $mIndex = 1-1;
 	$masterParams["dispChildCount"]= "1";
 	$masterParams["hideChild"]= "0";
 	$masterParams["dispInfo"]= "1";
-	$masterParams["previewOnList"]= 1;
+	$masterParams["previewOnList"]= 0;
 	$masterParams["previewOnAdd"]= 0;
 	$masterParams["previewOnEdit"]= 0;
 	$masterParams["previewOnView"]= 0;
@@ -2136,7 +2133,7 @@ $mIndex = 2-1;
 	$masterParams["dispChildCount"]= "1";
 	$masterParams["hideChild"]= "0";
 	$masterParams["dispInfo"]= "1";
-	$masterParams["previewOnList"]= 1;
+	$masterParams["previewOnList"]= 0;
 	$masterParams["previewOnAdd"]= 0;
 	$masterParams["previewOnEdit"]= 0;
 	$masterParams["previewOnView"]= 0;
@@ -2154,7 +2151,7 @@ $mIndex = 3-1;
 	$masterParams["dispChildCount"]= "1";
 	$masterParams["hideChild"]= "0";
 	$masterParams["dispInfo"]= "1";
-	$masterParams["previewOnList"]= 1;
+	$masterParams["previewOnList"]= 0;
 	$masterParams["previewOnAdd"]= 0;
 	$masterParams["previewOnEdit"]= 0;
 	$masterParams["previewOnView"]= 0;

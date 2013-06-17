@@ -7,9 +7,9 @@ add_nocache_headers();
 
 include('include/xtempl.php');
 include("include/pl_posti_variables.php");
-include_once("include/ge_messaggi_settings.php");
 include_once("include/pg_personaggi_settings.php");
 include_once("include/pl_riferimenti_posti_settings.php");
+include_once("include/pg_messaggi_settings.php");
 include('classes/runnerpage.php');
 include('classes/listpage.php');
 include("classes/searchpanel.php");
@@ -75,16 +75,10 @@ $layout->skins["master"] = "empty";
 $layout->blocks["top"][] = "master";
 $layout->containers["toplinks"] = array();
 
-$layout->containers["toplinks"][] = array("name"=>"toplinks_print","block"=>"prints_block","substyle"=>1);
-
 
 $layout->containers["toplinks"][] = array("name"=>"toplinks_advsearch","block"=>"asearch_link","substyle"=>1);
 
 
-$layout->containers["toplinks"][] = array("name"=>"toplinks_import","block"=>"import_link","substyle"=>1);
-
-
-$layout->containers["toplinks"][] = array("name"=>"toplinks_export","block"=>"export_link","substyle"=>1);
 
 
 

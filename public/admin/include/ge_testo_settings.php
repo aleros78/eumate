@@ -57,13 +57,10 @@ $tdatage_testo[".listAjax"] = false;
 
 $tdatage_testo[".listIcons"] = true;
 $tdatage_testo[".edit"] = true;
-$tdatage_testo[".inlineEdit"] = true;
-$tdatage_testo[".inlineAdd"] = true;
+$tdatage_testo[".copy"] = true;
 $tdatage_testo[".view"] = true;
 
-$tdatage_testo[".exportTo"] = true;
 
-$tdatage_testo[".printFriendly"] = true;
 
 $tdatage_testo[".delete"] = true;
 
@@ -177,9 +174,6 @@ $tdatage_testo[".addFields"][] = "value_it";
 $tdatage_testo[".addFields"][] = "value_en";
 
 $tdatage_testo[".inlineAddFields"] = array();
-$tdatage_testo[".inlineAddFields"][] = "chiave";
-$tdatage_testo[".inlineAddFields"][] = "value_it";
-$tdatage_testo[".inlineAddFields"][] = "value_en";
 
 $tdatage_testo[".editFields"] = array();
 $tdatage_testo[".editFields"][] = "chiave";
@@ -187,21 +181,10 @@ $tdatage_testo[".editFields"][] = "value_it";
 $tdatage_testo[".editFields"][] = "value_en";
 
 $tdatage_testo[".inlineEditFields"] = array();
-$tdatage_testo[".inlineEditFields"][] = "chiave";
-$tdatage_testo[".inlineEditFields"][] = "value_it";
-$tdatage_testo[".inlineEditFields"][] = "value_en";
 
 $tdatage_testo[".exportFields"] = array();
-$tdatage_testo[".exportFields"][] = "id";
-$tdatage_testo[".exportFields"][] = "chiave";
-$tdatage_testo[".exportFields"][] = "value_it";
-$tdatage_testo[".exportFields"][] = "value_en";
 
 $tdatage_testo[".printFields"] = array();
-$tdatage_testo[".printFields"][] = "id";
-$tdatage_testo[".printFields"][] = "chiave";
-$tdatage_testo[".printFields"][] = "value_it";
-$tdatage_testo[".printFields"][] = "value_en";
 
 //	id
 //	Custom field settings
@@ -226,10 +209,8 @@ $tdatage_testo[".printFields"][] = "value_en";
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "id"; 
 		$fdata["FullName"] = "id";
 	
@@ -319,20 +300,16 @@ $tdatage_testo[".printFields"][] = "value_en";
 	
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "chiave"; 
 		$fdata["FullName"] = "chiave";
 	
@@ -420,20 +397,16 @@ $tdatage_testo[".printFields"][] = "value_en";
 	
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "value_it"; 
 		$fdata["FullName"] = "value_it";
 	
@@ -521,20 +494,16 @@ $tdatage_testo[".printFields"][] = "value_en";
 	
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "value_en"; 
 		$fdata["FullName"] = "value_en";
 	

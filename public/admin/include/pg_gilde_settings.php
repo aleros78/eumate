@@ -57,13 +57,9 @@ $tdatapg_gilde[".listAjax"] = false;
 
 $tdatapg_gilde[".listIcons"] = true;
 $tdatapg_gilde[".edit"] = true;
-$tdatapg_gilde[".inlineEdit"] = true;
-$tdatapg_gilde[".inlineAdd"] = true;
 $tdatapg_gilde[".view"] = true;
 
-$tdatapg_gilde[".exportTo"] = true;
 
-$tdatapg_gilde[".printFriendly"] = true;
 
 $tdatapg_gilde[".delete"] = true;
 
@@ -87,7 +83,6 @@ $tdatapg_gilde[".isUseTimeForSearch"] = false;
 
 
 
-$tdatapg_gilde[".useDetailsPreview"] = true;
 
 $tdatapg_gilde[".allSearchFields"] = array();
 
@@ -178,9 +173,6 @@ $tdatapg_gilde[".addFields"][] = "descrizione";
 $tdatapg_gilde[".addFields"][] = "attivo";
 
 $tdatapg_gilde[".inlineAddFields"] = array();
-$tdatapg_gilde[".inlineAddFields"][] = "nome";
-$tdatapg_gilde[".inlineAddFields"][] = "descrizione";
-$tdatapg_gilde[".inlineAddFields"][] = "attivo";
 
 $tdatapg_gilde[".editFields"] = array();
 $tdatapg_gilde[".editFields"][] = "nome";
@@ -188,21 +180,10 @@ $tdatapg_gilde[".editFields"][] = "descrizione";
 $tdatapg_gilde[".editFields"][] = "attivo";
 
 $tdatapg_gilde[".inlineEditFields"] = array();
-$tdatapg_gilde[".inlineEditFields"][] = "nome";
-$tdatapg_gilde[".inlineEditFields"][] = "descrizione";
-$tdatapg_gilde[".inlineEditFields"][] = "attivo";
 
 $tdatapg_gilde[".exportFields"] = array();
-$tdatapg_gilde[".exportFields"][] = "id";
-$tdatapg_gilde[".exportFields"][] = "nome";
-$tdatapg_gilde[".exportFields"][] = "descrizione";
-$tdatapg_gilde[".exportFields"][] = "attivo";
 
 $tdatapg_gilde[".printFields"] = array();
-$tdatapg_gilde[".printFields"][] = "id";
-$tdatapg_gilde[".printFields"][] = "nome";
-$tdatapg_gilde[".printFields"][] = "descrizione";
-$tdatapg_gilde[".printFields"][] = "attivo";
 
 //	id
 //	Custom field settings
@@ -227,10 +208,8 @@ $tdatapg_gilde[".printFields"][] = "attivo";
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "id"; 
 		$fdata["FullName"] = "id";
 	
@@ -320,20 +299,16 @@ $tdatapg_gilde[".printFields"][] = "attivo";
 	
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "nome"; 
 		$fdata["FullName"] = "nome";
 	
@@ -421,20 +396,16 @@ $tdatapg_gilde[".printFields"][] = "attivo";
 	
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "descrizione"; 
 		$fdata["FullName"] = "descrizione";
 	
@@ -522,20 +493,16 @@ $tdatapg_gilde[".printFields"][] = "attivo";
 	
 		$fdata["bAddPage"] = true; 
 	
-		$fdata["bInlineAdd"] = true; 
-	
+		
 		$fdata["bEditPage"] = true; 
 	
-		$fdata["bInlineEdit"] = true; 
-	
+		
 		$fdata["bViewPage"] = true; 
 	
 		$fdata["bAdvancedSearch"] = true; 
 	
-		$fdata["bPrinterPage"] = true; 
-	
-		$fdata["bExportPage"] = true; 
-	
+		
+		
 		$fdata["strField"] = "attivo"; 
 		$fdata["FullName"] = "attivo";
 	
@@ -615,15 +582,15 @@ $fieldToolTips["pg_gilde"] = &$fieldToolTipspg_gilde;
 // tables which are detail tables for current table (master)
 $detailsTablesData["pg_gilde"] = array();
 $dIndex = 1-1;
-			$strOriginalDetailsTable="ge_messaggi";
-	$detailsParam["dDataSourceTable"]="ge_messaggi";
+			$strOriginalDetailsTable="pg_personaggi";
+	$detailsParam["dDataSourceTable"]="pg_personaggi";
 	$detailsParam["dOriginalTable"]=$strOriginalDetailsTable;
-	$detailsParam["dShortTable"]="ge_messaggi";
+	$detailsParam["dShortTable"]="pg_personaggi";
 	$detailsParam["masterKeys"]=array();
 	$detailsParam["detailKeys"]=array();
 	$detailsParam["dispChildCount"]= "1";
 	$detailsParam["hideChild"]="0";
-	$detailsParam["previewOnList"]= 1;
+	$detailsParam["previewOnList"]= 0;
 	$detailsParam["previewOnAdd"]= 0;
 	$detailsParam["previewOnEdit"]= 0;
 	$detailsParam["previewOnView"]= 0;
@@ -635,15 +602,15 @@ $dIndex = 1-1;
 		$detailsTablesData["pg_gilde"][$dIndex]["detailKeys"][]="id_gilda";
 
 $dIndex = 2-1;
-			$strOriginalDetailsTable="pg_personaggi";
-	$detailsParam["dDataSourceTable"]="pg_personaggi";
+			$strOriginalDetailsTable="pg_messaggi";
+	$detailsParam["dDataSourceTable"]="pg_messaggi";
 	$detailsParam["dOriginalTable"]=$strOriginalDetailsTable;
-	$detailsParam["dShortTable"]="pg_personaggi";
+	$detailsParam["dShortTable"]="pg_messaggi";
 	$detailsParam["masterKeys"]=array();
 	$detailsParam["detailKeys"]=array();
 	$detailsParam["dispChildCount"]= "1";
 	$detailsParam["hideChild"]="0";
-	$detailsParam["previewOnList"]= 1;
+	$detailsParam["previewOnList"]= 0;
 	$detailsParam["previewOnAdd"]= 0;
 	$detailsParam["previewOnEdit"]= 0;
 	$detailsParam["previewOnView"]= 0;

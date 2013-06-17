@@ -32,7 +32,6 @@ function DBLookup($sql)
   */
 class tDAL
 {
-	var $ge_messaggi;
 	var $ge_testo;
 	var $ge_utenti;
 	var $pg_mail;
@@ -46,6 +45,7 @@ class tDAL
 	var $vv_azioni_lista;
 	var $vv_config_var;
 	var $vv_tipologia_utenti;
+	var $pg_messaggi;
 	var $lstTables;
 	var $Table=array();
 
@@ -53,7 +53,6 @@ class tDAL
 	{
 		if($this->lstTables)
 			return;
-	  $this->lstTables[]=array("name"=>"ge_messaggi","varname"=>"ge_messaggi");
 	  $this->lstTables[]=array("name"=>"ge_testo","varname"=>"ge_testo");
 	  $this->lstTables[]=array("name"=>"ge_utenti","varname"=>"ge_utenti");
 	  $this->lstTables[]=array("name"=>"pg_mail","varname"=>"pg_mail");
@@ -67,6 +66,7 @@ class tDAL
 	  $this->lstTables[]=array("name"=>"vv_azioni_lista","varname"=>"vv_azioni_lista");
 	  $this->lstTables[]=array("name"=>"vv_config_var","varname"=>"vv_config_var");
 	  $this->lstTables[]=array("name"=>"vv_tipologia_utenti","varname"=>"vv_tipologia_utenti");
+	  $this->lstTables[]=array("name"=>"pg_messaggi","varname"=>"pg_messaggi");
 	}
 
 	/**

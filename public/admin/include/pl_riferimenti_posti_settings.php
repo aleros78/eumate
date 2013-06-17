@@ -55,13 +55,10 @@ $tdatapl_riferimenti_posti[".listAjax"] = false;
 
 $tdatapl_riferimenti_posti[".listIcons"] = true;
 $tdatapl_riferimenti_posti[".edit"] = true;
-$tdatapl_riferimenti_posti[".inlineEdit"] = true;
-$tdatapl_riferimenti_posti[".inlineAdd"] = true;
+$tdatapl_riferimenti_posti[".copy"] = true;
 $tdatapl_riferimenti_posti[".view"] = true;
 
-$tdatapl_riferimenti_posti[".exportTo"] = true;
 
-$tdatapl_riferimenti_posti[".printFriendly"] = true;
 
 $tdatapl_riferimenti_posti[".delete"] = true;
 
@@ -557,7 +554,7 @@ $mIndex = 1-1;
 	$masterParams["dispChildCount"]= "1";
 	$masterParams["hideChild"]= "0";
 	$masterParams["dispInfo"]= "1";
-	$masterParams["previewOnList"]= 1;
+	$masterParams["previewOnList"]= 0;
 	$masterParams["previewOnAdd"]= 0;
 	$masterParams["previewOnEdit"]= 0;
 	$masterParams["previewOnView"]= 0;

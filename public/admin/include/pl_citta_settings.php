@@ -77,13 +77,10 @@ $tdatapl_citta[".listAjax"] = false;
 
 $tdatapl_citta[".listIcons"] = true;
 $tdatapl_citta[".edit"] = true;
-$tdatapl_citta[".inlineEdit"] = true;
-$tdatapl_citta[".inlineAdd"] = true;
+$tdatapl_citta[".copy"] = true;
 $tdatapl_citta[".view"] = true;
 
-$tdatapl_citta[".exportTo"] = true;
 
-$tdatapl_citta[".printFriendly"] = true;
 
 $tdatapl_citta[".delete"] = true;
 
@@ -107,7 +104,6 @@ $tdatapl_citta[".isUseTimeForSearch"] = false;
 
 
 
-$tdatapl_citta[".useDetailsPreview"] = true;
 
 $tdatapl_citta[".allSearchFields"] = array();
 
@@ -1784,7 +1780,7 @@ $dIndex = 1-1;
 	$detailsParam["detailKeys"]=array();
 	$detailsParam["dispChildCount"]= "1";
 	$detailsParam["hideChild"]="0";
-	$detailsParam["previewOnList"]= 1;
+	$detailsParam["previewOnList"]= 0;
 	$detailsParam["previewOnAdd"]= 0;
 	$detailsParam["previewOnEdit"]= 0;
 	$detailsParam["previewOnView"]= 0;
@@ -1809,7 +1805,7 @@ $mIndex = 1-1;
 	$masterParams["dispChildCount"]= "1";
 	$masterParams["hideChild"]= "0";
 	$masterParams["dispInfo"]= "1";
-	$masterParams["previewOnList"]= 1;
+	$masterParams["previewOnList"]= 0;
 	$masterParams["previewOnAdd"]= 0;
 	$masterParams["previewOnEdit"]= 0;
 	$masterParams["previewOnView"]= 0;

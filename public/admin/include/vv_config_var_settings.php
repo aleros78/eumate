@@ -57,13 +57,10 @@ $tdatavv_config_var[".listAjax"] = false;
 
 $tdatavv_config_var[".listIcons"] = true;
 $tdatavv_config_var[".edit"] = true;
-$tdatavv_config_var[".inlineEdit"] = true;
-$tdatavv_config_var[".inlineAdd"] = true;
+$tdatavv_config_var[".copy"] = true;
 $tdatavv_config_var[".view"] = true;
 
-$tdatavv_config_var[".exportTo"] = true;
 
-$tdatavv_config_var[".printFriendly"] = true;
 
 $tdatavv_config_var[".delete"] = true;
 

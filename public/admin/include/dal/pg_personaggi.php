@@ -3,6 +3,7 @@ $dalTablepg_personaggi = array();
 $dalTablepg_personaggi["id"] = array("type"=>3,"varname"=>"id");
 $dalTablepg_personaggi["id_utente"] = array("type"=>3,"varname"=>"id_utente");
 $dalTablepg_personaggi["id_posto"] = array("type"=>3,"varname"=>"id_posto");
+$dalTablepg_personaggi["id_gilda"] = array("type"=>3,"varname"=>"id_gilda");
 $dalTablepg_personaggi["nome"] = array("type"=>200,"varname"=>"nome");
 $dalTablepg_personaggi["status"] = array("type"=>201,"varname"=>"status");
 $dalTablepg_personaggi["att"] = array("type"=>3,"varname"=>"att");
@@ -17,7 +18,6 @@ $dalTablepg_personaggi["pf_last_reset_time"] = array("type"=>3,"varname"=>"pf_la
 $dalTablepg_personaggi["lev"] = array("type"=>3,"varname"=>"lev");
 $dalTablepg_personaggi["xp"] = array("type"=>3,"varname"=>"xp");
 $dalTablepg_personaggi["xp_next"] = array("type"=>3,"varname"=>"xp_next");
-$dalTablepg_personaggi["id_gilda"] = array("type"=>3,"varname"=>"id_gilda");
 	$dalTablepg_personaggi["id"]["key"]=true;
 $dal_info["pg_personaggi"]=&$dalTablepg_personaggi;
 

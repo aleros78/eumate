@@ -84,7 +84,7 @@ $xt = new Xtempl();
 // assign an id
 $xt->assign("id",$id);
 
-$templatefile = ($inlineedit == EDIT_INLINE) ? "vv_tipologia_utenti_inline_edit.htm" : "vv_tipologia_utenti_edit.htm";
+$templatefile = "vv_tipologia_utenti_edit.htm";
 
 //array of params for classes
 $params = array("pageType" => PAGE_EDIT,"id" => $id);
@@ -225,7 +225,7 @@ if(@$_POST["a"] == "edited")
 	
 
 //	processing tipologia - begin
-	$condition = 1;
+	$condition = $inlineedit!=EDIT_INLINE;//(!$inlineedit) edit simple mode
 
 	if($condition)
 	{
@@ -292,7 +292,7 @@ if(@$_POST["a"] == "edited")
 
 			// Give possibility to all edit controls to clean their data				
 			//	processing tipologia - begin
-							$condition = 1;
+							$condition = $inlineedit!=EDIT_INLINE;//(!$inlineedit) edit simple mode
 			
 				if($condition)
 				{
@@ -524,78 +524,6 @@ if(!strlen($message))
 //process readonly and auto-update fields
 /////////////////////////////////////////////////////////////
 
-/////////////////////////////////////////////////////////////
-//	return new data to the List page or report an error
-/////////////////////////////////////////////////////////////
-if (postvalue("a")=="edited" && ($inlineedit == EDIT_INLINE || $inlineedit == EDIT_POPUP))
-{
-	if(!$data)
-	{
-		$data = $evalues;
-		$HaveData = false;
-	}
-	//Preparation   view values
-
-//	detail tables
-	$showDetailKeys["ge_utenti"]["masterkey1"] = $data["id"];		
-
-	$keylink = "";
-	$keylink.= "&key1=".htmlspecialchars(rawurlencode(@$data["id"]));
-
-
-//	id - 
-	$value = $pageObject->showDBValue("id", $data, $keylink);
-	$showValues["id"] = $value;
-	$showFields[] = "id";
-		$showRawValues["id"] = substr($data["id"],0,100);
-
-//	tipologia - 
-	$value = $pageObject->showDBValue("tipologia", $data, $keylink);
-	$showValues["tipologia"] = $value;
-	$showFields[] = "tipologia";
-		$showRawValues["tipologia"] = substr($data["tipologia"],0,100);
-/////////////////////////////////////////////////////////////
-//	start inline output
-/////////////////////////////////////////////////////////////
-	
-	if($IsSaved)
-	{
-		if($pageObject->lockingObj)
-			$pageObject->lockingObj->UnlockRecord($strTableName,$keys,"");
-		
-		$returnJSON['success'] = true;
-		$returnJSON['keys'] = $pageObject->jsKeys;
-		$returnJSON['keyFields'] = $pageObject->keyFields;
-		$returnJSON['vals'] = $showValues;
-		$returnJSON['fields'] = $showFields;
-		$returnJSON['rawVals'] = $showRawValues;
-		$returnJSON['detKeys'] = $showDetailKeys;
-		$returnJSON['userMess'] = $usermessage;
-		$returnJSON['hrefs'] = $pageObject->buildDetailGridLinks($showDetailKeys);
-		
-		if($inlineedit==EDIT_POPUP && isset($_SESSION[$strTableName."_count_captcha"]) || $_SESSION[$strTableName."_count_captcha"]>0 || $_SESSION[$strTableName."_count_captcha"]<5)
-			$returnJSON['hideCaptcha'] = true;
-			
-		if($globalEvents->exists("IsRecordEditable", $strTableName))
-		{
-			if(!$globalEvents->IsRecordEditable($showRawValues, true, $strTableName))
-				$returnJSON['nonEditable'] = true;
-		}
-	}
-	else
-	{
-		$returnJSON['success'] = false;
-		$returnJSON['message'] = $message;
-		
-		if($pageObject->lockingObj)
-			$returnJSON['lockMessage'] = $system_message;
-		
-		if($inlineedit == EDIT_POPUP && !$pageObject->isCaptchaOk)
-			$returnJSON['captcha'] = false;
-	}
-	echo "<textarea>".htmlspecialchars(my_json_encode($returnJSON))."</textarea>";
-	exit();
-} 
 /////////////////////////////////////////////////////////////
 //	prepare Edit Controls
 /////////////////////////////////////////////////////////////

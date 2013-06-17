@@ -13,7 +13,7 @@ use Doctrine\Common\Collections\ArrayCollection;
  * @Entity
  * @Table(name="pl_posti")
  */
-class Posto extends \pff\AModel {
+class Posto extends ATranslator {
 
     /**
      * @Id

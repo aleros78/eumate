@@ -57,11 +57,11 @@ $locale_info["LOCALE_SABBREVMONTHNAME12"]="dic";
 //	time settings
 $locale_info["LOCALE_ITIME"]="1";
 $locale_info["LOCALE_ITIMEMARKPOSN"]="0";
-$locale_info["LOCALE_ITLZERO"]="0";
+$locale_info["LOCALE_ITLZERO"]="1";
 $locale_info["LOCALE_S1159"]="";
 $locale_info["LOCALE_S2359"]="";
-$locale_info["LOCALE_STIME"]=".";
-$locale_info["LOCALE_STIMEFORMAT"]="H.mm.ss";
+$locale_info["LOCALE_STIME"]=":";
+$locale_info["LOCALE_STIMEFORMAT"]="HH:mm:ss";
 //	currency settings
 $locale_info["LOCALE_ICURRDIGITS"]="2";
 $locale_info["LOCALE_ICURRENCY"]="2";

@@ -84,7 +84,7 @@ $xt = new Xtempl();
 // assign an id
 $xt->assign("id",$id);
 
-$templatefile = ($inlineedit == EDIT_INLINE) ? "pg_mail_inline_edit.htm" : "pg_mail_edit.htm";
+$templatefile = "pg_mail_edit.htm";
 
 //array of params for classes
 $params = array("pageType" => PAGE_EDIT,"id" => $id);
@@ -225,7 +225,7 @@ if(@$_POST["a"] == "edited")
 	
 
 //	processing invia - begin
-	$condition = 1;
+	$condition = $inlineedit!=EDIT_INLINE;//(!$inlineedit) edit simple mode
 
 	if($condition)
 	{
@@ -235,7 +235,7 @@ if(@$_POST["a"] == "edited")
 		}
 //	processing invia - end
 //	processing ricevi - begin
-	$condition = 1;
+	$condition = $inlineedit!=EDIT_INLINE;//(!$inlineedit) edit simple mode
 
 	if($condition)
 	{
@@ -245,7 +245,7 @@ if(@$_POST["a"] == "edited")
 		}
 //	processing ricevi - end
 //	processing messaggio - begin
-	$condition = 1;
+	$condition = $inlineedit!=EDIT_INLINE;//(!$inlineedit) edit simple mode
 
 	if($condition)
 	{
@@ -255,7 +255,7 @@ if(@$_POST["a"] == "edited")
 		}
 //	processing messaggio - end
 //	processing soggetto - begin
-	$condition = 1;
+	$condition = $inlineedit!=EDIT_INLINE;//(!$inlineedit) edit simple mode
 
 	if($condition)
 	{
@@ -265,7 +265,7 @@ if(@$_POST["a"] == "edited")
 		}
 //	processing soggetto - end
 //	processing data - begin
-	$condition = 1;
+	$condition = $inlineedit!=EDIT_INLINE;//(!$inlineedit) edit simple mode
 
 	if($condition)
 	{
@@ -275,7 +275,7 @@ if(@$_POST["a"] == "edited")
 		}
 //	processing data - end
 //	processing aperta - begin
-	$condition = 1;
+	$condition = $inlineedit!=EDIT_INLINE;//(!$inlineedit) edit simple mode
 
 	if($condition)
 	{
@@ -285,7 +285,7 @@ if(@$_POST["a"] == "edited")
 		}
 //	processing aperta - end
 //	processing vista_invia - begin
-	$condition = 1;
+	$condition = $inlineedit!=EDIT_INLINE;//(!$inlineedit) edit simple mode
 
 	if($condition)
 	{
@@ -295,7 +295,7 @@ if(@$_POST["a"] == "edited")
 		}
 //	processing vista_invia - end
 //	processing vista_ricevi - begin
-	$condition = 1;
+	$condition = $inlineedit!=EDIT_INLINE;//(!$inlineedit) edit simple mode
 
 	if($condition)
 	{
@@ -362,7 +362,7 @@ if(@$_POST["a"] == "edited")
 
 			// Give possibility to all edit controls to clean their data				
 			//	processing invia - begin
-							$condition = 1;
+							$condition = $inlineedit!=EDIT_INLINE;//(!$inlineedit) edit simple mode
 			
 				if($condition)
 				{
@@ -370,7 +370,7 @@ if(@$_POST["a"] == "edited")
 				}
 	//	processing invia - end
 			//	processing ricevi - begin
-							$condition = 1;
+							$condition = $inlineedit!=EDIT_INLINE;//(!$inlineedit) edit simple mode
 			
 				if($condition)
 				{
@@ -378,7 +378,7 @@ if(@$_POST["a"] == "edited")
 				}
 	//	processing ricevi - end
 			//	processing messaggio - begin
-							$condition = 1;
+							$condition = $inlineedit!=EDIT_INLINE;//(!$inlineedit) edit simple mode
 			
 				if($condition)
 				{
@@ -386,7 +386,7 @@ if(@$_POST["a"] == "edited")
 				}
 	//	processing messaggio - end
 			//	processing soggetto - begin
-							$condition = 1;
+							$condition = $inlineedit!=EDIT_INLINE;//(!$inlineedit) edit simple mode
 			
 				if($condition)
 				{
@@ -394,7 +394,7 @@ if(@$_POST["a"] == "edited")
 				}
 	//	processing soggetto - end
 			//	processing data - begin
-							$condition = 1;
+							$condition = $inlineedit!=EDIT_INLINE;//(!$inlineedit) edit simple mode
 			
 				if($condition)
 				{
@@ -402,7 +402,7 @@ if(@$_POST["a"] == "edited")
 				}
 	//	processing data - end
 			//	processing aperta - begin
-							$condition = 1;
+							$condition = $inlineedit!=EDIT_INLINE;//(!$inlineedit) edit simple mode
 			
 				if($condition)
 				{
@@ -410,7 +410,7 @@ if(@$_POST["a"] == "edited")
 				}
 	//	processing aperta - end
 			//	processing vista_invia - begin
-							$condition = 1;
+							$condition = $inlineedit!=EDIT_INLINE;//(!$inlineedit) edit simple mode
 			
 				if($condition)
 				{
@@ -418,7 +418,7 @@ if(@$_POST["a"] == "edited")
 				}
 	//	processing vista_invia - end
 			//	processing vista_ricevi - begin
-							$condition = 1;
+							$condition = $inlineedit!=EDIT_INLINE;//(!$inlineedit) edit simple mode
 			
 				if($condition)
 				{
@@ -713,119 +713,6 @@ if(!strlen($message))
 //process readonly and auto-update fields
 /////////////////////////////////////////////////////////////
 
-/////////////////////////////////////////////////////////////
-//	return new data to the List page or report an error
-/////////////////////////////////////////////////////////////
-if (postvalue("a")=="edited" && ($inlineedit == EDIT_INLINE || $inlineedit == EDIT_POPUP))
-{
-	if(!$data)
-	{
-		$data = $evalues;
-		$HaveData = false;
-	}
-	//Preparation   view values
-
-//	detail tables
-
-	$keylink = "";
-	$keylink.= "&key1=".htmlspecialchars(rawurlencode(@$data["id"]));
-
-
-//	id - 
-	$value = $pageObject->showDBValue("id", $data, $keylink);
-	$showValues["id"] = $value;
-	$showFields[] = "id";
-		$showRawValues["id"] = substr($data["id"],0,100);
-
-//	invia - 
-	$value = $pageObject->showDBValue("invia", $data, $keylink);
-	$showValues["invia"] = $value;
-	$showFields[] = "invia";
-		$showRawValues["invia"] = substr($data["invia"],0,100);
-
-//	ricevi - 
-	$value = $pageObject->showDBValue("ricevi", $data, $keylink);
-	$showValues["ricevi"] = $value;
-	$showFields[] = "ricevi";
-		$showRawValues["ricevi"] = substr($data["ricevi"],0,100);
-
-//	messaggio - 
-	$value = $pageObject->showDBValue("messaggio", $data, $keylink);
-	$showValues["messaggio"] = $value;
-	$showFields[] = "messaggio";
-		$showRawValues["messaggio"] = substr($data["messaggio"],0,100);
-
-//	soggetto - 
-	$value = $pageObject->showDBValue("soggetto", $data, $keylink);
-	$showValues["soggetto"] = $value;
-	$showFields[] = "soggetto";
-		$showRawValues["soggetto"] = substr($data["soggetto"],0,100);
-
-//	data - Short Date
-	$value = $pageObject->showDBValue("data", $data, $keylink);
-	$showValues["data"] = $value;
-	$showFields[] = "data";
-		$showRawValues["data"] = substr($data["data"],0,100);
-
-//	aperta - Checkbox
-	$value = $pageObject->showDBValue("aperta", $data, $keylink);
-	$showValues["aperta"] = $value;
-	$showFields[] = "aperta";
-		$showRawValues["aperta"] = substr($data["aperta"],0,100);
-
-//	vista_invia - Checkbox
-	$value = $pageObject->showDBValue("vista_invia", $data, $keylink);
-	$showValues["vista_invia"] = $value;
-	$showFields[] = "vista_invia";
-		$showRawValues["vista_invia"] = substr($data["vista_invia"],0,100);
-
-//	vista_ricevi - Checkbox
-	$value = $pageObject->showDBValue("vista_ricevi", $data, $keylink);
-	$showValues["vista_ricevi"] = $value;
-	$showFields[] = "vista_ricevi";
-		$showRawValues["vista_ricevi"] = substr($data["vista_ricevi"],0,100);
-/////////////////////////////////////////////////////////////
-//	start inline output
-/////////////////////////////////////////////////////////////
-	
-	if($IsSaved)
-	{
-		if($pageObject->lockingObj)
-			$pageObject->lockingObj->UnlockRecord($strTableName,$keys,"");
-		
-		$returnJSON['success'] = true;
-		$returnJSON['keys'] = $pageObject->jsKeys;
-		$returnJSON['keyFields'] = $pageObject->keyFields;
-		$returnJSON['vals'] = $showValues;
-		$returnJSON['fields'] = $showFields;
-		$returnJSON['rawVals'] = $showRawValues;
-		$returnJSON['detKeys'] = $showDetailKeys;
-		$returnJSON['userMess'] = $usermessage;
-		$returnJSON['hrefs'] = $pageObject->buildDetailGridLinks($showDetailKeys);
-		
-		if($inlineedit==EDIT_POPUP && isset($_SESSION[$strTableName."_count_captcha"]) || $_SESSION[$strTableName."_count_captcha"]>0 || $_SESSION[$strTableName."_count_captcha"]<5)
-			$returnJSON['hideCaptcha'] = true;
-			
-		if($globalEvents->exists("IsRecordEditable", $strTableName))
-		{
-			if(!$globalEvents->IsRecordEditable($showRawValues, true, $strTableName))
-				$returnJSON['nonEditable'] = true;
-		}
-	}
-	else
-	{
-		$returnJSON['success'] = false;
-		$returnJSON['message'] = $message;
-		
-		if($pageObject->lockingObj)
-			$returnJSON['lockMessage'] = $system_message;
-		
-		if($inlineedit == EDIT_POPUP && !$pageObject->isCaptchaOk)
-			$returnJSON['captcha'] = false;
-	}
-	echo "<textarea>".htmlspecialchars(my_json_encode($returnJSON))."</textarea>";
-	exit();
-} 
 /////////////////////////////////////////////////////////////
 //	prepare Edit Controls
 /////////////////////////////////////////////////////////////

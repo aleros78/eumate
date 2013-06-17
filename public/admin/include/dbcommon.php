@@ -1,7 +1,7 @@
 <?php
 
-$version = explode('.', PHP_VERSION);
-if($version[0]*10+$version[1]<53)
+$phpversion = explode('.', PHP_VERSION);
+if($phpversion[0]*10+$phpversion[1]<53)
 	set_magic_quotes_runtime(0);
 
 if(@$_SERVER["REQUEST_URI"])
@@ -61,7 +61,7 @@ set_error_handler("runner_error_handler");
 
 // json support
 $useUTF8 = true;
-if(!function_exists('json_encode') || !$useUTF8)
+if(!function_exists('json_encode') || !$useUTF8 || $phpversion[0]*10+$phpversion[1]<54)
 {
 	include_once(getabspath("classes/json.php"));
 	$GLOBALS['JSON_OBJECT'] = new Services_JSON(SERVICES_JSON_LOOSE_TYPE, $useUTF8);
@@ -77,11 +77,16 @@ if(!function_exists('json_encode') || !$useUTF8)
     	else 
     		return $result;
 	}
+	function my_json_encode_unescaped_unicode($value)
+	{
+    	$json = new Services_JSON(SERVICES_JSON_LOOSE_TYPE, $useUTF8, false);
+		return $json->encode($value);
+	}
 }
 else
 {
 	function my_json_encode($value){
-		return json_encode($value);
+		return json_encode($value, JSON_UNESCAPED_SLASHES);
     }
    
     function my_json_decode($value){
@@ -91,12 +96,13 @@ else
     	else 
     		return $result;
 	}
+
+	function my_json_encode_unescaped_unicode($value)
+	{
+		return json_encode($value, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES );
+	}
+	
 }
 
-function my_json_encode_unescaped_unicode($value)
-{
-	array_walk_recursive($value, 'json_mb_encode_numericentity');
-	return mb_decode_numericentity(my_json_encode($value), array(0x80, 0xffff, 0, 0xffff), 'UTF-8');
-}
 
 ?>

@@ -1534,8 +1534,6 @@ function GetTableURL($table = "")
 	global $strTableName, $projectTables;
 	if(!$table)
 		$table=$strTableName;
-	if("ge_messaggi" == $table) 
-		return "ge_messaggi";
 	if("ge_testo" == $table) 
 		return "ge_testo";
 	if("ge_utenti" == $table) 
@@ -1562,6 +1560,8 @@ function GetTableURL($table = "")
 		return "vv_config_var";
 	if("vv_tipologia_utenti" == $table) 
 		return "vv_tipologia_utenti";
+	if("pg_messaggi" == $table) 
+		return "pg_messaggi";
 }
 
 //	return strTableName by short table name
@@ -1570,8 +1570,6 @@ function GetTableByShort($shortTName = "")
 	global $projectTables;
 	if(!$shortTName)
 		return false;
-	if("ge_messaggi" == $shortTName) 
-		return "ge_messaggi";
 	if("ge_testo" == $shortTName) 
 		return "ge_testo";
 	if("ge_utenti" == $shortTName) 
@@ -1598,6 +1596,8 @@ function GetTableByShort($shortTName = "")
 		return "vv_config_var";
 	if("vv_tipologia_utenti" == $shortTName) 
 		return "vv_tipologia_utenti";
+	if("pg_messaggi" == $shortTName) 
+		return "pg_messaggi";
 }
 
 //	A

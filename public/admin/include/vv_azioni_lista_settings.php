@@ -55,13 +55,10 @@ $tdatavv_azioni_lista[".listAjax"] = false;
 
 $tdatavv_azioni_lista[".listIcons"] = true;
 $tdatavv_azioni_lista[".edit"] = true;
-$tdatavv_azioni_lista[".inlineEdit"] = true;
-$tdatavv_azioni_lista[".inlineAdd"] = true;
+$tdatavv_azioni_lista[".copy"] = true;
 $tdatavv_azioni_lista[".view"] = true;
 
-$tdatavv_azioni_lista[".exportTo"] = true;
 
-$tdatavv_azioni_lista[".printFriendly"] = true;
 
 $tdatavv_azioni_lista[".delete"] = true;
 

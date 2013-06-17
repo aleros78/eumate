@@ -175,7 +175,7 @@ $detailKeys = $pageObject->detailKeysByM;
 $addFields = $pageObject->getFieldsByPageType();
 
 // add button events if exist
-if ($inlineadd==ADD_SIMPLE)
+if ($inlineadd==ADD_SIMPLE || $inlineadd == ADD_ONTHEFLY)
 	$pageObject->addButtonHandlers();
 
 $url_page=substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1,12);

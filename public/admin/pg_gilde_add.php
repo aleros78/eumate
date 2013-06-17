@@ -175,7 +175,7 @@ $detailKeys = $pageObject->detailKeysByM;
 $addFields = $pageObject->getFieldsByPageType();
 
 // add button events if exist
-if ($inlineadd==ADD_SIMPLE)
+if ($inlineadd==ADD_SIMPLE || $inlineadd == ADD_ONTHEFLY)
 	$pageObject->addButtonHandlers();
 
 $url_page=substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1,12);
@@ -210,6 +210,7 @@ if(@$_POST["a"]=="added")
 	$blobfields=array();
 //	processing nome - start
 	$inlineAddOption = true;
+	$inlineAddOption = $inlineadd!=ADD_INLINE;
 	if($inlineAddOption)
 	{
 		$control_nome = $pageObject->getControl("nome", $id);
@@ -218,6 +219,7 @@ if(@$_POST["a"]=="added")
 //	processing nome - end
 //	processing descrizione - start
 	$inlineAddOption = true;
+	$inlineAddOption = $inlineadd!=ADD_INLINE;
 	if($inlineAddOption)
 	{
 		$control_descrizione = $pageObject->getControl("descrizione", $id);
@@ -226,6 +228,7 @@ if(@$_POST["a"]=="added")
 //	processing descrizione - end
 //	processing attivo - start
 	$inlineAddOption = true;
+	$inlineAddOption = $inlineadd!=ADD_INLINE;
 	if($inlineAddOption)
 	{
 		$control_attivo = $pageObject->getControl("attivo", $id);
@@ -267,6 +270,7 @@ if(@$_POST["a"]=="added")
 // Give possibility to all edit controls to clean their data				
 //	processing nome - start
 			$inlineAddOption = true;
+			$inlineAddOption = $inlineadd!=ADD_INLINE;
 			if($inlineAddOption)
 			{
 				$control_nome->afterSuccessfulSave();
@@ -274,6 +278,7 @@ if(@$_POST["a"]=="added")
 //	processing nome - end
 //	processing descrizione - start
 			$inlineAddOption = true;
+			$inlineAddOption = $inlineadd!=ADD_INLINE;
 			if($inlineAddOption)
 			{
 				$control_descrizione->afterSuccessfulSave();
@@ -281,6 +286,7 @@ if(@$_POST["a"]=="added")
 //	processing descrizione - end
 //	processing attivo - start
 			$inlineAddOption = true;
+			$inlineAddOption = $inlineadd!=ADD_INLINE;
 			if($inlineAddOption)
 			{
 				$control_attivo->afterSuccessfulSave();
@@ -542,8 +548,8 @@ if(@$_POST["a"]=="added" && ($inlineadd == ADD_INLINE || $inlineadd == ADD_MASTE
 		$HaveData=false;
 	}
 	//check if correct values added
-	$showDetailKeys["ge_messaggi"]["masterkey1"] = $data["id"];	
 	$showDetailKeys["pg_personaggi"]["masterkey1"] = $data["id"];	
+	$showDetailKeys["pg_messaggi"]["masterkey1"] = $data["id"];	
 
 	$keylink="";
 	$keylink.="&key1=".htmlspecialchars(rawurlencode(@$data["id"]));

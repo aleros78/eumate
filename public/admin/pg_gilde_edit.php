@@ -84,7 +84,7 @@ $xt = new Xtempl();
 // assign an id
 $xt->assign("id",$id);
 
-$templatefile = ($inlineedit == EDIT_INLINE) ? "pg_gilde_inline_edit.htm" : "pg_gilde_edit.htm";
+$templatefile = "pg_gilde_edit.htm";
 
 //array of params for classes
 $params = array("pageType" => PAGE_EDIT,"id" => $id);
@@ -225,7 +225,7 @@ if(@$_POST["a"] == "edited")
 	
 
 //	processing nome - begin
-	$condition = 1;
+	$condition = $inlineedit!=EDIT_INLINE;//(!$inlineedit) edit simple mode
 
 	if($condition)
 	{
@@ -235,7 +235,7 @@ if(@$_POST["a"] == "edited")
 		}
 //	processing nome - end
 //	processing descrizione - begin
-	$condition = 1;
+	$condition = $inlineedit!=EDIT_INLINE;//(!$inlineedit) edit simple mode
 
 	if($condition)
 	{
@@ -245,7 +245,7 @@ if(@$_POST["a"] == "edited")
 		}
 //	processing descrizione - end
 //	processing attivo - begin
-	$condition = 1;
+	$condition = $inlineedit!=EDIT_INLINE;//(!$inlineedit) edit simple mode
 
 	if($condition)
 	{
@@ -312,7 +312,7 @@ if(@$_POST["a"] == "edited")
 
 			// Give possibility to all edit controls to clean their data				
 			//	processing nome - begin
-							$condition = 1;
+							$condition = $inlineedit!=EDIT_INLINE;//(!$inlineedit) edit simple mode
 			
 				if($condition)
 				{
@@ -320,7 +320,7 @@ if(@$_POST["a"] == "edited")
 				}
 	//	processing nome - end
 			//	processing descrizione - begin
-							$condition = 1;
+							$condition = $inlineedit!=EDIT_INLINE;//(!$inlineedit) edit simple mode
 			
 				if($condition)
 				{
@@ -328,7 +328,7 @@ if(@$_POST["a"] == "edited")
 				}
 	//	processing descrizione - end
 			//	processing attivo - begin
-							$condition = 1;
+							$condition = $inlineedit!=EDIT_INLINE;//(!$inlineedit) edit simple mode
 			
 				if($condition)
 				{
@@ -578,91 +578,6 @@ if(!strlen($message))
 //process readonly and auto-update fields
 /////////////////////////////////////////////////////////////
 
-/////////////////////////////////////////////////////////////
-//	return new data to the List page or report an error
-/////////////////////////////////////////////////////////////
-if (postvalue("a")=="edited" && ($inlineedit == EDIT_INLINE || $inlineedit == EDIT_POPUP))
-{
-	if(!$data)
-	{
-		$data = $evalues;
-		$HaveData = false;
-	}
-	//Preparation   view values
-
-//	detail tables
-	$showDetailKeys["ge_messaggi"]["masterkey1"] = $data["id"];		
-	$showDetailKeys["pg_personaggi"]["masterkey1"] = $data["id"];		
-
-	$keylink = "";
-	$keylink.= "&key1=".htmlspecialchars(rawurlencode(@$data["id"]));
-
-
-//	id - 
-	$value = $pageObject->showDBValue("id", $data, $keylink);
-	$showValues["id"] = $value;
-	$showFields[] = "id";
-		$showRawValues["id"] = substr($data["id"],0,100);
-
-//	nome - 
-	$value = $pageObject->showDBValue("nome", $data, $keylink);
-	$showValues["nome"] = $value;
-	$showFields[] = "nome";
-		$showRawValues["nome"] = substr($data["nome"],0,100);
-
-//	descrizione - 
-	$value = $pageObject->showDBValue("descrizione", $data, $keylink);
-	$showValues["descrizione"] = $value;
-	$showFields[] = "descrizione";
-		$showRawValues["descrizione"] = substr($data["descrizione"],0,100);
-
-//	attivo - Checkbox
-	$value = $pageObject->showDBValue("attivo", $data, $keylink);
-	$showValues["attivo"] = $value;
-	$showFields[] = "attivo";
-		$showRawValues["attivo"] = substr($data["attivo"],0,100);
-/////////////////////////////////////////////////////////////
-//	start inline output
-/////////////////////////////////////////////////////////////
-	
-	if($IsSaved)
-	{
-		if($pageObject->lockingObj)
-			$pageObject->lockingObj->UnlockRecord($strTableName,$keys,"");
-		
-		$returnJSON['success'] = true;
-		$returnJSON['keys'] = $pageObject->jsKeys;
-		$returnJSON['keyFields'] = $pageObject->keyFields;
-		$returnJSON['vals'] = $showValues;
-		$returnJSON['fields'] = $showFields;
-		$returnJSON['rawVals'] = $showRawValues;
-		$returnJSON['detKeys'] = $showDetailKeys;
-		$returnJSON['userMess'] = $usermessage;
-		$returnJSON['hrefs'] = $pageObject->buildDetailGridLinks($showDetailKeys);
-		
-		if($inlineedit==EDIT_POPUP && isset($_SESSION[$strTableName."_count_captcha"]) || $_SESSION[$strTableName."_count_captcha"]>0 || $_SESSION[$strTableName."_count_captcha"]<5)
-			$returnJSON['hideCaptcha'] = true;
-			
-		if($globalEvents->exists("IsRecordEditable", $strTableName))
-		{
-			if(!$globalEvents->IsRecordEditable($showRawValues, true, $strTableName))
-				$returnJSON['nonEditable'] = true;
-		}
-	}
-	else
-	{
-		$returnJSON['success'] = false;
-		$returnJSON['message'] = $message;
-		
-		if($pageObject->lockingObj)
-			$returnJSON['lockMessage'] = $system_message;
-		
-		if($inlineedit == EDIT_POPUP && !$pageObject->isCaptchaOk)
-			$returnJSON['captcha'] = false;
-	}
-	echo "<textarea>".htmlspecialchars(my_json_encode($returnJSON))."</textarea>";
-	exit();
-} 
 /////////////////////////////////////////////////////////////
 //	prepare Edit Controls
 /////////////////////////////////////////////////////////////

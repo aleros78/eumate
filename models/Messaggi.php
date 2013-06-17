@@ -46,7 +46,7 @@ class Messaggi extends \pff\AModel {
     private $posto;
 
     /**
-     * @Column(type="date")
+     * @Column(type="datetime")
      */
     private $data;
 
