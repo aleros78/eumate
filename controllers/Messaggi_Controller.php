@@ -47,7 +47,7 @@ class Messaggi_Controller extends \pff\AController
 
         $this->_em->persist($m);
         $this->_em->flush();
-        
+
     }
 
 }
