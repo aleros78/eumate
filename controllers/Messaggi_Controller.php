@@ -25,7 +25,6 @@ class Messaggi_Controller extends \pff\AController
         $view = \pff\FView::create('formMessaggi.tpl',$this->_app);
         $this->addView($view);
     }
-
     public function addMessaggio(){
         $id_personaggio = $_SESSION['login_personaggio'];
         $personaggio = $this->_em->find('pff\models\personaggio',$id_personaggio);
@@ -53,7 +52,7 @@ class Messaggi_Controller extends \pff\AController
 
         $this->_em->persist($m);
         $this->_em->flush();
-
+        
         header("Location: " .$this->_app->getExternalPath() . "test");
     }
 
