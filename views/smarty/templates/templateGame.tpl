@@ -20,6 +20,7 @@
             <div id="left_cl">
                 <div id="top"></div>
                 <div class="content">
+                    {renderAction controller=Personaggio action=scheda}
                     {renderAction controller=Posto action=descrizione}
                     {content index=0}
                 </div>
