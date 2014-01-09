@@ -1,6 +1,6 @@
 
 {
     "require": {
-
+        "hybridauth/hybridauth": "dev-master"
     }
 }
