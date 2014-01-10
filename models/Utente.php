@@ -58,6 +58,11 @@ class Utente extends AModel {
     private $numero_login;
 
     /**
+     * @Column(type="date")
+     */
+    private $data_ultimo_login;
+
+    /**
      * @Column(length=100)
      */
     private $ip_ultimo_login;
@@ -77,6 +82,14 @@ class Utente extends AModel {
 
 
     public function __construct() {
+    }
+
+    public function setDataUltimoLogin($data_ultimo_login) {
+        $this->data_ultimo_login = $data_ultimo_login;
+    }
+
+    public function getDataUltimoLogin() {
+        return $this->data_ultimo_login;
     }
 
     /**

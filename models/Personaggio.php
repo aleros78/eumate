@@ -44,6 +44,11 @@ class Personaggio extends \pff\AModel {
     /**
      * @Column(type="integer")
      */
+    private $int;
+
+    /**
+     * @Column(type="integer")
+     */
     private $cha;
 
     /**
@@ -113,6 +118,14 @@ class Personaggio extends \pff\AModel {
     private $gilda;
 
     function __construct(){
+    }
+
+    public function setInt($int) {
+        $this->int = $int;
+    }
+
+    public function getInt() {
+        return $this->int;
     }
 
     public function setAtt($att)

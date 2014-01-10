@@ -18,7 +18,7 @@
         }
 
         public function getScheda(){
-            $id_personaggio = $_SESSION['login_personaggio'];
+            $id_personaggio = $_SESSION['logged_personaggio'];
             $personaggio = $this->em->find('pff\models\personaggio',$id_personaggio);
             $result = array();
             if ($personaggio){

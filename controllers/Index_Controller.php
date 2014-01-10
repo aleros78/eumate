@@ -12,7 +12,11 @@ class Index_Controller extends \pff\AController
      */
     public function index()
     {
-        echo 'Welcome to pff!';
+        $layout = \pff\FLayout::create('template.tpl', $this->_app);
+        $view = \pff\FView::create('indexGame.tpl',$this->_app);
+
+        $layout->addContent($view);
+        $this->addView($layout);
     }
 
 }

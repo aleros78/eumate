@@ -2,7 +2,7 @@
 
 	host='neroserver3';	
 	user='root';
-	path='/var/www/eumate.com/test';
+	path='/var/www/eumate';
 	first='FALSE';
 
 usage="$(basename $0) [-h] [-f]  -- PUBLISH ONLINE FOR PFF
